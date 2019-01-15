@@ -5,8 +5,30 @@ date: 2013-05-22 16:25:06 -0700
 categories: linux
 ---
 
-Nulla vel risus dapibus, fringilla nunc id, interdum magna. Vivamus non diam egestas, bibendum elit sed, condimentum quam. Integer eu ipsum ultrices, tincidunt nibh at, auctor sem. Duis iaculis purus a aliquet gravida. Sed ornare, leo venenatis dignissim condimentum, nibh arcu iaculis dui, nec vulputate ante eros laoreet sem. Fusce dapibus, ante eu blandit tincidunt, odio quam vulputate libero, et interdum tellus lorem eleifend nisi. Nam elementum vel sapien sed rhoncus. Praesent commodo neque odio. Praesent a nisl nec neque laoreet dignissim. Quisque vitae felis a nisl sodales consequat ut ac mi. Etiam varius gravida accumsan. In sed lectus nec ipsum commodo efficitur. Ut vehicula diam eu justo pellentesque, in pulvinar lorem dapibus. Donec ornare metus vitae turpis malesuada, ut aliquet dolor vulputate. Aenean eget ipsum elit. Suspendisse tempor sagittis dictum.
+                         Comandos básicos para terminal Linux
 
-Vivamus dapibus justo vitae tellus dignissim, non interdum odio egestas. Maecenas tincidunt sem non consequat bibendum. Aliquam cursus, enim sed rutrum porta, nisl tellus ultrices ipsum, vel vestibulum orci tellus sit amet quam. Pellentesque ut viverra lacus. Suspendisse potenti. Ut augue enim, hendrerit sed interdum sed, ullamcorper sit amet ex. Donec at mi at erat hendrerit commodo at non eros. Fusce commodo nec quam at rhoncus.
+`cd [nome da pasta/]`
+Comando para entrar ou mudar de pasta.
 
-Aliquam molestie urna at turpis venenatis, et placerat lorem volutpat. Sed gravida arcu id lectus viverra eleifend. Sed in metus sit amet ante luctus dignissim. Etiam in sodales justo, in iaculis odio. Vestibulum accumsan felis vitae cursus pharetra. Nulla congue ipsum est, sed vulputate odio pulvinar id. Maecenas a sollicitudin turpis.
+`ls`
+Lista conteúdo da pasta onde o usuário se encontra.
+
+`cd ..`
+Volta um nível
+
+`mkdir [nome da pasta]`
+Cria nova pasta onde o usuário se encontra.
+
+`rm -rf [nome da pasta]`
+Remove pasta especificada. 
+
+`man [nome do comando]`
+
+O comando "man" exibe a função de determinado comando. Ele é muito útil quando não se sabe o que um comando faz, ou quando se pretende aprender mais sobre a sua utilização. Aconselha-se a leitura do manual sempre que houver dúvidas.
+
+Exemplo: 
+**man ls** – Exibe o que faz o comando ls e quais são suas variações.
+Para sair do man pressione a tecla “q”.
+					
+
+
