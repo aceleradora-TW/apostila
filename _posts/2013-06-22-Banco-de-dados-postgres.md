@@ -5,8 +5,40 @@ date: 2013-06-22 16:25:06 -0700
 categories: banco-de-dados
 ---
 
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus fermentum facilisis velit eu auctor. Maecenas tincidunt, leo tempor bibendum auctor, ligula lorem ultricies tellus, ac auctor lorem libero a sapien. Donec ac suscipit tellus. Quisque vitae placerat lorem. In ullamcorper malesuada risus, eget fringilla lacus dignissim at. Proin faucibus, nibh vel molestie scelerisque, lorem urna tempus lacus, id viverra odio dolor sit amet odio. In hendrerit, orci vel scelerisque luctus, arcu purus aliquet turpis, a bibendum nulla est et dui.
+# Banco de Dados
+   
+São um conjunto de arquivos relacionados entre si com registros sobre pessoas, lugares ou coisas, são coleções organizadas de dados. Sempre que for possível agrupar informações que se relacionam e tratam de um mesmo assunto, posso dizer que tenho um banco de dados.
+   
+Já um sistema de gerenciamento de banco de dados (SGBD) é um software que possui recursos capazes de manipular as informações do banco de dados e interagir com o usuário. Um exemplo de SGBD é: 
 
-Praesent pellentesque posuere lectus eget condimentum. Ut vitae nisi diam. Quisque vitae ipsum magna. Aliquam pretium laoreet tortor quis volutpat. Donec congue, nisl nec consequat varius, enim enim consectetur felis, a viverra libero elit in ligula. Cras posuere ipsum vel mi scelerisque, eu interdum velit elementum. Duis eu posuere est. Ut vestibulum urna eu viverra fringilla. Aliquam tempus nisi eros, vitae posuere nulla fermentum in. Praesent et justo eros. Proin eleifend justo vel justo condimentum ullamcorper. Curabitur vel vehicula lectus. Mauris sed ex ac ipsum ultrices bibendum at id tortor. Aenean dictum magna ac nisi posuere euismod. Ut fermentum, nulla quis venenatis varius, risus nulla dictum felis, ut dictum eros libero vitae justo.
+![ImagemPostgreSQL](https://lh4.googleusercontent.com/ZthMHOYo9r5QnYduoOBsdzGoUhQ69PieuabvgA27bd8lBuI4QMi2-uY66wWxxELL1kXti140zD0ZEmlVKmonMHc8fScH3QoqGfkefveKvwprj49otRV8OOr_RBfkXSPZ6E0CkVjJ)É um Sistema Gerenciador de Bancos de dados Relacional estendido e de código aberto(SGBDR- o R é porque ele é relacional). Existem vários Modelos de Base de Dados, alguns exemplos são: Modelo em Rede, Modelo Hierárquico, Modelo Relacional,Orientado a Objetos. 
+Para criar a base de dados o SGBD utiliza uma linguagem. A mais utilizada atualmente é o SQL, (Structured Query Language). Para armazenar um dado em um banco de dados, é necessário criar tabelas e dentro delas são criadas colunas, onde as informações são armazenadas.
 
-Integer aliquam tellus vel libero eleifend, condimentum euismod odio tincidunt. Vivamus felis ante, faucibus quis urna nec, volutpat pulvinar quam. Cras dictum libero ac augue bibendum, et pretium ex pharetra. Vivamus suscipit et erat id eleifend. Proin vulputate, quam sit amet pretium fermentum, felis neque scelerisque metus, a rhoncus quam nisi sit amet urna. Sed et commodo libero, laoreet rutrum eros. Vivamus tempor, leo eget scelerisque molestie, sapien augue viverra tortor, et semper arcu eros ut elit. Sed pulvinar ipsum in semper facilisis.
+**Comandos SQL(utilizando postgreSQL)**
+
+```PostgreSQL
+CREATE TABLE pessoa (
+id serial primary key,
+nome varchar(255));
+```
+O comando CREATE TABLE cria uma tabela, pessoa é um exemplo de nome para sua tabela e dentro dos () vai as suas colunas, como exemplos temos  id e nome.
+
+```PostgreSQL
+INSERT INTO TABLE pessoa VALUES (1,”Ingrid”);
+```                                                                                                                                                                                            
+O comando INSERT INTO TABLE insere na tabela pessoa respectivamente os seguintes valores: id=1 e nome=Ingrid.
+
+```PostgreSQL
+SELECT * FROM  pessoa;
+```
+*SELECT* Seleciona toda a tabela pessoa.
+
+```PostgreSQL
+UPDATE pessoa SET nome = ‘Brenda’ WHERE id = 1; 
+```
+*UPDATE* Atualiza o nome do cliente para Brenda se o Id for igual a 1
+
+```PostgreSQL
+DELETE FROM pessoa WHERE id = 1;
+```
+*DELETE* exclui as linhas que o id é =1 na tabela especificada. Se não existir esse id, o efeito é excluir todas as linhas da tabela.

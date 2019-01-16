@@ -146,3 +146,58 @@ numero--;
 Opções de operadores de lógicos
 
 ![imagemExemplo3](https://lh4.googleusercontent.com/dHuYPLRnGJUqXvaTPgKg0Jh3yewEU5UGkx6Hk9jHE4VsbQm3l0tWcxD6BcS7ywaHTsbs2g_RiFTjAdJPWAhHUdkwx8alR-EJJZ3PXBbr0w5Chi8Lolb_cLZw6B61DhpxwdTUFSd8)
+
+**ENUM**
+
+Em Java, uma enum é um tipo no qual declaramos um conjunto de valores constantes pré-definidos. usamos a palavra chave __enum__ que antecede seu nome.
+
+***Exemplo:***
+
+```java
+public enum Turno {
+    MANHA, TARDE, NOITE;
+}
+```
+
+Por serem os campos de uma enum constantes, seus nomes são escritos em letras maiúsculas.
+
+Para atribuir um desses valores a uma variável podemos fazer como no código abaixo:
+
+***Exemplo:***
+
+`
+Turno  turno = Turno.MANHA;
+`
+
+**Construtores em java**
+
+***Para que servem?***
+
+Métodos construtores servem para construir um objeto da classe. Ao contrário de outros métodos, um construtor não pode ser chamado diretamente. Para isso usamos a palavra new para criar o objeto e então atribuí-lo a uma variável de mesmo tipo. 
+
+**Os 4 pilares da Programação Orientada a Objetos**
+***Abstração***
+
+É utilizada para a definição de entidades do mundo real. Sendo onde são criadas as classes. Essas entidades são consideradas tudo que é real, tendo como consideração as suas características e ações.
+
+![exemploImagem](https://lh5.googleusercontent.com/KsUZuY1T5eIEfjKn9Pdf5zzpTHsuCRF9V8Zd_E0Uf9tkKpiQVEJSsiD08OhRMvj6rIOUkH3_o7avmTJMXlqsVx6aPl_yorXLTnw4eeg0uB4DtY8zp__StPNB9qfeHC1FiU1YQlvd)
+
+Encapsulamento
+
+É a técnica utilizada para esconder uma ideia, ou seja, não expor detalhes internos para o usuário, tornando partes do sistema mais independentes possível. Por exemplo, quando um controle remoto estraga apenas é trocado ou consertado o controle e não a televisão inteira. Nesse exemplo do controle remoto, acontece a forma clássica de encapsulamento, pois quando o usuário muda de canal não se sabe que programação acontece entre a televisão e o controle para efetuar tal ação.
+
+![Explicação](https://lh6.googleusercontent.com/fe5tbRM9vzg0cpzT442alHz1anacJK4qLBOB1z4Gf-PxUCM9YXvL1PqNOR4nQYqGl3m8jeY1MIYWJmsMNgVYBD8ubJruT8sXIf7qVwc)
+
+**Herança**
+
+Na Programação Orientada a Objetos o significado de herança tem o mesmo significado para o mundo real. Assim como um filho pode herdar alguma característica do pai, na Orientação a Objetos é permitido que uma classe possa herdar atributos e métodos da outra, tendo apenas uma restrição para a herança. Os modificadores de acessos das classes, métodos e atributos só podem estar com visibilidade ***public*** e ***protected*** para que sejam herdados.
+
+![imagem](https://lh4.googleusercontent.com/R93m_BhnAlI0L8iQVV_A1wCd99BBrGGGrgaSdwZDF2MN_vKSHb0XPt6J2E4qs4DMUb5VhWxHHS1U2oLZ-jW5zbgnvlTfJ9JGtZj5OFsjyYp6Z43ZgbW6f7HtwXmPPOCL00zaj-fZ)
+
+**Polimorfismo**
+
+O polimorfismo consiste na alteração do funcionamento interno de um método herdado de um objeto pai.
+
+***Exemplo:***
+
+![exemplo](https://lh3.googleusercontent.com/D4Ia9jLgKQ__CX7RtXIjPgS-Wgn0qO-fwV2F-vcuLcp6ckrArMioa6ZR4lyrsd9kWEawTEq_NRsx0JlMtf5urViGvmveo9bXQsqvYfBGMznKsyfGqTNORsbmABTNoccoat3qD77O)
