@@ -7,7 +7,7 @@ categories: java
 # Java
 ## Declaração e utilização de classes	
 
-No Java o seu primeiro código será escrito dentro de um método de uma classe.Uma classe é um elemento do código Java que utilizamos para representar objetos do mundo real. Podemos informar a visibilidade da classe, que pode ser public, private ou default.Utilizamos a palavra reservada class seguida pelo nome da classe. Logo após, entre chaves, definimos os elementos a ela relacionados: atributos, construtores e métodos.
+No Java o seu primeiro código será escrito dentro de um método de uma classe. Uma classe é um elemento do código Java que utilizamos para representar objetos do mundo real. Podemos informar a visibilidade da classe, que pode ser ``public``, ``private`` ou ``default``. Utilizamos a palavra reservada ``class`` seguida pelo nome da classe. Logo após, entre chaves, definimos os elementos a ela relacionados: atributos, construtores e métodos.
 
 ***Exemplo:***
 
@@ -31,15 +31,14 @@ public class Carro {
 ```
 ***Exemplo de instanciação de classe:***
 
-chama-se instância de uma classe, um objeto cujo comportamento e estado são definidos pela classe. 
+Chama-se instância de uma classe, um objeto cujo comportamento e estado são definidos pela classe. 
 
 ```
-Carro carrinho= new Carro();
+Carro carrinho = new Carro();
 ```
 **EXTENDS**
 
-Quando uma classe precisa herdar características de outra, 
-fazemos uso de herança. Em Java, é representado pela palavra-chave EXTENDS. todos os atributos e métodos não-privados serão herdados pela outra classe. Por isso, é comum dizer que a classe herdada é pai da classe que herdou seus elementos.
+Quando uma classe precisa herdar características de outra, fazemos uso de herança. Em Java, é representado pela palavra-chave ``extends``. Todos os atributos e métodos não-privados serão herdados pela outra classe. Por isso, é comum dizer que a classe herdada é pai da classe que herdou seus elementos.
 
 **Nota:** Em Java não existe herança múltipla. Assim, uma classe pode herdar apenas de outra.
 
@@ -57,11 +56,11 @@ public class Produto {
    }
 }
 ```
-A palavra-chave Extends foi utilizada na declaração da classe Computador. Assim, além do atributo processador, devido à herança, a classe Computador também terá os atributos valorCompra e valorVenda, sem que seja necessário declará-los novamente, sem repetir código.
+A palavra-chave ``extends`` foi utilizada na declaração da classe Computador. Assim, além do atributo processador, devido à herança, a classe Computador também terá os atributos valorCompra e valorVenda, sem que seja necessário declará-los novamente, sem repetir código.
 
 **IMPLEMENTS**
 
-Quando uma classe precisa implementar os métodos de uma interface, utiliza-se a palavra reservada IMPLEMENTS:		
+Quando uma classe precisa implementar os métodos de uma interface, utiliza-se a palavra reservada ``implements``:		
 
 ***Exemplo:***
 
@@ -80,11 +79,11 @@ public class Televisao implements IProduto {
     }
 }
 ```
-A anotação __@override__ explicita os métodos que foram codificados/sobrescritos.
+A anotação ``@Override`` explicita os métodos que foram codificados/sobrescritos.
 
 **Nota:** Podemos implementar várias interfaces. Para isso, basta separá-las por vírgula.
 
-Também é possível utilizar __extends__ conjuntamente com __implements__. Trata-se de um recurso útil quando deseja-se tornar uma classe mais específica e implementar novos comportamentos definidos em interfaces.
+Também é possível utilizar ``extends`` conjuntamente com ``implements`. Trata-se de um recurso útil quando deseja-se tornar uma classe mais específica e implementar novos comportamentos definidos em interfaces.
 
 ***Exemplo:***
 
@@ -97,7 +96,7 @@ public class ClasseFilha extends ClassePai implements NomeInterface {
 **Regras para nomeação de classes:**
 * Manter o nome simples e descritivo;
 * Usar palavras inteiras, isto é, sem siglas e abreviações;
-* A primeira letra de cada palavra devem ser maiúsculas.
+* A primeira letra de cada palavra devem ser maiúsculas. (camel casing)
 
 ## Variáveis
 
@@ -112,8 +111,7 @@ public String nome;
 
 ## Constantes
 
-Uma constante é declarada quando precisamos lidar com dados que não devem ser alterados durante a execução do programa. Para isso, utilizamos a palavra reservada __
-final__ para que a variável seja inicializada uma única vez.
+Uma constante é declarada quando precisamos lidar com dados que não devem ser alterados durante a execução do programa. Para isso, utilizamos a palavra reservada ``final`` para que a variável seja inicializada uma única vez.
 
 ***Exemplo:***
 
@@ -149,7 +147,7 @@ Opções de operadores de lógicos
 
 **ENUM**
 
-Em Java, uma enum é um tipo no qual declaramos um conjunto de valores constantes pré-definidos. usamos a palavra chave __enum__ que antecede seu nome.
+Em Java, uma enum é um tipo no qual declaramos um conjunto de valores constantes pré-definidos. usamos a palavra chave ``enum`` que antecede seu nome.
 
 ***Exemplo:***
 
@@ -166,14 +164,14 @@ Para atribuir um desses valores a uma variável podemos fazer como no código ab
 ***Exemplo:***
 
 `
-Turno  turno = Turno.MANHA;
+Turno turno = Turno.MANHA;
 `
 
 **Construtores em java**
 
 ***Para que servem?***
 
-Métodos construtores servem para construir um objeto da classe. Ao contrário de outros métodos, um construtor não pode ser chamado diretamente. Para isso usamos a palavra new para criar o objeto e então atribuí-lo a uma variável de mesmo tipo. 
+Métodos construtores servem para construir um objeto da classe. Ao contrário de outros métodos, um construtor não pode ser chamado diretamente. Para isso usamos a palavra ``new`` para criar o objeto e então atribuí-lo a uma variável de mesmo tipo. 
 
 **Os 4 pilares da Programação Orientada a Objetos**
 ***Abstração***
@@ -182,15 +180,15 @@ Métodos construtores servem para construir um objeto da classe. Ao contrário d
 
 ![exemploImagem](https://lh5.googleusercontent.com/KsUZuY1T5eIEfjKn9Pdf5zzpTHsuCRF9V8Zd_E0Uf9tkKpiQVEJSsiD08OhRMvj6rIOUkH3_o7avmTJMXlqsVx6aPl_yorXLTnw4eeg0uB4DtY8zp__StPNB9qfeHC1FiU1YQlvd)
 
-Encapsulamento
+***Encapsulamento***
 
 É a técnica utilizada para esconder uma ideia, ou seja, não expor detalhes internos para o usuário, tornando partes do sistema mais independentes possível. Por exemplo, quando um controle remoto estraga apenas é trocado ou consertado o controle e não a televisão inteira. Nesse exemplo do controle remoto, acontece a forma clássica de encapsulamento, pois quando o usuário muda de canal não se sabe que programação acontece entre a televisão e o controle para efetuar tal ação.
 
 ![Explicação](https://lh6.googleusercontent.com/fe5tbRM9vzg0cpzT442alHz1anacJK4qLBOB1z4Gf-PxUCM9YXvL1PqNOR4nQYqGl3m8jeY1MIYWJmsMNgVYBD8ubJruT8sXIf7qVwc)
 
-**Herança**
+***Herança***
 
-Na Programação Orientada a Objetos o significado de herança tem o mesmo significado para o mundo real. Assim como um filho pode herdar alguma característica do pai, na Orientação a Objetos é permitido que uma classe possa herdar atributos e métodos da outra, tendo apenas uma restrição para a herança. Os modificadores de acessos das classes, métodos e atributos só podem estar com visibilidade ***public*** e ***protected*** para que sejam herdados.
+Na Programação Orientada a Objetos o significado de herança tem o mesmo significado para o mundo real. Assim como um filho pode herdar alguma característica do pai, na Orientação a Objetos é permitido que uma classe possa herdar atributos e métodos da outra, tendo apenas uma restrição para a herança. Os modificadores de acessos das classes, métodos e atributos só podem estar com visibilidade ``public`` e ``protected`` para que sejam herdados.
 
 ![imagem](https://lh4.googleusercontent.com/R93m_BhnAlI0L8iQVV_A1wCd99BBrGGGrgaSdwZDF2MN_vKSHb0XPt6J2E4qs4DMUb5VhWxHHS1U2oLZ-jW5zbgnvlTfJ9JGtZj5OFsjyYp6Z43ZgbW6f7HtwXmPPOCL00zaj-fZ)
 
