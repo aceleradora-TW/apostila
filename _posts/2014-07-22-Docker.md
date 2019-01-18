@@ -1,0 +1,54 @@
+---
+layout: post
+title: "Docker"
+date: 2014-07-22 16:25:06 -0700
+categories: Docker
+---
+
+#Docker
+
+##O que é o Docker?
+
+Docker é uma plataforma open-source escrita em GO cuja finalidade é criar ambientes isolados para aplicações e serviços. Com esse isolamento o docker garante que cada container tenha tudo que um serviço precisa para ser executado.
+
+Uma das vantagens dessa abordagem é você poder iniciar esse serviço em qualquer máquina que sempre irá rodar da forma esperada, com bibliotecas, dependências e permissões configuradas da forma correta, sem surpresas.
+
+**Instalando o Docker**
+
+`
+apt-get install docker.io
+`
+
+**Comandos Básicos**
+
+```
+docker pull [nome da imagem]; 
+```
+Baixa a imagem.
+
+```
+docker images;
+```
+Lista todas as imagens baixadas
+
+```
+docker run [nome da imagem]; 
+```
+Inicia um container da imagem que você escolheu.
+
+```
+docker ps; 
+```
+ Lista os containers em execução
+ 
+```
+docker stop
+```
+Para a execução de todos dos containers
+ 
+```
+docker rm
+```
+Exclui todos os containers criados
+
+***Nota:*** Para parar/excluir um container especifico, é só colocar o nome do contaneir no final dos comandos listados. 
