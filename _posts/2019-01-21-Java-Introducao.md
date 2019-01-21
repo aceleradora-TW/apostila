@@ -109,7 +109,7 @@ A anotação ``@Override`` explicita os métodos que foram codificados/sobrescri
 
 **Nota:** Podemos implementar várias interfaces. Para isso, basta separá-las por vírgula.
 
-Também é possível utilizar ``extends`` conjuntamente com ``implements`. Trata-se de um recurso útil quando deseja-se tornar uma classe mais
+Também é possível utilizar ``extends`` conjuntamente com ``implements``. Trata-se de um recurso útil quando deseja-se tornar uma classe mais
 específica e implementar novos comportamentos definidos em interfaces.
 
 ***Exemplo:***
