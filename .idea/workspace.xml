@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="287c270b-fc29-4f47-80ff-b2284877f16e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_posts/2014-07-22-Docker.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2014-07-22-Hibernate.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,18 +13,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Html.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="680">
-                <caret line="147" column="181" selection-start-line="147" selection-start-column="181" selection-end-line="147" selection-end-column="181" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Thymeleaf.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -39,8 +27,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Heroku.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="681">
-                <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
+              <first_editor relative-caret-position="576">
+                <caret line="124" selection-start-line="124" selection-end-line="124" />
               </first_editor>
               <second_editor />
             </state>
@@ -48,6 +36,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Hibernate.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="621">
+                <caret line="79" column="1" lean-forward="true" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Docker.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -63,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Bulma.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="606">
+              <first_editor relative-caret-position="1950">
                 <caret line="130" selection-start-line="130" selection-end-line="130" />
               </first_editor>
               <second_editor />
@@ -75,8 +75,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Logica-De-Programacao.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="681">
-                <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+              <first_editor relative-caret-position="606">
+                <caret line="46" selection-start-line="46" selection-end-line="46" />
               </first_editor>
               <second_editor />
             </state>
@@ -88,7 +88,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="345">
-                <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+                <caret line="23" selection-start-line="23" selection-end-line="23" />
               </first_editor>
               <second_editor />
             </state>
@@ -100,7 +100,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="3015">
-                <caret line="201" lean-forward="true" selection-start-line="201" selection-end-line="201" />
+                <caret line="201" selection-start-line="201" selection-end-line="201" />
               </first_editor>
               <second_editor />
             </state>
@@ -111,7 +111,7 @@
         <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Javascript.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="561">
+              <first_editor relative-caret-position="795">
                 <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
               </first_editor>
               <second_editor />
@@ -123,8 +123,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Entendendo-Http.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="60">
-                <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <first_editor relative-caret-position="150">
+                <caret line="10" selection-start-line="10" selection-end-line="10" />
               </first_editor>
               <second_editor />
             </state>
@@ -151,6 +151,7 @@
         <option value="$PROJECT_DIR$/_posts/2014-07-22-CircleCi.md" />
         <option value="$PROJECT_DIR$/_posts/2014-07-22-Heroku.md" />
         <option value="$PROJECT_DIR$/_posts/2014-07-22-Docker.md" />
+        <option value="$PROJECT_DIR$/_posts/2014-07-22-Hibernate.md" />
       </list>
     </option>
   </component>
@@ -165,7 +166,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -192,16 +192,18 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547833335538" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548069562348" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -234,17 +236,18 @@
       <workItem from="1547554357506" duration="7352000" />
       <workItem from="1547638297786" duration="7960000" />
       <workItem from="1547825446436" duration="7858000" />
+      <workItem from="1548067747708" duration="1734000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24413000" />
+    <option name="totallyTimeSpent" value="26147000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-1" width="1375" height="901" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.5252069" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2633559" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -349,71 +352,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Javascript.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="561">
-            <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Entendendo-Http.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="60">
-            <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Html.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="680">
+          <first_editor relative-caret-position="2205">
             <caret line="147" column="181" selection-start-line="147" selection-start-column="181" selection-end-line="147" selection-end-column="181" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Bulma.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="606">
-            <caret line="130" selection-start-line="130" selection-end-line="130" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2012-05-22-Java-Classes.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="3015">
-            <caret line="201" lean-forward="true" selection-start-line="201" selection-end-line="201" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-CircleCi.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="345">
-            <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Logica-De-Programacao.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="681">
-            <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
           </first_editor>
           <second_editor />
         </state>
@@ -427,11 +370,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Heroku.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Bulma.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="681">
-            <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
+          <first_editor relative-caret-position="1950">
+            <caret line="130" selection-start-line="130" selection-end-line="130" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2012-05-22-Java-Classes.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="3015">
+            <caret line="201" selection-start-line="201" selection-end-line="201" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Javascript.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="795">
+            <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Entendendo-Http.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="150">
+            <caret line="10" selection-start-line="10" selection-end-line="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-CircleCi.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="345">
+            <caret line="23" selection-start-line="23" selection-end-line="23" />
           </first_editor>
           <second_editor />
         </state>
@@ -442,6 +425,36 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="621">
             <caret line="53" column="120" selection-start-line="53" selection-start-column="120" selection-end-line="53" selection-end-column="120" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Logica-De-Programacao.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="606">
+            <caret line="46" selection-start-line="46" selection-end-line="46" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Heroku.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="576">
+            <caret line="124" selection-start-line="124" selection-end-line="124" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2014-07-22-Hibernate.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="621">
+            <caret line="79" column="1" lean-forward="true" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
           </first_editor>
           <second_editor />
         </state>
