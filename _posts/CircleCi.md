@@ -5,9 +5,9 @@ date: 2014-07-22 16:25:06 -0700
 categories: CircleCi
 ---
 
-#CircleCi
+# CircleCi
 
-###Beleza, então como começar?
+### Beleza, então como começar?
   Faça o cadastro no https://circleci.com/ e inicie o projeto selecionando o seu repositório (github).
   
   Agora Vá em *Add projects* que irá listar todos os seus projetos, escolha um e clique *Set Up Project*

@@ -5,9 +5,9 @@ date: 2014-07-22 16:25:06 -0700
 categories: Heroku
 ---
 
-#Heroku
+# Heroku
 
-##PAAS (Platform as a service)
+## PAAS (Platform as a service)
 
 *O QUE É?*
 
@@ -51,10 +51,10 @@ Será necessário o arquivo “pom.xml” na raiz do projeto.
 * Escalabilidade.
 * Agilidade para disponibilizar uma aplicação na web.
 
-####DEPLOY DA APLICAÇÃO
-####AMBIENTES STAGING - DEV
+#### DEPLOY DA APLICAÇÃO
+#### AMBIENTES STAGING - DEV
 
-#####PROCFILE?!?
+##### PROCFILE?!?
 
 ![imagem](https://lh3.googleusercontent.com/jPwcSDYyjM4Xv6AsgLk9w0rD4xR2AlDzQicckL_7_owzApyH-XjwObgJu8IbYuloJVc8ztXEzmJATQDIlXwEVPHEJ-7MYotN0txu5R03IfEDN2m7dwAl5Wm85NBla6JqhceTwiFa_04)
 
@@ -66,13 +66,13 @@ A plataforma detecta automaticamente a linguagem;
 
 Procfile é recomendado para ter maior controle e flexibilidade na sua aplicação.
 
-#####Tipo do serviço: ação do Heroku
+##### Tipo do serviço: ação do Heroku
 
 ./gradlew assemble - gera o .jar
 
 apontar o jar criado no Procfile
 
-####HEROKU LOGS
+#### HEROKU LOGS
 
 Os logs são um fluxo de eventos com registro de data e hora agregados dos fluxos de saída de todos os processos em execução.
 
@@ -81,11 +81,11 @@ Os logs são um fluxo de eventos com registro de data e hora agregados dos fluxo
 ```
 ![imagem](https://lh3.googleusercontent.com/dfXzNzrudJwrcgiir_cFFhW91LCEmYkuhuwaVPy4nbfC2p0fen4oySq7UkJogzkyHxii4xfNZaTIAFpgv-4N6Q3SQ7hdzvYOuY5rFD7j7u-Sy2g-kCh_ZWADZTVlzBAXAN9lysXq-G0)
 
-####HEROKU LOGS continuação
+#### HEROKU LOGS continuação
 
 ![imagem](https://lh5.googleusercontent.com/KYypKSs9IaOjzXkNzjpFzqGi-R4qVhF59M97_yzTOrWbHB6vpbKebheunyg0s4iWUOqPFG6W0-N5kQgkNKF1bHDWQVlbhyJajjfD8zcehmufNEEt370ZPRfCoSBHAkr5vMIspAdkdFI)
 
-####COMO CONECTA O BANCO NO HEROKU?
+#### COMO CONECTA O BANCO NO HEROKU?
 
 **Configurações necessárias:**
 
@@ -96,15 +96,15 @@ Antes de iniciar o processo de configuração do ambiente, deve-se ter o heroku 
 ```
 $ heroku addons:create heroku-postgresql:hobby-dev 
 ```
-####Heroku Add-ons
+#### Heroku Add-ons
 
 ***Clique no link***
 https://elements.heroku.com/addons
 
-####COMO FUNCIONA O BANCO NO HEROKU?
+#### COMO FUNCIONA O BANCO NO HEROKU?
 O postgreSQL fica rodando no servidor junto com a aplicação.
 
-####E O CRUD?
+#### E O CRUD?
 **Comando para habilitar o Heroku CLI, Fazer os comandos do SQL direto para o Heroku:**
 ```
 $ heroku pg:psql -a <NOME DA APLICAÇÃO>

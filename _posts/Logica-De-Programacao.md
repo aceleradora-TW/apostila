@@ -4,9 +4,9 @@ title: "Logica-de-Programacao"
 date: 2014-07-22 16:25:06 -0700
 categories: backend
 ---
-#Lógica de Programação
+# Lógica de Programação
 
-##Tipos de Dados
+## Tipos de Dados
 
 A linguagem Java oferece diversos tipos de dados com os quais podemos trabalhar. Há basicamente duas categorias em que se encaixam os tipos de dados: tipos primitivos e tipos de referências. Os tipos primitivos correspondem a dados mais simples ou escalares, enquanto os tipos de referências consistem em arrays, classes e interfaces. Vamos a uma descrição curta sobre cada um dos tipos:
 
