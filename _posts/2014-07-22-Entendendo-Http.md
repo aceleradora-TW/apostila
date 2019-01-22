@@ -47,4 +47,4 @@ Os códigos HTTP servem como uma ferramenta para que saibamos o que aconteceu co
 * __500__: Significa que alguma erro aconteceu no servidor e que ele não pode responder a nossa requisição. 
 
 Estes são alguns dos mais utilizados, podemos encontrar uma lista mais detalhada em:
-https://www.restapitutorial.com/httpstatuscodes.html
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
