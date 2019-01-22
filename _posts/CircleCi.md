@@ -1,0 +1,23 @@
+---
+layout: post
+title: "CircleCi"
+date: 2014-07-22 16:25:06 -0700
+categories: CircleCi
+---
+
+# CircleCi
+
+### Beleza, então como começar?
+  Faça o cadastro no https://circleci.com/ e inicie o projeto selecionando o seu repositório (github).
+  
+  Agora Vá em *Add projects* que irá listar todos os seus projetos, escolha um e clique *Set Up Project*
+  
+  ![imagem](https://cdn-images-1.medium.com/max/1400/1*J2B3haJ45v5x6S9TuTHZVQ.png)
+  
+  Agora escolha o Sistema Operacional e a linguagem.
+  
+  ![imagem](https://cdn-images-1.medium.com/max/1400/1*9-juW30_LU-S1QFqYZ1F2A.png)
+  
+  Crie uma pasta nomeada .circleci adicione um arquivo config.yml(Preencha o config.yml com o conteúdo do arquivo.yml (mostrado abaixo no site)).
+          
+  E então atualize o arquivo .yml para ficar de acordo com seu projeto.                                                      
