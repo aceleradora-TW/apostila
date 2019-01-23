@@ -5,9 +5,6 @@ date: 2014-07-22 16:25:06 -0700
 categories: Hibernate
 ---
 
-# Hibernate
-
-
 **O que é?**
 
 O Hibernate é um framework utilizado para mapear as classes java que são suas entidades de negócio para tabelas no banco relacional, economizando tempo.

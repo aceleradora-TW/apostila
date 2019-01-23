@@ -1,11 +1,9 @@
 ---
 layout: post
-title: "Javascript"
+title: "JavaScript"
 date: 2014-07-22 16:25:06 -0700
 categories: frontend
 ---
-
-# JavaScript
 
 **Para que Serve:**
 

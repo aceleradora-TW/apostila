@@ -1,11 +1,9 @@
 ---
 layout: post
-title: "PostgreSQL"
+title: "Banco de Dados"
 date: 2013-06-22 16:25:06 -0700
 categories: banco-de-dados
 ---
-
-# Banco de Dados
    
 São um conjunto de arquivos relacionados entre si com registros sobre pessoas, lugares ou coisas, são coleções organizadas de dados. Sempre que for possível agrupar informações que se relacionam e tratam de um mesmo assunto, posso dizer que tenho um banco de dados.
    
@@ -14,7 +12,7 @@ Já um sistema de gerenciamento de banco de dados (SGBD) é um software que poss
 ![ImagemPostgreSQL](https://lh4.googleusercontent.com/ZthMHOYo9r5QnYduoOBsdzGoUhQ69PieuabvgA27bd8lBuI4QMi2-uY66wWxxELL1kXti140zD0ZEmlVKmonMHc8fScH3QoqGfkefveKvwprj49otRV8OOr_RBfkXSPZ6E0CkVjJ)É um Sistema Gerenciador de Bancos de dados Relacional estendido e de código aberto(SGBDR- o R é porque ele é relacional). Existem vários Modelos de Base de Dados, alguns exemplos são: Modelo em Rede, Modelo Hierárquico, Modelo Relacional,Orientado a Objetos. 
 Para criar a base de dados o SGBD utiliza uma linguagem. A mais utilizada atualmente é o SQL, (Structured Query Language). Para armazenar um dado em um banco de dados, é necessário criar tabelas e dentro delas são criadas colunas, onde as informações são armazenadas.
 
-**Comandos SQL(utilizando postgreSQL)**
+**Comandos SQL(utilizando PostgreSQL)**
 
 ```PostgreSQL
 CREATE TABLE pessoa (

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Logica-de-Programacao"
+title: "Logica de Programacao"
 date: 2014-07-22 16:25:06 -0700
 categories: backend
 ---
-# Lógica de Programação
+
 
 ## Tipos de Dados
 

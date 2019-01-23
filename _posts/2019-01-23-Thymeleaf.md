@@ -4,9 +4,7 @@ title: "Thymeleaf"
 date: 2014-07-22 16:25:06 -0700
 categories: frontend
 ---
- 
-# Thymeleaf
- 
+  
 ## O que é?
 
  Thymeleaf é um motor de templates para Java, ou seja, um mecanismo com capacidade para processar e criar HTML, XML, JavaScript, CSS e texto.
