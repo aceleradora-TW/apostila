@@ -8,7 +8,7 @@ categories: frontend
 ## O que é?
 
  Thymeleaf é um motor de templates para Java, ou seja, um mecanismo com capacidade para processar e criar HTML, XML, JavaScript, CSS e texto.
- Os templates são escritos, em sua maioria, com código HTML5 sendo mais adequado para servir XHTML / HTML5 na camada de visualização de aplicativos da Web baseados em MVC, mas pode processar arquivos mesmo em ambientes off-line e tem boa integração com o Spring Framework
+ Os templates são escritos, em sua maioria, com código HTML5 sendo mais adequado para servir XHTML / HTML5 na camada de visualização de aplicativos da Web baseados em MVC, mas pode processar arquivos mesmo em ambientes off-line e tem boa integração com o Spring Framework.
 
 ## Como Funciona:
 
@@ -40,13 +40,19 @@ No código:
 
 URLs absolutas permitem que você crie links para outros servidores. Eles começam especificando um nome de protocolo **(http:// ou https://)**
 
-![imagem](file:///home/aluno6/Pictures/Screenshot%20from%202019-01-22%2012-55-49.png)
+```
+<a th:href="@{http://www.thymeleaf/documentation.html}">
+```
 
 Os tipos de URLs mais usados ​​são os relativos ao contexto. Estas são as URLs que devem ser relativas à raiz da aplicação Web.
 URLs relativos ao contexto começam com /:
 
-![imagem](file:///home/aluno6/Pictures/Screenshot%20from%202019-01-22%2012-59-00.png)
+```
+<a th:href="@{/order/list}">
+```
 
 Basicamente um for each, onde percorre uma lista de objetos(no nosso caso mensagens)
 
-![imagem](file:///home/aluno6/Pictures/Screenshot%20from%202019-01-22%2013-17-21.png)
+```
+ <tr th:each="message : ${messages}"></tr>
+```

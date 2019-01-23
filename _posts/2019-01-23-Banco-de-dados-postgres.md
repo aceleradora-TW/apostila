@@ -29,14 +29,14 @@ O comando INSERT INTO TABLE insere na tabela pessoa respectivamente os seguintes
 ```PostgreSQL
 SELECT * FROM  pessoa;
 ```
-*SELECT* Seleciona toda a tabela pessoa.
+Seleciona toda a tabela pessoa.
 
 ```PostgreSQL
 UPDATE pessoa SET nome = ‘Brenda’ WHERE id = 1; 
 ```
-*UPDATE* Atualiza o nome do cliente para Brenda se o Id for igual a 1
+Atualiza o nome do cliente para Brenda se o Id for igual a 1
 
 ```PostgreSQL
 DELETE FROM pessoa WHERE id = 1;
 ```
-*DELETE* exclui as linhas que o id é =1 na tabela especificada. Se não existir esse id, o efeito é excluir todas as linhas da tabela.
+Exclui as linhas onde o id é igual a 1 na tabela especificada. Se o id não for especificado, o efeito é excluir todas as linhas da tabela.
