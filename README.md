@@ -2,7 +2,9 @@
 
 Baseado no template [Jekyll Clean](https://github.com/scotte/jekyll-clean).
 
-Para visualizar a apostila, acesse: https://aceleradora-tw.github.io/apostila/
+Existem duas opções de visualização da apostila: 
+- Github Pages: https://aceleradora-tw.github.io/apostila/
+- Gitbook: https://aceleradora-tw.gitbook.io/agil/_posts/
 
 
 # Conteúdo
