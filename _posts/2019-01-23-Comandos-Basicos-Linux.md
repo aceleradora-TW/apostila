@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Comandos Básicos"
+title: "Linux"
 date: 2013-05-22 16:25:06 -0700
 categories: linux
 ---
 
-# Linux
+## Comandos Básicos
 
 `cd [nome da pasta/]`
 Comando para entrar ou mudar de pasta.

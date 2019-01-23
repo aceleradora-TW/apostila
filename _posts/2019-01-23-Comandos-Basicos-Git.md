@@ -1,11 +1,9 @@
 ---
 layout: post
-title: "Comandos Básicos do Git"
+title: "Git e GitHub"
 date: 2013-05-22 16:25:06 -0700
 categories: git
 ---
-                       
-# Git e GitHub
 
 ## Git
 
@@ -23,7 +21,7 @@ Você instalará o Git com este comando (via terminal - Linux):
 
 Após isso já poderá realizar os comando do git pelo terminal.
 
-### Comando básicos do Git 
+### Comando básicos  
 
 `git clone [link da branch]`
 Para clonar o projeto do repositório;
