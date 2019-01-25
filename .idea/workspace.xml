@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="287c270b-fc29-4f47-80ff-b2284877f16e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_posts/2019-01-23-Spring-Introducao.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-01-23-Spring-Introducao.md" afterDir="false" />
-    </list>
+    <list default="true" id="287c270b-fc29-4f47-80ff-b2284877f16e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,12 +14,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2019-01-23-Spring-Introducao.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="455">
+              <first_editor relative-caret-position="486">
                 <caret line="141" column="92" selection-start-line="141" selection-start-column="92" selection-end-line="141" selection-end-column="92" />
-                <folding>
-                  <element signature="e#203#204#0" expanded="true" />
-                  <element signature="e#239#240#0" expanded="true" />
-                </folding>
               </first_editor>
               <second_editor />
             </state>
@@ -140,7 +134,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548433492273" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548434422152" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -184,12 +178,12 @@
       <workItem from="1548245368762" duration="5850000" />
       <workItem from="1548415733794" duration="7000" />
       <workItem from="1548415748037" duration="4221000" />
-      <workItem from="1548430134490" duration="3352000" />
+      <workItem from="1548430134490" duration="4282000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49990000" />
+    <option name="totallyTimeSpent" value="50920000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1375" height="904" extended-state="6" />
@@ -408,12 +402,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2019-01-23-Spring-Introducao.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="455">
+          <first_editor relative-caret-position="486">
             <caret line="141" column="92" selection-start-line="141" selection-start-column="92" selection-end-line="141" selection-end-column="92" />
-            <folding>
-              <element signature="e#203#204#0" expanded="true" />
-              <element signature="e#239#240#0" expanded="true" />
-            </folding>
           </first_editor>
           <second_editor />
         </state>

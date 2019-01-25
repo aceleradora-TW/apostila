@@ -51,20 +51,13 @@ Em segundo lugar, ele é customizável, ou seja, uma estrutura opinativa não se
 
 Por exemplo, se você prefere o Maven, pode facilmente fazer alterações de **`<dependência>`** no seu arquivo **pom** para substituir o valor padrão do Spring Boot.
 
-**Como se configura:**
+**Por onde iniciar?** 
 
-Basta que você diga pra ele quais módulos deseja utilizar (WEB, Template, Persistência, Segurança, etc.) que ele vai reconhecer e configurar.
-
-Você escolhe os módulos que deseja através dos *starters* que inclui no **pom.xml** do seu projeto. Eles, basicamente, são dependências que agrupam outras dependências. Inclusive, como temos esse grupo de dependências representadas pelo starter, nosso pom.xml acaba por ficar mais organizado.
-Não esqueça que você pode criar as suas customizações de acordo com suas necessidades.
-
-E por onde iniciar? 
 Existem várias formas de se criar um projeto com Spring Boot. Você pode fazer “na mão”, pode-se usar o Spring Boot pela linha de comando, uma IDE ou utilizar o **Spring Initializr**.
 
 ![imagem](https://cdn-images-1.medium.com/max/1200/1*CV2P0YWxS_skLrLTQOeePA.png)
 
 Caso você esteja utilizando o **IntelliJ**, ele fornece uma opção para se criar um projeto utilizando o Spring Initializr.
-
 
 **Anotações**
 
