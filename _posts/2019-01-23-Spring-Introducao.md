@@ -35,3 +35,34 @@ serviços na nuvem.
 
 * Além de outros. Visite http://spring.io/projects
 
+# Spring Boot
+
+**O que é:**
+
+O Spring Boot é **opinativo** e **customizável** e por isso seu objetivo é fornecer um conjunto de ferramentas que facilita a criação de aplicativos baseados em Spring autônomos e de produção que você pode "executar".  É uma estrutura leve que simplifica a configuração de aplicativos baseados em Spring e facilita a publicação de nossas aplicações. A intenção é ter o seu projeto rodando o mais rápido possível e sem complicação.
+
+**Vantagens do Spring Boot:**
+
+Em primeiro lugar o Spring Boot é opinativo, ou seja, tem opiniões. É outra forma de dizer que o Spring Boot tem padrões razoáveis; assim, é possível desenvolver um aplicativo rapidamente utilizando esses valores usados com frequência.
+
+Por exemplo, o Tomcat é um contêiner da web muito popular. Por padrão, um aplicativo da web Spring Boot usa um contêiner Tomcat integrado.
+
+Em segundo lugar, ele é customizável, ou seja, uma estrutura opinativa não será muito boa se não puder mudar de opinião. É possível customizar facilmente um aplicativo Spring Boot conforme suas preferências, tanto na configuração inicial quanto posteriormente, no ciclo de desenvolvimento.
+
+Por exemplo, se você prefere o Maven, pode facilmente fazer alterações de **<dependência>** no seu arquivo **POM** para substituir o valor padrão do Spring Boot.
+
+**Como se configura:**
+
+Basta que você diga pra ele quais módulos deseja utilizar (WEB, Template, Persistência, Segurança, etc.) que ele vai reconhecer e configurar.
+
+Você escolhe os módulos que deseja através dos *starters* que inclui no **pom.xml** do seu projeto. Eles, basicamente, são dependências que agrupam outras dependências. Inclusive, como temos esse grupo de dependências representadas pelo starter, nosso pom.xml acaba por ficar mais organizado.
+Não esqueça que você pode criar as suas customizações de acordo com suas necessidades.
+
+**Como começar:**
+
+Existem várias formas de se criar um projeto com Spring Boot. Você pode fazer “na mão”, pode-se usar o Spring Boot pela linha de comando, uma IDE ou utilizar o **Spring Initializr**.
+
+![imagem](https://cdn-images-1.medium.com/max/1200/1*CV2P0YWxS_skLrLTQOeePA.png)
+
+Caso você esteja utilizando o **IntelliJ**, ele fornece uma opção para se criar um projeto utilizando o Spring Initializr, o que pra mim é uma coisa muito boa.
+
