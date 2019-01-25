@@ -19,6 +19,21 @@ Volta um nível
 `mkdir [nome da pasta]`
 Cria nova pasta onde o usuário se encontra.
 
+`touch arquivo`
+Cria um arquivo
+
+`rm arquivo` 
+Remove o arquivo
+
+`ls -l`
+ Lista todos os itens da pasta atual com detalhes
+
+`mv item destino` 
+Move o arquivo (ou pasta) ao destino escolhido
+
+`cp item copia-do-item` 
+Cria uma cópia do arquivo (ou pasta)
+
 `rm -rf [nome da pasta]`
 Remove pasta especificada.
 
@@ -26,6 +41,7 @@ Remove pasta especificada.
 
 O comando "man" exibe a função de determinado comando. Ele é muito útil quando não se sabe o que um comando faz, ou quando se pretende
 aprender mais sobre a sua utilização. Aconselha-se a leitura do manual sempre que houver dúvidas.
+
 
 ## Flags
 
@@ -79,3 +95,21 @@ rm --recursive --force
 **man ls** – Exibe o que faz o comando ls e quais são suas variações.
 Para sair do man pressione a tecla “q”.
 
+
+# EXERCÍCIOS DE FIXAÇÃO
+
+Baseado no material desta apostila informe os comandos necessários para realizar cada uma das tarefas a seguir:
+
+Imagine que estamos na seguinte estrutura de pastas
+
+![imagem](images/imagemLinux01.png)
+
+- [ ] Liste os arquivos do diretório  `aceleradora`.
+
+- [ ] Entre no diretório `pasta`.
+
+- [ ] Dentro do diretório `pasta` crie um arquivo chamado `arquivo02.txt`.
+
+- [ ] Volte ao diretório anterior.
+
+- [ ] Sem sair do diretório atual, copie o arquivo `compactado.zip` para dentro do diretório `pasta`.
