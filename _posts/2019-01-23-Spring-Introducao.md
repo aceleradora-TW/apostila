@@ -5,7 +5,7 @@ date: 2014-06-22 16:25:06 -0700
 categories: spring
 ---
 
-# Spring Framework
+## Spring Framework
 
 **O que é:**
 
@@ -49,7 +49,7 @@ Por exemplo, o Tomcat é um contêiner da web muito popular. Por padrão, um apl
 
 Em segundo lugar, ele é customizável, ou seja, uma estrutura opinativa não será muito boa se não puder mudar de opinião. É possível customizar facilmente um aplicativo Spring Boot conforme suas preferências, tanto na configuração inicial quanto posteriormente, no ciclo de desenvolvimento.
 
-Por exemplo, se você prefere o Maven, pode facilmente fazer alterações de **<dependência>** no seu arquivo **POM** para substituir o valor padrão do Spring Boot.
+Por exemplo, se você prefere o Maven, pode facilmente fazer alterações de **`<dependência>`** no seu arquivo **pom** para substituir o valor padrão do Spring Boot.
 
 **Como se configura:**
 
@@ -58,11 +58,73 @@ Basta que você diga pra ele quais módulos deseja utilizar (WEB, Template, Pers
 Você escolhe os módulos que deseja através dos *starters* que inclui no **pom.xml** do seu projeto. Eles, basicamente, são dependências que agrupam outras dependências. Inclusive, como temos esse grupo de dependências representadas pelo starter, nosso pom.xml acaba por ficar mais organizado.
 Não esqueça que você pode criar as suas customizações de acordo com suas necessidades.
 
-**Como começar:**
-
+E por onde iniciar? 
 Existem várias formas de se criar um projeto com Spring Boot. Você pode fazer “na mão”, pode-se usar o Spring Boot pela linha de comando, uma IDE ou utilizar o **Spring Initializr**.
 
 ![imagem](https://cdn-images-1.medium.com/max/1200/1*CV2P0YWxS_skLrLTQOeePA.png)
 
-Caso você esteja utilizando o **IntelliJ**, ele fornece uma opção para se criar um projeto utilizando o Spring Initializr, o que pra mim é uma coisa muito boa.
+Caso você esteja utilizando o **IntelliJ**, ele fornece uma opção para se criar um projeto utilizando o Spring Initializr.
+
+
+**Anotações mais comuns:**
+
+`@SpringBootApplication`
+Para quem usa Spring Boot, essa é uma das primeiras que você. Ela engloba a @Component, @ComponentScan e mais uma chamada @EnableAutoConfiguration, que é utilizada pelo Spring Boot para tentar advinhar as configurações necessárias para rodar o seu projeto.
+
+`@Controller`
+Usada para classes controladoras que possuem métodos que processam Requests numa aplicação web.Um Controller é responsável tanto por receber requisições como por enviar a resposta ao usuário, algo 
+
+`@RequestMapping`
+Geralmente utilizada em cima dos métodos de uma classe anotada com @Controller. Serve para você colocar os endereços da sua aplicação que, quando acessados por algum cliente, deverão ser direcionados para o determinado método.
+
+***Exemplo:***
+
+Veja como é simples criar um Controller, mas veja que este não possui nenhum “mapping” atrelado a ele. Então criemos uma view (.jsp) chamada “home.jsp” dentro da pasta “/WEB-INF/views” e criaremos o mapping “/home” para exibir a view criada. Veja a Listagem 2.
+
+```java
+@Controller //Define que minha classe será uma controladora
+public class HomeController {
+     
+    @RequestMapping("/home") //Define a URL que quando for requisitada ira chamar o metodo
+    public ModelAndView home(){
+         //Retorna a view que deve ser chamada, no caso home (home.jsp) aqui o .jsp é omitido
+        return new ModelAndView("home");
+    }
+} 
+```
+
+`@Repository`
+É associada com classes que isolam o acesso aos dados da sua aplicação. Comumente associada a DAO’s.
+
+`@Autowired`
+Anotação utilizada para marcar o ponto de injeção na sua classe. Você pode colocar ela sobre atributos ou sobre o seu construtor com argumentos.Marca um construtor, um campo, um método setter ou um método 
+
+`@ResponseBody`
+Utilizada em métodos anotados com @RequestMapping para indicar que o retorno do método deve ser automaticamente escrito na resposta para o cliente.
+
+***Exemplo:***
+
+```java
+@Controller
+public class HomeController {
+     
+    @ResponseBody
+    //Essa anotação renderiza a pagina,que no nosso caso, retorna esse texto: Hello World
+
+    @RequestMapping("/home") 
+    public home(){
+        return "Hello World";
+    }
+} 
+```
+Como mostra a imagem:
+
+![imagem](https://docs.microsoft.com/pt-br/outlook/rest/images/java-tutorial/hello-world.png)
+
+`@Service`
+Associada com classes que representam a ideia do Service do Domain Driven Design. Para ficar menos teórico pense em classes que representam algum fluxo de negócio da sua aplicação. Por exemplo, um fluxo de finalização de compra envolve atualizar manipular o carrinho, enviar email, processar pagamento etc. Este é o típico código que temos dificuldade de saber onde vamos colocar, em geral ele pode ficar num Service.
+
+`@Component`
+A annotation básica que indica que uma classe vai ser gerenciada pelo container do Spring. Todas as annotations descritas acima são, na verdade, derivadas de @Component. A ideia é justamente passar mais semântica.
+
 
