@@ -66,7 +66,7 @@ Existem várias formas de se criar um projeto com Spring Boot. Você pode fazer 
 Caso você esteja utilizando o **IntelliJ**, ele fornece uma opção para se criar um projeto utilizando o Spring Initializr.
 
 
-**Anotações mais comuns:**
+**Anotações**
 
 `@SpringBootApplication`
 Para quem usa Spring Boot, essa é uma das primeiras que você. Ela engloba a @Component, @ComponentScan e mais uma chamada @EnableAutoConfiguration, que é utilizada pelo Spring Boot para tentar advinhar as configurações necessárias para rodar o seu projeto.
@@ -127,4 +127,33 @@ Associada com classes que representam a ideia do Service do Domain Driven Design
 `@Component`
 A annotation básica que indica que uma classe vai ser gerenciada pelo container do Spring. Todas as annotations descritas acima são, na verdade, derivadas de @Component. A ideia é justamente passar mais semântica.
 
+# Spring MVC
+
+O Spring MVC é um dos frameworks para desenvolvimento Web mais utilizados hoje em dia. Com ele, temos à nossa disposição uma implementação do padrão MVC em conjunto com os principais recursos do Spring.
+Ele já tem todas as funcionalidades que precisamos para: 
+* atender as requisições HTTP;
+* delegar responsabilidades de processamento de dados para outros componentes; 
+* preparar a resposta que precisa ser dada.
+  
+É uma excelente implementação do padrão MVC.
+  
+MVC é abreviação de Model, View e Controller, e é bacana entender o papel de cada um deles dentro do sistema,então vamos a explicação:
+
+![imagem](http://s3.amazonaws.com/algaworks-blog/wp-content/uploads/Fluxo-do-Spring-MVC.png)
+
+1. Acessamos uma URL no browser que envia a requisição HTTP para o servidor que roda a aplicação web com Spring MVC. Perceba que quem recebe a requisição é o controlador do framework, o Spring MVC.
+
+2. O controlador do framework irá procurar qual classe é responsável por tratar essa requisição, entregando a ela os dados enviados pelo browser. Essa classe faz o papel do controller.
+
+3. O controller passa os dados para o model, que por sua vez executa todas as regras de negócio, como cálculos, validações e acesso ao banco de dados.
+
+4. O resultado das operações realizadas pelo model é retornado ao controller.
+
+5. O controller retorna o nome da view, junto com os dados que ela precisa para renderizar a página.
+
+6. O Framework encontra a view que processa os dados, transformando o resultado em um HTML.
+
+7. Finalmente, o HTML é retornado ao browser do usuário.
+
+Na prática, o controller é a classe Java com os métodos que tratam essas requisições. Portanto, tem acesso a toda informação relacionada a ela como parâmetros da URL, dados submetidos através de um formulário, cabeçalhos HTTP, etc.
 
