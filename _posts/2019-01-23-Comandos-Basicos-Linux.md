@@ -102,7 +102,7 @@ Baseado no material desta apostila informe os comandos necessários para realiza
 
 Imagine que estamos na seguinte estrutura de diretórios:
 
-![imagem](images/imagemLinux01.png)
+![imagem](../images/imagemLinux01.png)
 
 - [ ] Liste os arquivos do diretório  `aceleradora`.
 
@@ -113,3 +113,10 @@ Imagine que estamos na seguinte estrutura de diretórios:
 - [ ] Volte ao diretório anterior.
 
 - [ ] Sem sair do diretório atual, copie o arquivo `compactado.zip` para dentro do diretório `pasta`.
+
+- [ ] Ainda no seu diretório atual, exclua o arquivo `compactado.zip`.
+
+- [ ] Mova tudo o que há dentro do diretório `pasta` para o diretório `aceleradora`.
+
+- [ ] Exclua o diretório `pasta`.
+
