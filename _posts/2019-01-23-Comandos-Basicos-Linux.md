@@ -31,8 +31,8 @@ Cria um arquivo onde o usuário se encontra.
 `rm [nome do arquivo]` 
 Remove o arquivo.
 
-`mv item destino` 
-Move o arquivo (ou pasta) ao destino escolhido.
+`mv item destino/caminho` 
+Move o arquivo (ou pasta) ao destino escolhido (se o seu destino não existir, o arquivo será renomeado com tal).
 
 `cp item copia-do-item` 
 Cria uma cópia do arquivo (ou pasta).
@@ -106,17 +106,24 @@ Imagine que estamos na seguinte estrutura de diretórios:
 
 - [ ] Liste os arquivos do diretório  `aceleradora`.
 
-- [ ] Entre no diretório `pasta`.
+- [ ] Entre no diretório `pasta`. 
 
 - [ ] Dentro do diretório `pasta` crie um arquivo chamado `arquivo02.txt`.
 
-- [ ] Volte ao diretório anterior.
+- [ ] Volte ao diretório anterior. 
 
 - [ ] Sem sair do diretório atual, copie o arquivo `compactado.zip` para dentro do diretório `pasta`.
 
-- [ ] Ainda no seu diretório atual, exclua o arquivo `compactado.zip`.
+- [ ] Ainda no seu diretório atual, exclua o arquivo `compactado.zip`. 
 
 - [ ] Mova tudo o que há dentro do diretório `pasta` para o diretório `aceleradora`.
 
 - [ ] Exclua o diretório `pasta`.
 
+- [ ] Crie um diretório chamado `[seu-nome]`.
+
+- [ ] Entre no diretório `[seu-nome]`.
+
+- [ ] Crie três arquivo, tais com nomes de três características suas.
+
+- [ ] Liste detalhadamente os arquivos do diretório `[seu-nome]`.
