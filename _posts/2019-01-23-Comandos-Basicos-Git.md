@@ -19,11 +19,36 @@ Você instalará o Git com este comando (via terminal - Linux):
  
  `-sudo apt-get install git`
 
+Depois de instalar, a primeira coisa que você deve fazer é configurar o Git. Para isso, abra uma janela de terminal e digite os seguintes comandos:
+ ```
+ git config --global user.name "Seu Nome"
+ git config --global user.email "seu@email.com"
+```
+A partir daí, o Git irá usar essas informações para registrar quem foi que fez as alterações nos arquivos.
+
 Após isso já poderá realizar os comando do git pelo terminal.
 
 ### Comando básicos  
 
-`git clone [link da branch]`
+**Criando um repositório:**
+
+Criar um repositório no Git é muito simples: basta criar um novo diretório onde você irá desenvolver seu trabalho, entrar dentro dele e digitar o seguinte comando:
+
+`git init`
+
+*Segue a sequência completa de comandos:*
+
+`mkdir meu-projeto`(irá criar o diretório)
+
+`cd meu-projeto`(irá entrar dentro do diretório)
+
+`git init`(irá criar o repositório git)
+
+Após isso, basta começar a trabalhar, criando, removendo e alterando arquivos.
+
+**Outros Comandos:**
+
+`git clone [link do repositório]`
 Para clonar o projeto do repositório;
 
 `git checkout -b [nome da branch]`
@@ -41,8 +66,24 @@ Para você adicionar as modificações feitas;
 `git commit -m [“mensagem”]`
 Para você comentar brevemente sobre as modificações feitas;
 
-`git pull origin master`
-Recebe as alterações feitas na branch remota origin master (caso exista) 
+`git push [nome da branch]`
+Sobe as alterações feitas para a branch remota do **GitHub**
 
-`git push origin master`
-Sobe as alterações para a branch remota origin master (caso exista)
+`git pull origin master`
+Recebe as alterações feitas na branch remota origin master;
+
+Se houver conflitos(Ex: Deram push em uma atualização de código da linha 11, e você localmente modificou esta linha e quer dar push, o git ficará sem saber o que fazer e resultará em conflitos) você terá que escolher entre uma das atualizações,ou em deixar as duas.
+
+Após isso para ter certeza de que não tenha mais nada diferente execute:  
+
+`git rebase --continue`
+
+Se não houver mais conflito pode dar seu push tranquilo, caso contrario terá que resolver todos os conflitos para dar push.
+
+`git reverse --hard HEAD~1`
+Exclui commit local
+
+Caso já tenha enviado ao seu repositório será necessário executar este comando também para exclui-lo:
+
+`git push origin HEAD --force`
+
