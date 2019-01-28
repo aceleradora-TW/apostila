@@ -25,7 +25,7 @@ Cria nova pasta onde o usuário se encontra.
 `rm -rf [nome da pasta]`
 Remove pasta especificada.
 
-`touch [nome do arquivo]`
+`> [nome do arquivo]`
 Cria um arquivo onde o usuário se encontra.
 
 `rm [nome do arquivo]` 

@@ -24,19 +24,19 @@ Depois de instalar, a primeira coisa que você deve fazer é configurar o Git. P
  git config --global user.name "Seu Nome"
  git config --global user.email "seu@email.com"
 ```
+
 A partir daí, o Git irá usar essas informações para registrar quem foi que fez as alterações nos arquivos.
 
+
 Após isso já poderá realizar os comando do git pelo terminal.
+
+**Nota:** Esse exemplo configura o mesmo usuário para todos os projetos presentes no computador (isso se dá por conta da flag --global). Podemos também configurar usuários para cada projeto, bastando remover a flag `--global`.
 
 ### Comando básicos  
 
 **Criando um repositório:**
 
-Criar um repositório no Git é muito simples: basta criar um novo diretório onde você irá desenvolver seu trabalho, entrar dentro dele e digitar o seguinte comando:
-
-`git init`
-
-*Segue a sequência completa de comandos:*
+Criar um repositório no Git é muito simples, apenas siga esta sequência completa dos comandos:
 
 `mkdir meu-projeto`(irá criar o diretório)
 
@@ -66,17 +66,24 @@ Para você adicionar as modificações feitas;
 `git commit -m [“mensagem”]`
 Para você comentar brevemente sobre as modificações feitas;
 
-`git push [nome da branch]`
-Sobe as alterações feitas para a branch remota do **GitHub**
+`git push origin [nome da branch]`
+Sobe as alterações feitas para a branch remota(para onde quero enviar, por isso usamos *origin*) do **GitHub**
 
 `git pull origin master`
 Recebe as alterações feitas na branch remota origin master;
 
-Se houver conflitos(Ex: Deram push em uma atualização de código da linha 11, e você localmente modificou esta linha e quer dar push, o git ficará sem saber o que fazer e resultará em conflitos) você terá que escolher entre uma das atualizações,ou em deixar as duas.
+Mas se houver conflitos:
+
+`git pull -r origin master` Facilita na hora de resolver conflitos.
+
+Ex: Deram push em uma atualização de código da linha 11, e você localmente modificou esta linha e quer dar push, o git ficará sem saber o que fazer e resultará em conflitos, você terá que escolher entre uma das atualizações,ou em deixar as duas.
+
 
 Após isso para ter certeza de que não tenha mais nada diferente execute:  
 
 `git rebase --continue`
+
+**Nota:** Este comando só funcionará se usar a flag `-r` no `git pull`
 
 Se não houver mais conflito pode dar seu push tranquilo, caso contrario terá que resolver todos os conflitos para dar push.
 
@@ -86,4 +93,6 @@ Exclui commit local
 Caso já tenha enviado ao seu repositório será necessário executar este comando também para exclui-lo:
 
 `git push origin HEAD --force`
+
+**Importante: Não é muito recomendável usar estes últimos dois comandos exceto em casos muito extremos, eles podem causar grandes complicações.**
 
