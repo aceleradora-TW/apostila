@@ -96,43 +96,31 @@ Caso já tenha enviado ao seu repositório será necessário executar este coman
 
 **Importante: Não é muito recomendável usar estes últimos dois comandos exceto em casos muito extremos, eles podem causar grandes complicações.**
 
-# EXERCÍCIOS DE FIXAÇÃO
- 
- Para instalar o git, execute o comando:
-  `-sudo apt-get install git`
+# EXERCÍCIOS DE FIXAÇÃO 
 
-Após instalar, você pode configura-lo executando o comando:
+Baseado no material desta apostila informe os comandos necessários para realizar cada uma das tarefas a seguir:
 
- ```
- git config --global user.name "Seu Nome"
- git config --global user.email "seu@email.com"
-```
- E para criar um repositório no git, é só executar os seguintes comandos:
- 
-`mkdir meu-projeto`(cria o diretório)
+Imagine que criamos um repositório no GitHub:
 
-`cd meu-projeto`(Entra no diretório)
+- [ ] Clone este repositório para seu computador
 
-`git init`(Cria o repositório git) 
+- [ ] Crie uma branchs
 
-Após isso, você pode começar a trabalhar, criando, removendo e alterando arquivos.
+- [ ] Entre na branch criada
 
- Para clonar o projeto do repositório use esse comando;
- `git clone [link do repositório]`
-  
-  Para criar uma nova branch:
-  `git checkout -b [nome da branch]`
- 
- e para trocar de branch basta executar  `git checkout [nome da branch`
- 
-  Com `git status`, Você verá as modificações que foram feitas. 
-  
-  e para adicionar todas as modificações basta executar `git add .`
+- [ ] Envie as modificações para o repositório
 
-  Para comentar brevemente sobre as modificações, é só executar:
-  `git commit -m [“mensagem”]`
-   
-   e para subir para a branch as alterações basta executar `git push origin [nome da branch]`
 
-   Para receber as alteraçoes feita na branch remota origin master, é só executar o comando:`git pull origin master`, após isso é só executar `git rebase --continue`
-para saber se há mais alguma alteração que não tenha recebido.
+
+
+- [ ] Acesse o site do GitHub e crie um repositório chamado `exercicioGitHubAcelera`
+
+- [ ] Agora, dentro de algum diretório de seu computador, inicie um repositório Git local
+
+- [ ] Clone este repositório (`exercicioGitHubAcelera`) para seu computador
+
+- [ ] Faça qualquer alteração neste diretório (crie arquivos novos, modifique algum existente e etc) e em seguida adicione estas alterações neste repositório Git local
+
+- [ ] Realize um `commit` destas alterações ao seu repositório Git local, informando uma mensagem explicando o que esta sendo salvo neste `commit`
+
+- [ ] Agora, envie as modificações para o repositório
