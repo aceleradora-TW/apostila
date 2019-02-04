@@ -96,3 +96,43 @@ Caso já tenha enviado ao seu repositório será necessário executar este coman
 
 **Importante: Não é muito recomendável usar estes últimos dois comandos exceto em casos muito extremos, eles podem causar grandes complicações.**
 
+# EXERCÍCIOS DE FIXAÇÃO
+ 
+ Para instalar o git, execute o comando:
+  `-sudo apt-get install git`
+
+Após instalar, você pode configura-lo executando o comando:
+
+ ```
+ git config --global user.name "Seu Nome"
+ git config --global user.email "seu@email.com"
+```
+ E para criar um repositório no git, é só executar os seguintes comandos:
+ 
+`mkdir meu-projeto`(cria o diretório)
+
+`cd meu-projeto`(Entra no diretório)
+
+`git init`(Cria o repositório git) 
+
+Após isso, você pode começar a trabalhar, criando, removendo e alterando arquivos.
+
+ Para clonar o projeto do repositório use esse comando;
+ `git clone [link do repositório]`
+  
+  Para criar uma nova branch:
+  `git checkout -b [nome da branch]`
+ 
+ e para trocar de branch basta executar  `git checkout [nome da branch`
+ 
+  Com `git status`, Você verá as modificações que foram feitas. 
+  
+  e para adicionar todas as modificações basta executar `git add .`
+
+  Para comentar brevemente sobre as modificações, é só executar:
+  `git commit -m [“mensagem”]`
+   
+   e para subir para a branch as alterações basta executar `git push origin [nome da branch]`
+
+   Para receber as alteraçoes feita na branch remota origin master, é só executar o comando:`git pull origin master`, após isso é só executar `git rebase --continue`
+para saber se há mais alguma alteração que não tenha recebido.
