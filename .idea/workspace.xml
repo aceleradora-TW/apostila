@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="287c270b-fc29-4f47-80ff-b2284877f16e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_posts/2019-01-23-Entendendo-Http.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-01-23-Entendendo-Http.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-01-23-Bulma.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-01-23-Bulma.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,12 +36,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2019-01-23-Entendendo-Http.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="591">
                 <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2019-01-23-Bulma.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="621">
+                <caret line="136" column="44" selection-start-line="136" selection-start-column="44" selection-end-line="136" selection-end-column="44" />
               </first_editor>
               <second_editor />
             </state>
@@ -64,8 +76,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2019-01-23-Banco-de-dados-postgres.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="276">
-                <caret line="56" column="14" lean-forward="true" selection-start-line="56" selection-end-line="57" />
+              <first_editor relative-caret-position="291">
+                <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
               </first_editor>
               <second_editor />
             </state>
@@ -132,7 +144,6 @@
         <option value="$PROJECT_DIR$/_posts/Comandos-Basicos-Git.md" />
         <option value="$PROJECT_DIR$/_posts/Thymeleaf.md" />
         <option value="$PROJECT_DIR$/_posts/2014-06-22-Spring-Introducao.md" />
-        <option value="$PROJECT_DIR$/_posts/2019-01-23-Bulma.md" />
         <option value="$PROJECT_DIR$/_posts/2019-01-23-Html.md" />
         <option value="$PROJECT_DIR$/_posts/2019-01-23-Javascript.md" />
         <option value="$PROJECT_DIR$/_posts/2019-01-23-Java-Introducao.md" />
@@ -151,6 +162,7 @@
         <option value="$PROJECT_DIR$/_posts/2019-01-23-Comandos-Basicos-Git.md" />
         <option value="$PROJECT_DIR$/_posts/2019-01-23-Banco-de-dados-postgres.md" />
         <option value="$PROJECT_DIR$/_posts/2019-01-23-Entendendo-Http.md" />
+        <option value="$PROJECT_DIR$/_posts/2019-01-23-Bulma.md" />
       </list>
     </option>
   </component>
@@ -263,12 +275,12 @@
       <workItem from="1548673404780" duration="287000" />
       <workItem from="1548673703337" duration="9435000" />
       <workItem from="1548685795595" duration="6942000" />
-      <workItem from="1549277642167" duration="6071000" />
+      <workItem from="1549277642167" duration="6872000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77418000" />
+    <option name="totallyTimeSpent" value="78219000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-1" width="1375" height="901" extended-state="6" />
@@ -317,16 +329,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2019-01-23-Bulma.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -477,6 +479,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2019-01-23-Entendendo-Http.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="591">
+            <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2019-01-23-Banco-de-dados-migracoes.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -490,18 +502,18 @@
     <entry file="file://$PROJECT_DIR$/_posts/2019-01-23-Banco-de-dados-postgres.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="276">
-            <caret line="56" column="14" lean-forward="true" selection-start-line="56" selection-end-line="57" />
+          <first_editor relative-caret-position="291">
+            <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2019-01-23-Entendendo-Http.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2019-01-23-Bulma.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="591">
-            <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+          <first_editor relative-caret-position="621">
+            <caret line="136" column="44" selection-start-line="136" selection-start-column="44" selection-end-line="136" selection-end-column="44" />
           </first_editor>
           <second_editor />
         </state>
