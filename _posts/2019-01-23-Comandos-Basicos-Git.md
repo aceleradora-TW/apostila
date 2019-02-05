@@ -104,14 +104,11 @@ Imagine que criamos um repositório no GitHub:
 
 - [ ] Clone este repositório para seu computador
 
-- [ ] Crie uma branchs
+- [ ] Crie uma branch
 
 - [ ] Entre na branch criada
 
 - [ ] Envie as modificações para o repositório
-
-
-
 
 - [ ] Acesse o site do GitHub e crie um repositório chamado `exercicioGitHubAcelera`
 

@@ -56,6 +56,10 @@ Exclui as linhas onde o id é igual a 1 na tabela especificada. Se o id não for
 
 # EXERCÍCIOS DE FIXAÇÃO
 
+**Baixe o postgreSQL** 
+
+Comandos para Linux: 
+
 sudo apt-get update
 
 sudo apt-get install postgresql postgresql-contrib
@@ -86,21 +90,33 @@ CREATE TABLE cliente(id_cliente INTEGER, nome_cliente VARCHAR (255), CONSTRAINT 
 CREATE TABLE pedido(id_pedido INTEGER, total REAL, cliente_id_cliente  INTEGER, FOREIGN KEY(cliente_id_cliente) REFERENCES cliente(id_cliente));
 
 INSERT INTO cliente (id_cliente,nome_cliente) VALUES  (2334, 'Joao da silva');
+
 INSERT INTO cliente (id_cliente,nome_cliente) VALUES  (3456, 'Ana Maria Braga');
+
 INSERT INTO cliente (id_cliente,nome_cliente) VALUES  (8275, 'Joana Barcelos Veiga');
+
 INSERT INTO cliente (id_cliente,nome_cliente) VALUES  (9812, 'Carlos Schallenberger');
 
 INSERT INTO pedido(id_pedido,total,cliente_id_cliente) VALUES (752, 100.23, 2334);
+
 INSERT INTO pedido(id_pedido,total,cliente_id_cliente) VALUES (334, 1456.00, 2334);
+
 INSERT INTO pedido(id_pedido,total,cliente_id_cliente) VALUES (498, 278.98, 9812);
+
 INSERT INTO pedido(id_pedido,total,cliente_id_cliente) VALUES (125, 874.98, 9812);
+
 INSERT INTO pedido(id_pedido,total,cliente_id_cliente) VALUES (365, 286.30, 9812);
+
 INSERT INTO pedido(id_pedido,total,cliente_id_cliente) VALUES (775, 134.54, 9812);
+
 INSERT INTO pedido(id_pedido,total,cliente_id_cliente) VALUES (834, 187.34, 3456);
+
 INSERT INTO pedido(id_pedido,total,cliente_id_cliente) VALUES (998, 234.34, 8275);
+
 INSERT INTO pedido(id_pedido,total,cliente_id_cliente) VALUES (101, 456.87, 8275);
 
 SELECT * FROM cliente;
+
 SELECT * FROM pedido; 
 
 UPDATE cliente SET nome_cliente = 'Ronaldo'; 

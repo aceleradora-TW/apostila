@@ -53,9 +53,12 @@ https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
 
 Baseado no material desta apostila realize cada uma das tarefas a seguir:
 
-1.Para que serve o método GET?
-2.Para que serve o método POST?
-3.Para que usamos o método DELETE?
-3.Qual a semelhança entre os métodos PUT/PATCH?
+1. Para que serve o método GET?
+
+2. Para que serve o método POST?
+
+3. Para que usamos o método DELETE?
+
+3. Qual a semelhança entre os métodos PUT/PATCH?
 
 
