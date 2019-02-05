@@ -327,3 +327,11 @@ O polimorfismo consiste na alteração do funcionamento interno de um método he
 ***Exemplo:***
 
 ![exemplo](https://lh3.googleusercontent.com/D4Ia9jLgKQ__CX7RtXIjPgS-Wgn0qO-fwV2F-vcuLcp6ckrArMioa6ZR4lyrsd9kWEawTEq_NRsx0JlMtf5urViGvmveo9bXQsqvYfBGMznKsyfGqTNORsbmABTNoccoat3qD77O)
+
+# EXERCÍCIOS DE FIXAÇÃO
+
+Clone o projeto do GitHub link: https://github.com/aceleradora-TW/laboratorio-oo-java
+
+Faça os exercícios e deixe os testes passar
+
+**Divirta-se!**
