@@ -22,16 +22,29 @@ tarefa em paralelo. Poderíamos ter, por exemplo, o seguinte cenário:
 - O Par 2 desenvolverá a pesquisa de produtos
 - O Par 3 desenvolverá os relatórios
 
-O problema é que, no final do dia, precisamos ter apenas um software funcionando ao invés de três, ou seja, os pares precisam integrar o seu
-trabalho, gerando um resultado comum.
+O problema é que, no final do dia, precisamos ter apenas um software funcionando ao invés de três pedaços de código inutilizáveis, ou seja,
+os pares precisam integrar o seu trabalho, gerando um resultado comum e utilizável.
 
-Durante muito tempo, isso foi um desafio imenso para equipes de desenvolvimento de software, era sempre caótico integrar código desenvolvido
-em paralelo, muitas vezes as duplas sobrescreviam partes comuns do código ao mesmo tempo.
+Para isso, temos diversos desafios. Vamos quebrar o problema em partes:
 
-Esses problemas ainda existem no dia-a-dia das equipes, mas pode-se dizer que eles são menos complicados de resolver
+__Controle eficiente de mudanças__
 
-Problemas que a integração contínua tenta resolver:
-- Merge Hell
-- Bugs
-- Implementações incorretas
-- Feedbacks mais rápidos quando algo está errado
+O trabalho vai ser desenvolvido em partes e em paralelo. Ou seja, a todo o tempo surgirão mudanças no código do sistema e essas mudanças
+precisam ser gerenciadas de maneira eficiente. Este é o primeiro problema a ser resolvido.
+
+__Resultados verificáveis__
+
+As verificações precisam ser rápidas e simples de executar
+
+__Software funcionando em diferentes ambientes__
+
+O que é ambiente?
+
+Precisa ser simples
+
+__Como usar integração contínua?__
+
+Aprender os conceitos
+
+Adotar as ferramentas
+
