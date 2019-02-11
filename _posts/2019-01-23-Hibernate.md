@@ -81,4 +81,14 @@ Para usar uma tabela com o nome tarefas:
 @Table (name="tarefas")
 public class Tarefa 
 ```
+# EXERCÍCIOS DE FIXAÇÃO
+##Primeiros passos para mapear uma tabela simples com hibernate
 
+ 
+ Imagine que temos o hibernate configurado, o próximo passo é realizar o mapeamento das classes ás tabelas do banco de dados.
+
+1. Qual é a anotação que usaremos para indicar que a classe será utilizada como uma entidade, ou seja, que os dados serão "persistiveis" pelo banco de dados?
+
+2. Qual anotação é utilizada para indicar o identificador único da tabela?
+
+3. Qual a notação que informa que queremos que esta chave seja populada pelo banco?

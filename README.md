@@ -11,6 +11,10 @@ Existem duas opções de visualização da apostila:
 
 O conteúdo é escrito usando Markdown. As páginas da apostila estão presentes na pasta `_posts/`.
 
+Para adicionar uma imagem local aos artigos, basta colocar a imagem na pasta `images/`. Para referenciar esta imagem em um artigo, pode-se usar seu caminho relativo:
+
+`![imagem](../images/nome-da-imagem.png`
+
 # Contribuindo
 
 Para contribuir, basta adicionar novas páginas à pasta `_posts/`. Não esqueça de adicionar uma categoria à nova página. Para verificar os

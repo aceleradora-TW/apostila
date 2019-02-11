@@ -26,7 +26,7 @@ Estes passos acontecem diversas vezes, toda vez que precisamos de um novo recurs
 Existem vários métodos HTTP, cada um deles é uma maneira de informar ao servidor o que estamos requisitando. Os mais utilizados são:
 
 * ``GET``:
-O método ``GET`` é utilizado para quando estamos pedindo para o servidor nos retornar algum recurso. Como, por exemplo, quando pedimos a página inicial do Google.
+O método ``GET`` é utilizado quando estamos pedindo para o servidor nos retornar algum recurso. Como, por exemplo, quando pedimos a página inicial do Google.
 
 * ``POST``:
 O método ``POST`` é utilizando quando estamos enviando informações ao servidor para que ele faça alguma coisa com esses dados. Por exemplo, quando vamos nos cadastrar no GMAIL, após pedirmos a página onde haverá o formulário(ou seja, utilizando um ``GET``) enviaremos as informações para o servidor com um ``POST``.
@@ -48,3 +48,17 @@ Os códigos HTTP servem como uma ferramenta para que saibamos o que aconteceu co
 
 Estes são alguns dos mais utilizados, podemos encontrar uma lista mais detalhada em:
 https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
+
+# EXERCÍCIOS DE FIXAÇÃO
+
+Baseado no material desta apostila realize cada uma das tarefas a seguir:
+
+1. Para que serve o método GET?
+
+2. Para que serve o método POST?
+
+3. Para que usamos o método DELETE?
+
+3. Qual a semelhança entre os métodos PUT/PATCH?
+
+

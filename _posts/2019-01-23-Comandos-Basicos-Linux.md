@@ -10,32 +10,32 @@ categories: linux
 `cd [nome da pasta/]`
 Comando para entrar ou mudar de pasta.
 
+`cd ..`
+Volta um nível.
+
 `ls`
 Lista conteúdo da pasta onde o usuário se encontra.
 
-`cd ..`
-Volta um nível
+`ls -l`
+Lista todos os itens da pasta atual com detalhes
 
 `mkdir [nome da pasta]`
 Cria nova pasta onde o usuário se encontra.
 
-`touch arquivo`
-Cria um arquivo
-
-`rm arquivo` 
-Remove o arquivo
-
-`ls -l`
- Lista todos os itens da pasta atual com detalhes
-
-`mv item destino` 
-Move o arquivo (ou pasta) ao destino escolhido
-
-`cp item copia-do-item` 
-Cria uma cópia do arquivo (ou pasta)
-
 `rm -rf [nome da pasta]`
 Remove pasta especificada.
+
+`> [nome do arquivo]`
+Cria um arquivo onde o usuário se encontra.
+
+`rm [nome do arquivo]` 
+Remove o arquivo.
+
+`mv item destino/caminho` 
+Move o arquivo (ou pasta) ao destino escolhido (se o seu destino não existir, o arquivo será renomeado com tal).
+
+`cp item copia-do-item` 
+Cria uma cópia do arquivo (ou pasta).
 
 `man [nome do comando]`
 
@@ -100,16 +100,30 @@ Para sair do man pressione a tecla “q”.
 
 Baseado no material desta apostila informe os comandos necessários para realizar cada uma das tarefas a seguir:
 
-Imagine que estamos na seguinte estrutura de pastas
+Imagine que estamos na seguinte estrutura de diretórios:
 
-![imagem](images/imagemLinux01.png)
+![imagem](../images/imagemLinux01.png)
 
 - [ ] Liste os arquivos do diretório  `aceleradora`.
 
-- [ ] Entre no diretório `pasta`.
+- [ ] Entre no diretório `pasta`. 
 
 - [ ] Dentro do diretório `pasta` crie um arquivo chamado `arquivo02.txt`.
 
-- [ ] Volte ao diretório anterior.
+- [ ] Volte ao diretório anterior. 
 
 - [ ] Sem sair do diretório atual, copie o arquivo `compactado.zip` para dentro do diretório `pasta`.
+
+- [ ] Ainda no seu diretório atual, exclua o arquivo `compactado.zip`. 
+
+- [ ] Mova tudo o que há dentro do diretório `pasta` para o diretório `aceleradora`.
+
+- [ ] Exclua o diretório `pasta`.
+
+- [ ] Crie um diretório chamado `[seu-nome]`.
+
+- [ ] Entre no diretório `[seu-nome]`.
+
+- [ ] Crie três arquivo, tais com nomes de três características suas.
+
+- [ ] Liste detalhadamente os arquivos do diretório `[seu-nome]`.
