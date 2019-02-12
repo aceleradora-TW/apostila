@@ -47,4 +47,13 @@ __Como usar integração contínua?__
 Aprender os conceitos
 
 Adotar as ferramentas
+- Git
+- Testes, linters e relatórios
+- Serviços/servidores de Integração Contínua
+
+E depois?
+
+Entrega contínua
+Deployments contínuos
+
 
