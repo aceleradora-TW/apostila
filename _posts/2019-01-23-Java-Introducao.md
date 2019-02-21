@@ -149,7 +149,7 @@ utilizamos conjuntamente as palavra reservadas ``final`` e ``static``.
 
 ``` java
 public static final float PI = 3.14;
-public static final String MEU_NOME = “Cássia”;
+public static final String MEU_NOME = "Cassia";
 ```
 
 * A palavra ``final`` indica que a variável não pode ter seu valor modificado.
