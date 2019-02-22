@@ -254,9 +254,9 @@ São os operadores que executam operações entre __dois__ números:
 | --------- | ------- | -------- | --------- |
 | Soma | `+` | `1 + 1` | `2` |
 | Subtração | `-` | `2 - 2` | `0` |
-| Multiplicação | `*` | `x >= y` | `x` é maior ou igual a `y` |
-| Divisão | `/` | `4 / 2` | `x` é menor ou igual a `y` |
-| Módulo | `%` | `4 % 2` | `x` é menor ou igual a `y` |
+| Multiplicação | `*` | `2 * 2` | `4` |
+| Divisão | `/` | `4 / 2` | `2` |
+| Módulo | `%` | `4 % 2` | `0` |
 
 __Exemplos de uso__
 
