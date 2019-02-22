@@ -219,7 +219,7 @@ Operadores condicionais são utilizados em valores booleanos. Eles são úteis q
 | Nome      | Sintaxe | Exemplo  | Significado            |
 | --------- | ------- | -------- | ---------------------- |
 | E     | `&&`   | `x && y` | É verdadeiro se `x` e `y` forem verdadeiros. |
-| Ou | `||`   | `x || y` | É verdadeiro se `x` ou `y` forem verdadeiros. |
+| Ou    | `x || y` | É verdadeiro se `x` ou `y` forem verdadeiros. |
 | Negação | `!`   | `!x` | `x` era verdadeiro, agora é falso.|
 
 __Exemplo:__
