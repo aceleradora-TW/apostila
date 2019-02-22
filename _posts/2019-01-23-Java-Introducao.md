@@ -230,7 +230,7 @@ if (vaiChover == true && ehSexta == true) {
 
 No código acima, a pessoa só iria para casa somente se fosse sexta e fosse chover.
 
-__Or (||)__:
+__Or ("||")__:
 
 Em inglês a palavra "or" significa "ou", logo, este operador verifica duas condições e resulta em verdadeiro se pelo menos uma das duas for verdadeira, e, somente caso as duas sejam falsas, resulta em falso:
 
