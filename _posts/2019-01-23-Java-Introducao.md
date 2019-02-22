@@ -161,6 +161,8 @@ public static final String MEU_NOME = "Cassia";
 
 [Documentação do Java sobre operadores](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html)
 
+[Resumo sobre operadores](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html)
+
 __Igualdade__
 
 | Nome      | Sintaxe | Exemplo  | Significado            |
