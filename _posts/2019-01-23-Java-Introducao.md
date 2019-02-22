@@ -155,18 +155,40 @@ public static final String MEU_NOME = "Cassia";
 * A palavra ``final`` indica que a variável não pode ter seu valor modificado.
 * A palavra ``static`` indica que todos os objetos de uma classe compartilharão o mesmo valor.
 
-
 **Nota:** Por convenção, usamos letras maiúsculas e underscores (`_`)para declarar constantes e assim distingui-las das variáveis.
 
-### Operadores de igualdade e operadores relacionais
+### Operadores
 
-![imagemExemplo](https://lh5.googleusercontent.com/UoOIUINJROkYArVhGTkN_uaLCWP9ibHR8C-7vynJFd0zjF4o_0J_bOq4KLIBPLt8Y6cP8fP70P2hY1tCOL7ymDl24Ll8W-vHY3rXhCTcWd32AM5deeIlwHehcbsfkzWkfOOHThcb)
+[Documentação do Java sobre operadores](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html)
 
-Opções de operadores aritméticos
+__Igualdade__
 
-![imagemExemplo2](https://lh6.googleusercontent.com/JFFp5IV9c6IivgShCbi9f5NF7bJSPah-06OoAfUbtBEajtPjWtacQUiYYA5g0cR9tzO2ITsCqtXMtmWQG64ND8i6exA795CiJFtAld8R)
+| Nome      | Sintaxe | Exemplo  | Significado            |
+| --------- | ------- | -------- | ---------------------- |
+| Igual     | `==`    | `x == y` | `x` é igual a `y`      |
+| Diferente | `!=`    | `x != y` | `x` é diferente de `y` |
 
-Operadores de incremento e decremento
+
+__Relacionais__
+
+| Nome      | Sintaxe | Exemplo  | Significado            |
+| --------- | ------- | -------- | ---------------------- |
+| Maior que | `>` | `x > y` | `x` é maior que `y` |
+| Menor que | `<` | `x < y` | `x` é menor que `y` |
+| Maior ou igual | `>=` | `x >= y` | `x` é maior ou igual a `y` |
+| Menor ou igual | `<=` | `x <= y` | `x` é menor ou igual a `y` |
+
+__Aritméticos__
+
+| Nome      | Sintaxe | Exemplo  | Resultado |
+| --------- | ------- | -------- | --------- |
+| Soma | `+` | `1 + 1` | `2` |
+| Subtração | `-` | `2 - 2` | `0` |
+| Multiplicação | `*` | `x >= y` | `x` é maior ou igual a `y` |
+| Divisão | `/` | `4 / 2` | `x` é menor ou igual a `y` |
+| Módulo | `%` | `4 % 2` | `x` é menor ou igual a `y` |
+
+
 
 ***Exemplo:***
 
