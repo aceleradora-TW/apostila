@@ -169,12 +169,17 @@ __Igualdade__
 | --------- | ------- | -------- | ---------------------- |
 | Igual     | `==`    | `x == y` | `x` é igual a `y`      |
 | Diferente | `!=`    | `x != y` | `x` é diferente de `y` |
+| Maior que | `>` | `x > y` | `x` é maior que `y` |
+| Menor que | `<` | `x < y` | `x` é menor que `y` |
+| Maior ou igual | `>=` | `x >= y` | `x` é maior ou igual a `y` |
+| Menor ou igual | `<=` | `x <= y` | `x` é menor ou igual a `y` |
 
-
-__Relacionais__
+__Condicionais__
 
 | Nome      | Sintaxe | Exemplo  | Significado            |
 | --------- | ------- | -------- | ---------------------- |
+| Igual     | `==`    | `x == y` | `x` é igual a `y`      |
+| Diferente | `!=`    | `x != y` | `x` é diferente de `y` |
 | Maior que | `>` | `x > y` | `x` é maior que `y` |
 | Menor que | `<` | `x < y` | `x` é menor que `y` |
 | Maior ou igual | `>=` | `x >= y` | `x` é maior ou igual a `y` |
@@ -189,8 +194,6 @@ __Aritméticos__
 | Multiplicação | `*` | `x >= y` | `x` é maior ou igual a `y` |
 | Divisão | `/` | `4 / 2` | `x` é menor ou igual a `y` |
 | Módulo | `%` | `4 % 2` | `x` é menor ou igual a `y` |
-
-
 
 ***Exemplo:***
 
