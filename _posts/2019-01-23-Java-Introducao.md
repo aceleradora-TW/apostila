@@ -169,7 +169,7 @@ Alguns links da documentação oficial do Java:
 
 __Operador de atribuição__
 
-Pode ser que isto passe desapercebido, mas ao atribuir um valor à uma variável, estamos utilizando um operador, o operador de atribuição (`=`):
+Pode ser que isto passe despercebido, mas ao atribuir um valor à uma variável, estamos utilizando um operador, o operador de atribuição (`=`):
 
 ```java
 int cinco = 5;
@@ -216,13 +216,54 @@ __Operadores Condicionais__
 
 Operadores condicionais são utilizados em valores booleanos. Eles são úteis quando precisamos verificar mais de uma condição ou precisamos inverter o valor de um booleano (trocar de `true` para `false` ou vice-versa):
 
-| Nome      | Sintaxe | Exemplo  | Significado            |
-| --------- | ------- | -------- | ---------------------- |
-| E     | `&&`   | `x && y` | É verdadeiro se `x` e `y` forem verdadeiros. |
-| Ou    | `x || y` | É verdadeiro se `x` ou `y` forem verdadeiros. |
-| Negação | `!`   | `!x` | `x` era verdadeiro, agora é falso.|
+__And (&&)__:
 
-__Exemplo:__
+Em inglês a palavra "and" é equivalente ao "e" do português (como na frase Maria `e` João), logo, este operador verifica duas condições e resulta em verdadeiro somente se as duas forem verdadeiras, caso contrário, resulta em falso:
+
+``` java
+if (vaiChover == true && ehSexta == true) {
+  System.out.println("Hoje irei embora mais cedo, pois eh sexta E esta chovendo.");
+} else {
+  System.out.println("Hoje ficarei até mais tarde.");
+}
+```
+
+No código acima, a pessoa só iria para casa somente se fosse sexta e fosse chover.
+
+__Or (||)__:
+
+Em inglês a palavra "or" significa "ou", logo, este operador verifica duas condições e resulta em verdadeiro se pelo menos uma das duas for verdadeira, e, somente caso as duas sejam falsas, resulta em falso:
+
+``` java
+if (vaiChover == true || ehSexta == true) {
+  System.out.println("Hoje irei embora mais cedo, pois eh sexta ou esta chovendo.");
+} else {
+  System.out.println("Hoje ficarei até mais tarde.");
+}
+```
+
+No código acima, a pessoa iria para casa se fosse chover, independentemente do dia da semana. Ou, caso fosse sexta mas não estivesse
+chovendo, ela também iria para casa.
+
+
+__Not (!)__:
+
+Em inglês, "not" significa "não" ou negação. Este operador inverte o valor booleano de uma expressão ou variável:
+
+Expressão:
+
+```java
+boolean naoEhCincoNemMaiorQueDez = !(numero == 5 || numero > 10)
+```
+
+Variável:
+
+```java
+boolean verdade = true;
+boolean mentira = !verdade;
+```
+
+__Exemplo de uso:__
 
 Temos que escrever um programa que valida o embarque de passageiros em um avião. O programa só deve permitir pessoas maiores de idade `e` que possuam passaporte. Caso a pessoa seja maior de idade mas não possua passaporte o sistema deve notificá-la. Caso a pessoa seja menor de idade, o programa deve notificá-la para estar acompanhada dos pais:
 
