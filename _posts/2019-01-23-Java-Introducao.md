@@ -159,7 +159,7 @@ public static final String MEU_NOME = "Cassia";
 
 ### Operadores
 
-Como o próprio nome diz, os operadores permite executar operações sobre um ou dois __valores primitivos__.
+Como o próprio nome diz, os operadores permitem executar operações sobre um ou dois __valores primitivos__.
 
 Alguns links da documentação oficial do Java:
 
