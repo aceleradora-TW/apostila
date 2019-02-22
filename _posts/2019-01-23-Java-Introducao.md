@@ -157,7 +157,7 @@ public static final String MEU_NOME = "Cassia";
 
 **Nota:** Por convenção, usamos letras maiúsculas e underscores (`_`)para declarar constantes e assim distingui-las das variáveis.
 
-### Operadores
+## Operadores
 
 Como o próprio nome diz, os operadores permitem executar operações sobre um ou dois __valores primitivos__.
 
