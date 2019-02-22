@@ -214,8 +214,7 @@ if (cincoEhMaiorQueDois) {
 
 __Operadores Condicionais__
 
-Operadores condicionais são utilizados em valores booleanos. Eles são úteis quando precisamos verificar mais de uma condição ou precisamos
-inverter o valor de um booleano (trocar de `true` para `false` ou vice-versa):
+Operadores condicionais são utilizados em valores booleanos. Eles são úteis quando precisamos verificar mais de uma condição ou precisamos inverter o valor de um booleano (trocar de `true` para `false` ou vice-versa):
 
 | Nome      | Sintaxe | Exemplo  | Significado            |
 | --------- | ------- | -------- | ---------------------- |
