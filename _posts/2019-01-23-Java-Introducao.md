@@ -159,11 +159,25 @@ public static final String MEU_NOME = "Cassia";
 
 ### Operadores
 
-[Documentação do Java sobre operadores](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html)
+Como o próprio nome diz, os operadores permite executar operações sobre um ou dois __valores primitivos__.
 
-[Resumo sobre operadores](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html)
+Alguns links da documentação oficial do Java:
 
-__Igualdade__
+- [Introdução a operadores Java](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html)
+
+- [Resumo sobre operadores](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html)
+
+__Operador de atribuição__
+
+Pode ser que isto passe desapercebido, mas ao atribuir um valor à uma variável, estamos utilizando um operador, o operador de atribuição (`=`):
+
+```java
+int cinco = 5;
+```
+
+__Operadores de Igualdade__
+
+Os operadores de igualdade são utilizados para fazer a comparação de dois valores, ou seja, utilizamos estes operadores quando precisamos saber se um valor é `igual`, `diferente`, `maior` ou `menor` do que outro:
 
 | Nome      | Sintaxe | Exemplo  | Significado            |
 | --------- | ------- | -------- | ---------------------- |
@@ -174,18 +188,68 @@ __Igualdade__
 | Maior ou igual | `>=` | `x >= y` | `x` é maior ou igual a `y` |
 | Menor ou igual | `<=` | `x <= y` | `x` é menor ou igual a `y` |
 
-__Condicionais__
+ O uso de operadores de igualdade resulta em um valor booleano, o que permite utilizar estes operadores de diferentes maneiras:
+
+Podemos utilizá-los diretamente dentro de estruturas condicionais:
+
+``` java
+if (5 > 2) {
+  System.out.println("5 eh maior que 2");
+} else {
+  System.out.println("5 nao eh maior que 2");
+}
+```
+
+Ou podemos guardar o resultado em uma variável, o que nos ajuda escrever código de uma maneira um pouco mais legível em algumas situações:
+
+```java
+boolean cincoEhMaiorQueDois = 5 > 2;
+
+if (cincoEhMaiorQueDois) {
+   System.out.println("5 eh maior que 2");
+} else {
+  System.out.println("5 nao eh maior que 2");
+}
+```
+
+__Operadores Condicionais__
+
+Operadores condicionais são utilizados em valores booleanos. Eles são úteis quando precisamos verificar mais de uma condição ou precisamos
+inverter o valor de um booleano (trocar de `true` para `false` ou vice-versa):
 
 | Nome      | Sintaxe | Exemplo  | Significado            |
 | --------- | ------- | -------- | ---------------------- |
-| Igual     | `==`    | `x == y` | `x` é igual a `y`      |
-| Diferente | `!=`    | `x != y` | `x` é diferente de `y` |
-| Maior que | `>` | `x > y` | `x` é maior que `y` |
-| Menor que | `<` | `x < y` | `x` é menor que `y` |
-| Maior ou igual | `>=` | `x >= y` | `x` é maior ou igual a `y` |
-| Menor ou igual | `<=` | `x <= y` | `x` é menor ou igual a `y` |
+| E     | `&&`   | `x && y` | É verdadeiro se `x` e `y` forem verdadeiros. |
+| Ou | `||`   | `x || y` | É verdadeiro se `x` ou `y` forem verdadeiros. |
+| Negação | `!`   | `!x` | `x` era verdadeiro, agora é falso.|
 
-__Aritméticos__
+__Exemplo:__
+
+Temos que escrever um programa que valida o embarque de passageiros em um avião. O programa só deve permitir pessoas maiores de idade `e` que possuam passaporte. Caso a pessoa seja maior de idade mas não possua passaporte o sistema deve notificá-la. Caso a pessoa seja menor de idade, o programa deve notificá-la para estar acompanhada dos pais:
+
+```java
+
+public void verificaEmbarque(int idade, boolean possuiPassaporte) {
+  boolean ehMaiorDeIdade = idade >= 18;
+
+  if (ehMaiorDeIdade && possuiPassaporte) {
+    System.out.println("Pode embarcar");
+  } else if (ehMaiorDeIdade && !possuiPassaporte) {
+    System.out.println("Nao pode embarcar. Apresente o passaporte.");
+  } else if (!ehMaiorDeIdade) {
+    System.out.println("Nao pode embarcar. Venha com seus pais.");
+  }
+}
+
+```
+
+__Operadores Numéricos__
+
+Os operadores numéricos servem para executar operações com números. Temos dois tipos de operadores numéricos:
+
+__Binários__
+
+São os operadores que executam operações entre __dois__ números:
 
 | Nome      | Sintaxe | Exemplo  | Resultado |
 | --------- | ------- | -------- | --------- |
@@ -195,17 +259,58 @@ __Aritméticos__
 | Divisão | `/` | `4 / 2` | `x` é menor ou igual a `y` |
 | Módulo | `%` | `4 % 2` | `x` é menor ou igual a `y` |
 
-***Exemplo:***
+__Exemplos de uso__
+
+Podemos utilizá-los para criar uma calculadora em Java:
 
 ```java
-int numero = 5;
-numero++; // numero agora tem o valor 6
-numero--; // numero agora tem o valor 5
+public class Calculadora {
+    public int soma(int a, int b) {
+        return a + b;
+    }
+
+    public int subtrai(int a, int b) {
+        return a - b;
+    }
+
+    public int multiplica(int a , int b) {
+        return a * b;
+    }
+
+    public int divide(int a, int b) {
+        return a / b;
+    }
+}
 ```
 
-Opções de operadores de lógicos
+__Unários__
 
-![imagemExemplo3](https://lh4.googleusercontent.com/dHuYPLRnGJUqXvaTPgKg0Jh3yewEU5UGkx6Hk9jHE4VsbQm3l0tWcxD6BcS7ywaHTsbs2g_RiFTjAdJPWAhHUdkwx8alR-EJJZ3PXBbr0w5Chi8Lolb_cLZw6B61DhpxwdTUFSd8)
+São operadores que executam operações com apenas __um__ número. Estes operadores não funcionam diretamente em números literais, apenas variáveis (veja os exemplos para entender isto melhor):
+
+| Nome      | Sintaxe |
+| --------- | ------- |
+| Incrementa | `++` |
+| Decrementa | `--` |
+| Acumula soma | `+=` |
+| Acumula multiplicação| `*=` |
+| Acumula subtração| `-=` |
+| Acumula divisão| `/=` |
+
+
+**Exemplo:**
+
+```java
+
+5++; // nao funciona
+
+int numero = 4;
+numero++; // numero agora tem o valor 5
+numero--; // numero agora tem o valor 4
+numero += 2; // numero agora tem o valor 6
+numero -= 2; // numero agora tem o valor 4
+numero *= 2; // numero agora tem o valor 8
+numero /= 2; // numero agora tem o valor 4
+```
 
 ## Enums
 
