@@ -55,8 +55,7 @@ boolean verdade = true;
 boolean mentira = false;
 
 int numero = 5;
-float numeroQuebrado = 5.0;
-double outroNumeroQuebrado = 5.00000001;
+double numeroQuebrado = 5.00000001;
 
 char umCaractere = 'a';
 ```
@@ -260,11 +259,150 @@ String dia = "Sexta";
 
 ### Manipulando Strings
 
-Strings são úteis para resolver incontáveis tipos de problemas, por isso, é interessante revisar como manipulamos valores String utilizando seus métodos.
+Strings são úteis para resolver incontáveis tipos de problemas, por isso, é interessante revisar como manipulamos valores String utilizando seus métodos. Vejamos alguns métodos úteis:
 
-Antes de mais nada, precisamos saber que Strings são __imutáveis__ e precisamos entender quais são as consequências disto no nosso código.
+__length__
+
+> Nome em portugues
+> length: tamanho
+
+Retorna o tamanho da String. O tamanho é a quantidade de caracteres que a String possui:
+
+```java
+String texto = "Oi";
+
+int tamanho = texto.length(); // tamanho sera 2;
+```
+
+__equals__
+
+> Nome em portugues
+> equals: igual ou é igual a
+
+Compara duas strings e retorna verdadeiro (`true`) caso elas sejam iguais:
+
+```java
+String texto = "Oi";
+String outroTexto = "Oi";
+
+boolean saoIguais = texto.equals(outroTexto); //saoIguais sera true
+```
+
+ou falso (`false`) caso elas sejam diferentes:
+
+```java
+String texto = "Oi";
+String outroTexto = "Opa";
+
+boolean saoIguais = texto.equals(outroTexto); //saoIguais sera false
+```
+
+__replace__
+
+> Nome em portugues
+> replace: substitui
+
+Este método recebe dois argumentos:
+  - conteudoAntigo
+  - conteudoNovo
+
+Ele retorna uma nova String substituindo todas as ocorrências do valor `conteudoAntigo` encontradas na String por `conteudoNovo`:
+
+```java
+String bomDia = "Bom Dia!";
+
+String boaNoite = bomDia.replace("Dia", "Noite"); // boaNoite sera "Boa Noite!"
+```
+
+__substring__
+
+Este método recebe dois argumentos:
+  - indiceInicial
+  - indiceFinal
+
+Retorna uma nova String contendo a porção que está entre as posições indiceInicial e indiceFinal:
+
+```java
+String texto = "Aceleradora";
+
+String pedaco = texto.substring(0, 3); // pedaco sera "Ace"
+```
+
+__split__
+
+> Nome em portugues
+> split: separar
+
+Este método recebe um argumento:
+  - token
+
+Retorna um array de Strings, formado pela divisão da String original. Este método irá dividir a String cada vez que encontrar o `token` no conteúdo da String:
+
+```java
+String texto = "A,B,C";
+
+String[] pedacos = texto.split(","); // pedacos sera um array contendo {"A", "B", "C"}
+
+```
+
+Dica, caso queira transformar uma String em um array de Strings, utilize este método passando uma String vazia:
+
+```java
+String texto = "dica";
+
+String[] pedacos = texto.split(""); //pedacos sera um array contendo {"d", "i", "c", "a"}
+```
+
+__contains__
+
+> Nome em portugues
+> contains: contém
+
+Este método recebe um argumento:
+  - busca
+
+Retorna verdadeiro caso a String contenha o valor especificado na `busca` ou falso caso contrário.
+
+```java
+String texto = "Aceleradora";
+
+texto.contains("A"); // sera verdadero
+texto.contains("B"); // sera falso
+texto.contains("Ace"); // sera verdadeiro
+texto.contains("radora"); // sera verdadeiro
+```
+
+__toLowerCase__
+
+> Nome em portugues
+> toLowerCase: para minusculas
+
+```java
+
+```
+
+__toUpperCase__
+
+> Nome em portugues
+> toUpperCase: para maiusculas
+
+```java
+
+```
+
+Documentação Java:
+  - [Lista completa dos métodos da classe string](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html)
+
+
+
+Precisamos saber que Strings são __imutáveis__ e precisamos também entender quais são as consequências disto no nosso código.
 
 __Afinal, o que quer dizer imutabilidade?__
+
+Quando dizemos que as Strings são imutáveis, basicamente significa que o valor de uma variável String não pode ser alterado em algumas
+situações. Isto gera bastante confusão.
+
+Podemos sobrescrever o valor de uma variável
 
 
 ## Qual a diferença entre tipos primitivos e tipos de referência?
