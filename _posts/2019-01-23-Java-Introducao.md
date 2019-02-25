@@ -163,6 +163,7 @@ Ao executar o código acima, o valor do nosso array agora será:
 ```
 
 __De volta ao problema__
+
 Para resolver o nosso problema utilizando arrays, basta adicionar os números em cada posição do array:
 
 ```java
@@ -180,7 +181,7 @@ valores[9] = 4;
 
 #### _Segura o cavaco!_
 
-Parando para pensar, até agora não ganhamos muita coisa ao utilizar um array em vez de 10 variáveis, nosso código está ficando muito parecido e até um pouco mais complexo.
+Parando para pensar, até agora não ganhamos muita coisa ao utilizar um array em vez de 10 variáveis, nosso código está ficando muito parecido e até um pouco mais complexo que a primeira alternativa (de criarmos dez variáveis).
 
 ___Qual é a moral de usar esse negócio então?___
 
@@ -245,7 +246,7 @@ Carro carro = new Carro();
 Papagaio passaro = new Papagaio();
 ```
 
-Seguindo, esta lógica, teríamos que fazer o mesmo com a String, certo? Afinal, ela é uma classe! Teríamos que fazer algo como:
+Seguindo esta lógica, teríamos que fazer o mesmo com a String, certo? Afinal, ela é uma classe! Teríamos que fazer algo como:
 
 ```java
 String dia = new String();
