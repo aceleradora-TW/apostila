@@ -69,7 +69,6 @@ Além dos tipos mais comuns, ainda temos alguns outros tipos primitivos para gua
 * **long:** armazena valores inteiros entre <code>-2<sup>63</sup></code> e <code>2<sup>63</sup> -1</code>.
 * **byte:** armazena valores inteiros entre `-128` e `127`
 
-> &nbsp;
 > Estes tipos são muito similares aos tipos mais comuns. No entanto, eles existem para casos muito específicos, especialmente para quando precisamos economizar memória ou precisamos utilizar valores inteiros muito grandes (declarando-os como `long` em vez de `int`, por exemplo). Não estamos preocupados com estas situações neste momento.
 > &nbsp;
 
@@ -207,7 +206,6 @@ for (int i = 0; i < valores.length; i++) {
 
 Sabemos que ainda não chegamos na parte das estruturas de repetição, mas tenha em mente que em algumas situações, é melhor utilizar arrays e eles existem por ótimos motivos, não se preocupe em entender como tudo funciona agora, por enquanto, apenas guarde isso na sua mente:
 
-> &nbsp;
 > ##### _"Arrays existem por bons motivos, fique de olho em onde você poderá utilizá-los."_ 
 > <small> - Regina Casé</small>
 > &nbsp;
