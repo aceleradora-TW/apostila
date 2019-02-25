@@ -1,18 +1,321 @@
 ---
 layout: post
-title: "Introdução"
+title: "Introdução ao Java"
 date: 2018-12-19 13:25:06 -0700
 categories: java
 ---
 
+Neste capítulo, veremos alguns conceitos fundamentais do Java para que possamos começar a utilizar a linguagem.
+
+- Escrevendo um "olá, mundo" em Java
+- Tipos de dados
+- Estruturas condicionais (se, senão, senão se)
+- Estruturas de repetição (enquanto, para)
+- Operadores
+
+---
+
+## Olá, mundo
+
+No Java o seu código sempre será escrito dentro de classes e métodos. Uma classe é um bloco de código que contém atributos (variáveis) e métodos (funções). Os atributos irão guardar dados e os métodos irão executar lógica/comportamento. Para este capítulo, isto é tudo que precisamos saber sobre classes e métodos, veremos mais sobre eles no capítulo de orientação a objetos.
+
+Sabendo disto, vejamos então como escrever um olá, mundo em Java:
+
+```java
+public class Ola {
+  public static void main(String [] args) {
+    System.out.println("Ola, mundo");
+  }
+}
+```
+
+No exemplo acima, criamos a classe `Ola`, que possui o método `main`, o qual irá escrever uma mensagem na tela utilizando o método `System.out.println` do Java.
+
+> &nbsp;
+> Existem algumas palavras chave neste exemplo que podem parecer bastante confusas (`public`, `static`, `void`, `String[]`). Por enquanto, não precisamos nos preocupar com elas, e iremos entender o que cada uma significa em outros capítulos.
+> &nbsp;
+
+---
+
+## Tipos de dados
+
+A linguagem Java oferece diversos tipos de dados com os quais podemos trabalhar. Há basicamente duas categorias em que se encaixam estes tipos de dados: __tipos primitivos__ e __tipos de referência__.
+
+### Tipos primitivos
+
+Os tipos primitivos correspondem a dados simples escalares (que possuem um tamanho fixo na memória). No java, existem oito tipos primitivos, mas nem todos são comumente utilizados. Os tipos que você utilizará com mais frequência serão:
+
+* **boolean:** Assume os valores booleanos `true` (verdadeiro) ou `false` (falso).
+* **int:** serve para armazenar números inteiros entre <code>-2<sup>31</sup></code> e <code>2<sup>31</sup> -1</code>.
+* **double:** armazena números decimais (quebrados, ou com vírgula).
+* **char:** O char é um tipo de variável que aceita a inserção de um caractere apenas.
+
+```java
+boolean verdade = true;
+boolean mentira = false;
+
+int numero = 5;
+float numeroQuebrado = 5.0;
+double outroNumeroQuebrado = 5.00000001;
+
+char umCaractere = 'a';
+```
+
+__Tipos primitivos menos comuns__
+
+Além dos tipos mais comuns, ainda temos alguns outros tipos primitivos para guardar números:
+
+* **float:** armazena números decimais (quebrados, ou com vírgula) com uma precisão menor (menos números depois da vírgula) que o `double`.
+* **short:** armazena valores inteiros entre `-32768` e `32767`
+* **long:** armazena valores inteiros entre <code>-2<sup>63</sup></code> e <code>2<sup>63</sup> -1</code>.
+* **byte:** armazena valores inteiros entre `-128` e `127`
+
+> &nbsp;
+> Estes tipos são muito similares aos tipos mais comuns. No entanto, eles existem para casos muito específicos, especialmente para quando precisamos economizar memória ou precisamos utilizar valores inteiros muito grandes (declarando-os como `long` em vez de `int`, por exemplo). Não estamos preocupados com estas situações neste momento.
+> &nbsp;
+
+__Links da documentação__
+
+Alguns destes são tópicos bastante avançados, mas caso queira entender um pouco mais sobre alguns detalhes, aqui estão alguns links da documentação oficial do Java:
+
+- [Sobre tipos primitivos](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
+- [Explicação sobre a precisão de números decimais](https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3)
+- [O padrão Unicode (utilizado pelo Java para representar variáveis do tipo char)](https://en.wikipedia.org/wiki/Unicode)
+
+### Tipos de referência
+
+Os tipos de referência armazenam objetos. Neste momento, não faz sentido tentarmos entender a fundo o que isto significa. Sugerimos que depois de você dar uma lida no capítulo de orientação a objetos, revisite esta parte da apostila para entender um pouco melhor.
+
+Nas primeiras interações com a linguagem, você irá utilizar quase que constantemente dois tipos de referências:
+- Arrays (vetores)
+- Strings
+
+Portanto, neste momento, vamos nos concentrar em entender estes tipos primeiro.
+
+### Arrays (vetores)
+
+Arrays (ou vetores) são uma estrutura utilizada para quando necessitamos armazenar um conjunto de valores em uma variável, como uma lista.
+
+__Por que utilizamos vetores?__
+
+Pensemos em um caso de uso. Estamos escrevendo um programa que armazena 10 valores aleatórios inteiros na memória, multiplica cada um por 2 e exibe os resultados na tela. Podemos resolver isto de duas maneiras:
+
+### Criando 10 variáveis
+
+```java
+int valor0 = 5;
+int valor1 = 11;
+int valor2 = 8;
+int valor3 = 13;
+int valor4 = 18;
+int valor5 = 20;
+int valor6 = 30;
+int valor7 = 35;
+int valor8 = 2;
+int valor9 = 4;
+
+System.out.println(valor0 * 2);
+System.out.println(valor1 * 2);
+System.out.println(valor2 * 2);
+System.out.println(valor3 * 2);
+System.out.println(valor4 * 2);
+System.out.println(valor5 * 2);
+System.out.println(valor6 * 2);
+System.out.println(valor7 * 2);
+System.out.println(valor8 * 2);
+System.out.println(valor9 * 2);
+```
+
+Esta alternativa não é um bom caminho, pois nosso código ficaria imenso e confuso. Imagine ter que fazer isto com 100 variáveis?
+
+Vejamos a outra alternativa:
+
+### Criando um vetor de 10 posições
+
+Antes de mais nada, para criar um vetor de valores inteiros, fazemos o seguinte:
+
+```java
+int[] valores = new int[10];
+```
+
+Utilizamos os colchetes `[]` para indicar que a variável será um array de inteiros. Para criar um array, precisamos dizer qual será seu tamanho, ou em outras palavras, quantos elementos ele poderá guardar. Neste caso, estamos dizendo que o array poderá guardar `10` elementos.
+
+__Precisamos falar sobre índices__
+
+Como mencionando anteriormente, arrays são uma lista de valores e, para guardar ou acessar elementos desta lista, utilizamos um índice, que indica em qual posição da lista está o elemento que queremos acessar.
+
+Ao criar um array de inteiros de tamanho 10, inicialmente, todas as suas 10 posições conterão o valor `0`:
+
+```
+{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+```
+
+Vamos adicionar o valor `15` à segunda posição do array. Os índices começam em `0`, portanto, para acessar a segunda posição, utilizamos o índice `1`:
+
+```java
+valores[1] = 15;
+```
+
+Ao executar o código acima, o valor do nosso array agora será:
+
+```
+{ 0, 15, 0, 0, 0, 0, 0, 0, 0, 0 }
+```
+
+__De volta ao problema__
+Para resolver o nosso problema utilizando arrays, basta adicionar os números em cada posição do array:
+
+```java
+valores[0] = 5;
+valores[1] = 11;
+valores[2] = 8;
+valores[3] = 13;
+valores[4] = 18;
+valores[5] = 20;
+valores[6] = 30;
+valores[7] = 35;
+valores[8] = 2;
+valores[9] = 4;
+```
+
+#### _Segura o cavaco!_
+
+Parando para pensar, até agora não ganhamos muita coisa ao utilizar um array em vez de 10 variáveis, nosso código está ficando muito parecido e até um pouco mais complexo.
+
+___Qual é a moral de usar esse negócio então?___
+
+Uma das maiores vantagem de utilizar um array em vez de várias variáveis é que eles nos permitem utilizar __estruturas de repetição!__
+
+Vamos resolver nosso problema utilizando um loop `for`:
+
+```java
+valores[0] = 5;
+valores[1] = 11;
+valores[2] = 8;
+valores[3] = 13;
+valores[4] = 18;
+valores[5] = 20;
+valores[6] = 30;
+valores[7] = 35;
+valores[8] = 2;
+valores[9] = 4;
+
+for (int i = 0; i < valores.length; i++) {
+  System.out.println(valores[i] * 2);
+}
+```
+
+Sabemos que ainda não chegamos na parte das estruturas de repetição, mas tenha em mente que em algumas situações, é melhor utilizar arrays e eles existem por ótimos motivos, não se preocupe em entender como tudo funciona agora, por enquanto, apenas guarde isso na sua mente:
+
+> &nbsp;
+> ##### _"Arrays existem por bons motivos, fique de olho em onde você poderá utilizá-los."_ 
+> <small> - Regina Casé</small>
+> &nbsp;
+
+#### Bônus: Definindo valores direto na declaração
+
+No caso do nosso problema, os arrays nos dão uma outra vantagem bacana. Podemos criar o array já preenchido com os valores que precisamos, o que simplifica bastante nosso código:
+
+```java
+int [] valores = { 5, 11, 8, 13, 18, 20, 30, 35, 2, 4 };
+
+for (int i = 0; i < valores.length; i++) {
+  System.out.println(valores[i] * 2);
+}
+```
+
+## Strings
+
+String é uma das classes mais importantes do Java, pois ela é utilizada para representar e manipular texto.
+
+Para declarar uma String, basta fazer o seguinte:
+
+```java
+String dia = "Sexta";
+```
+
+Ao começar no Java, muitas pessoas pensam que String é um tipo primitivo, o que não é verdade, pois ela é uma classe e valores String armazenados em variáveis são do tipo referência. Esta confusão geralmente acontece pois ela é a única classe na linguagem que possui uma __representação literal__.
+
+__Representação o quê?__
+
+Quando falamos _representação literal_, estamos nos referindo às _aspas duplas_. No Java, quando queremos criar um objeto de alguma classe, sempre temos que utilizar a palavra `new`. Vamos supor que nosso programa tem as classes `Carro` e `Papagaio`. Para criar objetos destas classes e guardá-los em variáveis, teríamos que utilizar o new:
+
+```java
+Carro carro = new Carro();
+Papagaio passaro = new Papagaio();
+```
+
+Seguindo, esta lógica, teríamos que fazer o mesmo com a String, certo? Afinal, ela é uma classe! Teríamos que fazer algo como:
+
+```java
+String dia = new String();
+```
+
+Ainda que isto seja possível, não é necessário, pois String é uma classe tão comumente utilizada, que o Java nos dá a facilidade de utilizar as aspas duplas em vez de new:
+
+```java
+String dia = "Sexta";
+```
+
+### Manipulando Strings
+
+Strings são úteis para resolver incontáveis tipos de problemas, por isso, é interessante revisar como manipulamos valores String utilizando seus métodos.
+
+Antes de mais nada, precisamos saber que Strings são __imutáveis__ e precisamos entender quais são as consequências disto no nosso código.
+
+__Afinal, o que quer dizer imutabilidade?__
+
+
+## Qual a diferença entre tipos primitivos e tipos de referência?
+
+Existem grandes diferenças entre estes tipos, no entanto, para nós esta diferença ainda não é clara, pois não exploramos os conceitos de orientação a objetos. Basicamente, tipos primitivos guardam valores, enquanto tipos de referência guardam a referência para um objeto na memória. Esta ideia pode soar bastante estranha por enquanto, pois ainda não sabemos o que é um objeto.
+
+Para saber quando uma variável é primitiva e quando ela é referência, podemos observar o uso da palavra chave `new` (exceto com as Strings).  Esta palavra é responsável por criar uma instância de objeto. Em outras palavras, ela colocará os dados do objeto em memória e adicionará na variável uma referência para a posição de memória onde estão estes dados para que possamos manipulá-los (daí o nome tipo de referência).
+
+Não se preocupe se nada disto fizer sentido agora, recapitularemos estas ideias posteriormente com mais detalhes.
+
+Com tudo isto em mente, vejamos uns exemplos:
+
+```java
+
+// Um tipo primitivo:
+int numero = 5;
+
+// Um tipo de referencia
+Carro carro = new Carro();
+
+/*
+Strings sao a unica excessao a regra da palavra new.
+
+Elas tambem sao um tipo por referencia, mas nao precisamos da palavra new, em vez disto,
+podemos utilizar as aspas duplas para declarar uma nova String e o Java vai entender numa boa:
+*/
+String dia = "Sexta";
+```
+
+Uma diferença muito importante entre tipos primitivos e tipos de referência é que tipos de referência, por serem objetos, possuem atributos e métodos. Ou seja, em um tipo por referência, eu posso fazer o seguinte:
+
+```java
+String dia = "SEXTA";
+
+// Chamar um metodo da String
+String diaMinusculo = dia.toLowerCase();
+
+int [] vetor = new int [5];
+
+// Acessar um atributo do vetor
+int tamanhoVetor = vetor.length;
+```
+
+Já nos tipos, primitivos, nada disto é possível, pois eles não possuem atributos nem métodos, pois variáveis primitivas apenas guardam um valor bruto.
+
+Depois de ler o capítulo de orientação a objetos, recomendamos que vocês revisite esta parte, prometemos que tudo fará um pouco mais de sentido.
+
 ## Classes
 
-No Java o seu primeiro código será escrito dentro de um método de uma classe. Uma classe é um elemento do código Java que utilizamos para
-representar objetos do mundo real. Podemos informar a visibilidade da classe, que pode ser ``public``, ``private`` ou ``default``.
-Utilizamos a palavra reservada ``class`` seguida pelo nome da classe. Logo após, entre chaves, definimos os elementos a ela relacionados:
-atributos, construtores e métodos.
+No Java o seu código sempre será escrito dentro de classes e métodos. Uma classe é um elemento do código Java que utilizamos para representar objetos do mundo real. Na orientação a objetos, sempre tentamos pensar em como abstrair conceitos do mundo real dentro do código.
 
-***Exemplo:***
+Vejamos por exemplo uma classe que representa um carro:
 
 ```java
 public class Carro {
@@ -31,6 +334,23 @@ public class Carro {
   }
 }
 ```
+
+Na orientação a objetos (ou a até mesmo na programação em geral), sempre teremos dois elementos:
+
+  - (Representação de) Dados
+  - Comportamento
+
+### Atributos
+
+Quando se está estudando e utilizando orientação a objetos, muito ouve-se falar dos tais atributos. Estes nada mais são que variáveis que pertencem a uma classe. No caso da nossa classe carro, temos dois atributos:
+
+  - Marca
+  - Quantidade de pneus
+
+
+Podemos informar a visibilidade da classe, que pode ser ``public``, ``private`` ou ``default``.
+Utilizamos a palavra reservada ``class`` seguida pelo nome da classe. Logo após, entre chaves, definimos os elementos a ela relacionados:
+atributos, construtores e métodos.
 
 ### Construtores
 
