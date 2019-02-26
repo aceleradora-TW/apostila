@@ -2,3 +2,4 @@ _cache
 _site
 *.swp
 .sass-cache/
+_book
