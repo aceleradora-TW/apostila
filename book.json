@@ -1,0 +1,7 @@
+{
+  "root": "_posts",
+  "structure": {
+    "readme": "introducao.md",
+    "summary": "sumario.md"
+  }
+}
