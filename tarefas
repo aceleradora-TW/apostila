@@ -2,6 +2,7 @@
 
 readonly IMAGE_NAME="apostila-aceleradora"
 readonly PDF_FILE_NAME="apostila-aceleradora.pdf"
+readonly CONTAINER_NAME="apostila-aceleradora"
 
 docker_build() {
   docker build -t ${IMAGE_NAME} .
@@ -9,29 +10,46 @@ docker_build() {
 
 docker_run() {
   docker run \
-    --tty \
     --interactive \
+    --tty \
+    --rm \
+    --name ${CONTAINER_NAME} \
     --volume ${PWD}:/book \
+    --publish 4000:4000 \
     ${IMAGE_NAME} $@
+
+  docker logs -f ${CONTAINER_NAME}
 }
 
 case $1 in
-  build)
+  docker-build)
     docker_build
     ;;
+
+  docker-serve)
+    rm -rf _book
+    docker_run gitbook install; gitbook serve
+    ;;
+
+  docker-pdf)
+    docker_run gitbook install; gitbook pdf . ${PDF_FILE_NAME}
+    ;;
+
   serve)
-    docker_run gitbook serve
+    gitbook serve
     ;;
 
   pdf)
-    docker_run gitbook pdf . ${PDF_FILE_NAME}
-  ;;
+    gitbook pdf . ${PDF_FILE_NAME}
+    ;;
 
   *)
     echo
     echo "Opcao invalida: $1. Tente uma das seguintes:"
-    echo -e "\tbuild: Constroi imagem docker"
-    echo -e "\tserve: Renderiza apostila no ambiente local (localhost:4000)"
+    echo -e "\tdocker-build: Constroi imagem docker"
+    echo -e "\tdocker-serve: Renderiza apostila no ambiente local usando Docker (acesse localhost:4000 no browser)"
+    echo -e "\tdocker-pdf: Gera versao PDF da apostila utilizando Docker"
+    echo -e "\tserve: Renderiza apostila no ambiente local sem Docker (acesse localhost:4000 no browser)"
     echo -e "\tpdf: Gera versao PDF da apostila"
   ;;
 esac

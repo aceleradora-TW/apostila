@@ -1,5 +1,5 @@
 {
-  "root": "_posts",
+  "root": "capitulos",
   "structure": {
     "readme": "introducao.md",
     "summary": "sumario.md"

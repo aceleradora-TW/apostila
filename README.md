@@ -1,24 +1,77 @@
 # Apostila Aceleradora
 
-Baseado no template [Jekyll Clean](https://github.com/scotte/jekyll-clean).
+## Como Acessar
 
-Existem duas opções de visualização da apostila:
-- Github Pages: https://aceleradora-tw.github.io/apostila/
-- Gitbook: https://aceleradora-tw.gitbook.io/agil/_posts/
+  - Via Gitbook: https://aceleradora-tw.gitbook.io/agil/
 
-# Conteúdo
+## Como contribuir
 
-O conteúdo é escrito usando Markdown. As páginas da apostila estão presentes na pasta `_posts/`.
+### Gerando Conteúdo
 
-Para adicionar uma imagem local aos artigos, basta colocar a imagem na pasta `images/`. Para referenciar esta imagem em um artigo, pode-se usar seu caminho relativo:
+Para adicionar conteúdo, pode-se utilizar o editor visual do próprio Gitbook.
 
-`![imagem](../images/nome-da-imagem.png`)
+Caso você seja familar com Git e queira editar o conteúdo na sua máquina, basta:
 
-# Contribuindo
+  - Adicionar novas páginas à pasta `capitulos/`;
+  - Atualizar o arquivo `capitulos/sumario.md` adicionando o link para as novas páginas
+  - Commitar as mudanças
 
-Para contribuir, basta adicionar novas páginas à pasta `_posts/`. Não esqueça de adicionar uma categoria à nova página. Para verificar os
-resultados localmente, execute:
+Recomendamos editores que suportem a visualização de Markdown:
 
-```sh
-jekyll serve
+  - [Visual Studio Code](https://code.visualstudio.com/)
+  - [Typora](https://typora.io/)
+
+Para adicionar uma imagem local aos artigos, basta colocar a imagem na pasta `images/`. Para referenciar esta imagem em um artigo, pode-se
+usar seu caminho relativo:
+
+```
+![imagem](../images/nome-da-imagem.png)
+```
+
+### Visualizando o resultado localmente
+
+Apostila feita com [Gitbook toolchain](https://toolchain.gitbook.com/setup.html).
+
+### Dependências
+
+  - Node; e/ou
+  - Docker
+  - Calibre
+
+Instale o Gitbook toolchain:
+
+```bash
+npm install -g gitbook-cli
+```
+
+Instale o Calibre de acordo com as [instruções do Gitbook](https://toolchain.gitbook.com/ebook.html).
+
+__Caso você não queira instalar o Node nem o Calibre, utilize o Docker__
+
+### Execução local
+
+Caso você pretenda usar Docker, construa a imagem primeiro:
+
+```bash
+./tarefas docker-build
+```
+
+__Visualizar apostila no browser local__
+
+```bash
+# Sem docker
+./tarefas serve
+
+# Com docker
+./tarefas docker-serve
+```
+
+__Gerar PDF__
+
+```bash
+# Sem docker
+./tarefas pdf
+
+# Com docker
+./tarefas docker-pdf
 ```
