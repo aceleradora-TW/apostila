@@ -375,8 +375,17 @@ __toLowerCase__
 > Nome em portugues
 > toLowerCase: para minusculas
 
-```java
+Retorna uma nova String com todas as letras maiúsculas trocadas por minúsculas:
 
+```java
+String texto = "BOM DIA";
+
+String textoMinusculo = texto.toLowerCase(); // textoMinusculo sera "bom dia"
+
+
+String outroTexto = "Bom Dia";
+
+String outroTextoMinusculo = texto.toLowerCase(); // outroTextoMinusculo sera "bom dia"
 ```
 
 __toUpperCase__
@@ -384,18 +393,28 @@ __toUpperCase__
 > Nome em portugues
 > toUpperCase: para maiusculas
 
-```java
+Retorna uma nova String com todas as letras minúsculas trocadas por maiúsculas:
 
+```java
+String texto = "bom dia";
+
+String textoMaiusculo = texto.toUpperCase(); // textoMaiusculo sera "BOM DIA"
+
+
+String outroTexto = "Bom Dia";
+
+String outroTextoMaiusculo = texto.toUpperCase(); // outroTextoMaiusculo sera "BOM DIA"
 ```
 
 Documentação Java:
   - [Lista completa dos métodos da classe string](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html)
 
 
-
 Precisamos saber que Strings são __imutáveis__ e precisamos também entender quais são as consequências disto no nosso código.
 
-__Afinal, o que quer dizer imutabilidade?__
+### Strings são imutáveis
+
+Sempre que buscamos al
 
 Quando dizemos que as Strings são imutáveis, basicamente significa que o valor de uma variável String não pode ser alterado em algumas
 situações. Isto gera bastante confusão.
