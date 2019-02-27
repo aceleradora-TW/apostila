@@ -8,7 +8,8 @@ script:
 before_deploy:
 - git config --local user.name "yrachid"
 - git config --local user.email "anuar.yasser@gmail.com"
-- git tag -f master
+- export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+- git tag $TRAVIS_TAG
 deploy:
   provider: releases
   api_key:
@@ -17,3 +18,4 @@ deploy:
   file: apostila-aceleradora.pdf
   on:
     repo: aceleradora-TW/apostila
+  draft: false
