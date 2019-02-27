@@ -2,3 +2,7 @@ language: node_js
 
 services:
   - docker
+
+before_install:
+  - docker build -t aceleradora-tw/apostila .
+  - docker run -v ${PWD}:/book aceleradora-tw/apostila gitbook pdf . apostila-aceleradora.pdf
