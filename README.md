@@ -4,7 +4,11 @@
 
 ## Como Acessar
 
-  - Via Gitbook: https://aceleradora-tw.gitbook.io/agil/
+  Para fazer a leitura online da apostila, acesse-a no [Gitbook](https://aceleradora-tw.gitbook.io/agil/).
+
+  Para baixar a versão PDF do conteúdo, acesse a versão mais recente [aqui](https://github.com/aceleradora-TW/apostila/releases/latest) e
+baixe o arquivo `apostila-aceleradora.pdf`
+
 
 ## Como contribuir
 
