@@ -24,11 +24,11 @@ Recomendamos editores que suportem a visualização de Markdown:
   - [Visual Studio Code](https://code.visualstudio.com/)
   - [Typora](https://typora.io/)
 
-Para adicionar uma imagem local aos artigos, basta colocar a imagem na pasta `images/`. Para referenciar esta imagem em um artigo, pode-se
+Para adicionar uma imagem local aos artigos, basta colocar a imagem na pasta `imagens/`. Para referenciar esta imagem em um artigo, pode-se
 usar seu caminho relativo:
 
 ```
-![imagem](../images/nome-da-imagem.png)
+![imagem](../imagens/nome-da-imagem.png)
 ```
 
 ### Visualizando o resultado localmente

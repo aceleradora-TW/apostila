@@ -102,7 +102,7 @@ Baseado no material desta apostila informe os comandos necessários para realiza
 
 Imagine que estamos na seguinte estrutura de diretórios:
 
-![imagem](../images/imagemLinux01.png)
+![imagem](../imagens/imagem-linux-01.png)
 
 - [ ] Liste os arquivos do diretório  `aceleradora`.
 
