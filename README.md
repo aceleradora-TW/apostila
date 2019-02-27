@@ -16,6 +16,7 @@ Caso você seja familar com Git e queira editar o conteúdo na sua máquina, bas
 
   - Adicionar novas páginas à pasta `capitulos/`;
   - Atualizar o arquivo `capitulos/sumario.md` adicionando o link para as novas páginas
+    - Para entender melhor como o sumário funciona, veja [esta página](https://toolchain.gitbook.com/pages.html)
   - Commitar as mudanças
 
 Recomendamos editores que suportem a visualização de Markdown:
