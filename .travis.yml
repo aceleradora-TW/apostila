@@ -1,13 +1,20 @@
 language: node_js
-
 services:
-  - docker
-
+- docker
 before_install:
-  - docker build -t aceleradora-tw/apostila .
-  - docker run -v ${PWD}:/book aceleradora-tw/apostila gitbook pdf . apostila-aceleradora.pdf
-
+- docker build -t aceleradora-tw/apostila .
 script:
-  - echo ">>>>>>>>>> ======== <<<<<<<<<<"
-  - echo ">>>>>>>>>> ALL GOOD <<<<<<<<<<"
-  - echo ">>>>>>>>>> ======== <<<<<<<<<<"
+- docker run -v ${PWD}:/book aceleradora-tw/apostila gitbook pdf . apostila-aceleradora.pdf
+- echo ">>>>>>>>>> ALL GOOD <<<<<<<<<<"
+before_deploy:
+- git config --local user.name "yrachid"
+- git config --local user.email "anuar.yasser@gmail.com"
+- export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+- git tag $TRAVIS_TAG
+deploy:
+  provider: releases
+  api_key:
+    secure: mRwpmukVJJZn/ydYnSJ5nfZ2mVIXT71y+sPUEBJzbltr5cy1pytzdsJDQDk5ZWugM9LhuyHM+3+MaP8xpTbq2mXdcEpCNXb80eq9U1TsZMKIQscX0esfHO/5n42urZ2fh9vQCgzw87lnjj+PSSQ/v9Qwl2X2bZGnaHP47rrJ05RofNQCC9GJ8psSdAfzNcvnB7zzhAqCEnQMqlSYr6sZbHrMoI/xIFyejm1ekviHnGJl/tMsgXlIokrTzg8ilX3OPJXZ8IpO55u7v0L1Z4quS+3anR/WTiG1Y5dfJSHXW13PHacATfYoDc2ztANBA+tAEsz4dmpyTqDy62W1+zQxdrpMg+mtc6dhyUCb9XAbxtQv7nuZUyh1Wf/G+Ja836k/STciqmvu2XLx1v7NEL7CFrC3188/BOn+vd0Y3S19Kwp9yPcAcmSrXNZj+U0wYgSkRRIrHIYEidfKC4DzcCvc6+fB+Kk1IcMktRwjpbQxwuHkd+79NTkXW9l9x8eqT6rU+lJe1AWl0IUYycXjnjlkRvF31RMpa50gfOcxI2n0qHp1Z8V8xF5Wl3MsBISPpm2IXm5Sk5P3DI/Kujzm/So9ARWQSNvAviIqpPBgbRjza4XVLyUsywlIAj2ejCXpdl8lFdo3qn84y7AsDn31PAkhPCub6wVwaLg8R+WWt3LNzCA=
+  file: apostila-aceleradora.pdf
+  on:
+    repo: aceleradora-TW/apostila
