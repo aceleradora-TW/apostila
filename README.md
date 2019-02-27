@@ -1,5 +1,7 @@
 # Apostila Aceleradora
 
+[![Build Status](https://travis-ci.org/aceleradora-TW/apostila.svg?branch=master)](https://travis-ci.org/aceleradora-TW/apostila)
+
 ## Como Acessar
 
   - Via Gitbook: https://aceleradora-tw.gitbook.io/agil/
