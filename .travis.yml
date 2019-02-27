@@ -10,7 +10,7 @@ before_deploy:
 # - git config --local user.name "yrachid"
 # - git config --local user.email "anuar.yasser@gmail.com"
 # - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-- git tag latest-master
+- git tag master
 deploy:
   provider: releases
   api_key:
