@@ -42,7 +42,7 @@ A linguagem Java oferece diversos tipos de dados com os quais podemos trabalhar.
 Os tipos primitivos correspondem a dados simples escalares \(que possuem um tamanho fixo na memória\). No java, existem oito tipos primitivos, mas nem todos são comumente utilizados. Os tipos que você utilizará com mais frequência serão:
 
 * **boolean:** Assume os valores booleanos `true` \(verdadeiro\) ou `false` \(falso\).
-* **int:** serve para armazenar números inteiros entre `-231` e `231 -1`.
+* **int:** serve para armazenar números inteiros entre $$-2 ^ {31} $$ e $$2 ^ {31} - 1$$ 
 * **double:** armazena números decimais \(quebrados, ou com vírgula\).
 * **char:** O char é um tipo de variável que aceita a inserção de um caractere apenas.
 
@@ -62,7 +62,7 @@ Além dos tipos mais comuns, ainda temos alguns outros tipos primitivos para gua
 
 * **float:** armazena números decimais \(quebrados, ou com vírgula\) com uma precisão menor \(menos números depois da vírgula\) que o `double`.
 * **short:** armazena valores inteiros entre `-32768` e `32767`
-* **long:** armazena valores inteiros entre `-263` e `263 -1`.
+* **long:** armazena valores inteiros entre $$-2 ^ {63}$$ e $$2 ^ {63} - 1$$.
 * **byte:** armazena valores inteiros entre `-128` e `127`
 
 > Estes tipos são muito similares aos tipos mais comuns. No entanto, eles existem para casos muito específicos, especialmente para quando precisamos economizar memória ou precisamos utilizar valores inteiros muito grandes \(declarando-os como `long` em vez de `int`, por exemplo\). Não estamos preocupados com estas situações neste momento.
