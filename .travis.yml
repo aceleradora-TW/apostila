@@ -5,7 +5,6 @@ before_install:
 - docker build -t aceleradora-tw/apostila .
 script:
 - docker run -v ${PWD}:/book aceleradora-tw/apostila gitbook pdf . apostila-aceleradora.pdf
-- echo ">>>>>>>>>> ALL GOOD <<<<<<<<<<"
 before_deploy:
 - git config --local user.name "yrachid"
 - git config --local user.email "anuar.yasser@gmail.com"
