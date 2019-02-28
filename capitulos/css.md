@@ -1,8 +1,6 @@
 ---
-layout: post
 title: "CSS"
 date: 2014-07-22 16:25:06 -0700
-categories: frontend
 ---
 
 O Cascading Style Sheets (CSS) é uma __"folha de estilo"__ e é utilizada para definir a aparência em páginas da internet que adotam para o seu desenvolvimento linguagens de marcação (como XML, HTML e XHTML). O CSS define como serão exibidos os elementos contidos no código de uma página da internet.

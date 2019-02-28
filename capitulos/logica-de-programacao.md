@@ -1,10 +1,7 @@
 ---
-layout: post
 title: "Logica de Programacao"
 date: 2014-07-22 16:25:06 -0700
-categories: backend
 ---
-
 
 ## Tipos de Dados
 
@@ -15,10 +12,6 @@ A linguagem Java oferece diversos tipos de dados com os quais podemos trabalhar.
 * **Int:** serve para armazenar números inteiros. 
 * **Float:** armazena números decimais (quebrados, ou com vírgula).
 * **String:** armazena
-
-
-
-
 
 **Arrays e Vetores**
 

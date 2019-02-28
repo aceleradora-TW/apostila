@@ -1,8 +1,6 @@
 ---
-layout: post
 title: "HTML"
 date: 2014-07-22 16:25:06 -0700
-categories: frontend
 ---
 
 ## Estrutura básica de uma página HTML

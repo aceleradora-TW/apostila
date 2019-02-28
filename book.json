@@ -1,7 +1,7 @@
 {
   "root": "capitulos",
   "structure": {
-    "readme": "introducao.md",
+    "readme": "sumario.md",
     "summary": "sumario.md"
   }
 }
