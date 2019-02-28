@@ -5,7 +5,7 @@ date: '2018-12-19 13:25:06 -0700'
 categories: java
 ---
 
-# Java
+# Introdução ao Java
 
 Neste capítulo, veremos alguns conceitos fundamentais do Java para que possamos começar a utilizar a linguagem.
 
@@ -15,7 +15,7 @@ Neste capítulo, veremos alguns conceitos fundamentais do Java para que possamos
 * Estruturas de repetição \(enquanto, para\)
 * Operadores
 
-### Olá, mundo
+## Olá, mundo
 
 No Java o seu código sempre será escrito dentro de classes e métodos. Uma classe é um bloco de código que contém atributos \(variáveis\) e métodos \(funções\). Os atributos irão guardar dados e os métodos irão executar lógica/comportamento. Para este capítulo, isto é tudo que precisamos saber sobre classes e métodos, veremos mais sobre eles no capítulo de orientação a objetos.
 
@@ -33,16 +33,16 @@ No exemplo acima, criamos a classe `Ola`, que possui o método `main`, o qual ir
 
 > Existem algumas palavras chave neste exemplo que podem parecer bastante confusas \(`public`, `static`, `void`, `String[]`\). Por enquanto, não precisamos nos preocupar com elas, e iremos entender o que cada uma significa em outros capítulos.
 
-### Tipos de dados
+## Tipos de dados
 
 A linguagem Java oferece diversos tipos de dados com os quais podemos trabalhar. Há basicamente duas categorias em que se encaixam estes tipos de dados: **tipos primitivos** e **tipos de referência**.
 
-#### Tipos primitivos
+### Tipos primitivos
 
 Os tipos primitivos correspondem a dados simples escalares \(que possuem um tamanho fixo na memória\). No java, existem oito tipos primitivos, mas nem todos são comumente utilizados. Os tipos que você utilizará com mais frequência serão:
 
 * **boolean:** Assume os valores booleanos `true` \(verdadeiro\) ou `false` \(falso\).
-* **int:** serve para armazenar números inteiros entre $$-2 ^ {31} $$ e $$2 ^ {31} - 1$$ 
+* **int:** serve para armazenar números inteiros entre $$-2 ^ {31}$$ e $$2 ^ {31} - 1$$ 
 * **double:** armazena números decimais \(quebrados, ou com vírgula\).
 * **char:** O char é um tipo de variável que aceita a inserção de um caractere apenas.
 
@@ -75,7 +75,7 @@ Alguns destes são tópicos bastante avançados, mas caso queira entender um pou
 * [Explicação sobre a precisão de números decimais](https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3)
 * [O padrão Unicode \(utilizado pelo Java para representar variáveis do tipo char\)](https://en.wikipedia.org/wiki/Unicode)
 
-#### Tipos de referência
+### Tipos de referência
 
 Os tipos de referência armazenam objetos. Neste momento, não faz sentido tentarmos entender a fundo o que isto significa. Sugerimos que depois de você dar uma lida no capítulo de orientação a objetos, revisite esta parte da apostila para entender um pouco melhor.
 
@@ -86,7 +86,7 @@ Nas primeiras interações com a linguagem, você irá utilizar quase que consta
 
 Portanto, neste momento, vamos nos concentrar em entender estes tipos primeiro.
 
-### Arrays \(vetores\)
+## Arrays \(vetores\)
 
 Arrays \(ou vetores\) são uma estrutura utilizada para quando necessitamos armazenar um conjunto de valores em uma variável, como uma lista.
 
@@ -94,7 +94,7 @@ Arrays \(ou vetores\) são uma estrutura utilizada para quando necessitamos arma
 
 Pensemos em um caso de uso. Estamos escrevendo um programa que armazena 10 valores aleatórios inteiros na memória, multiplica cada um por 2 e exibe os resultados na tela. Podemos resolver isto de duas maneiras:
 
-#### Criando 10 variáveis
+### Criando 10 variáveis
 
 ```java
 int valor0 = 5;
@@ -124,7 +124,7 @@ Esta alternativa não é um bom caminho, pois nosso código ficaria imenso e con
 
 Vejamos a outra alternativa:
 
-#### Criando um vetor de 10 posições
+### Criando um vetor de 10 posições
 
 Antes de mais nada, para criar um vetor de valores inteiros, fazemos o seguinte:
 
@@ -204,7 +204,7 @@ Sabemos que ainda não chegamos na parte das estruturas de repetição, mas tenh
 
 > **"Arrays existem por bons motivos, fique de olho em onde você poderá utilizá-los."**
 >
->  - Regina Casé
+> * Regina Casé
 
 **Bônus: Definindo valores direto na declaração**
 
@@ -218,7 +218,7 @@ for (int i = 0; i < valores.length; i++) {
 }
 ```
 
-### Strings
+## Strings
 
 String é uma das classes mais importantes do Java, pois ela é utilizada para representar e manipular texto.
 
@@ -251,7 +251,7 @@ Ainda que isto seja possível, não é necessário, pois String é uma classe t�
 String dia = "Sexta";
 ```
 
-### Manipulando Strings
+## Manipulando Strings
 
 Strings são úteis para resolver incontáveis tipos de problemas, por isso, é interessante revisar como manipulamos valores String utilizando seus métodos. Vejamos alguns métodos úteis:
 
@@ -402,7 +402,7 @@ Documentação Java:
 
 * [Lista completa dos métodos da classe string](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html)
 
-### Operadores
+## Operadores
 
 Como o próprio nome diz, os operadores permitem executar operações sobre um ou dois **valores primitivos**.
 
@@ -590,9 +590,9 @@ numero *= 2; // numero agora tem o valor 8
 numero /= 2; // numero agora tem o valor 4
 ```
 
-### Tópicos complementares
+## Tópicos complementares
 
-#### Strings são imutáveis
+### Strings são imutáveis
 
 Sempre que buscamos al
 
@@ -600,7 +600,7 @@ Quando dizemos que as Strings são imutáveis, basicamente significa que o valor
 
 Podemos sobrescrever o valor de uma variável
 
-#### Qual a diferença entre tipos primitivos e tipos de referência?
+### Qual a diferença entre tipos primitivos e tipos de referência?
 
 Existem grandes diferenças entre estes tipos, no entanto, para nós esta diferença ainda não é clara, pois não exploramos os conceitos de orientação a objetos. Basicamente, tipos primitivos guardam valores, enquanto tipos de referência guardam a referência para um objeto na memória. Esta ideia pode soar bastante estranha por enquanto, pois ainda não sabemos o que é um objeto.
 
@@ -643,3 +643,4 @@ int tamanhoVetor = vetor.length;
 Já nos tipos, primitivos, nada disto é possível, pois eles não possuem atributos nem métodos, pois variáveis primitivas apenas guardam um valor bruto.
 
 Depois de ler o capítulo de orientação a objetos, recomendamos que vocês revisite esta parte, prometemos que tudo fará um pouco mais de sentido.
+
