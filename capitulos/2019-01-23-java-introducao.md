@@ -220,7 +220,7 @@ for (int i = 0; i < valores.length; i++) {
 
 ## Strings
 
-String é uma das classes mais importantes do Java, pois ela é utilizada para representar e manipular texto.
+String é uma das classes mais importantes do Java, sendo vastamente utilizada. Strings servem para representar e manipular texto.
 
 Para declarar uma String, basta fazer o seguinte:
 
@@ -228,28 +228,8 @@ Para declarar uma String, basta fazer o seguinte:
 String dia = "Sexta";
 ```
 
-Ao começar no Java, muitas pessoas pensam que String é um tipo primitivo, o que não é verdade, pois ela é uma classe e valores String armazenados em variáveis são do tipo referência. Esta confusão geralmente acontece pois ela é a única classe na linguagem que possui uma **representação literal**.
+Ao começar no Java, muitas pessoas pensam que String é um tipo primitivo, o que não é verdade, pois ela é uma classe e valores String armazenados em variáveis são do tipo referência. Esta confusão geralmente acontece pois ela é a única classe na linguagem que possui uma **representação literal**, ou seja, é possível criar novas Strings utilizando aspas duplas.
 
-**Representação o quê?**
-
-Quando falamos _representação literal_, estamos nos referindo às _aspas duplas_. No Java, quando queremos criar um objeto de alguma classe, sempre temos que utilizar a palavra `new`. Vamos supor que nosso programa tem as classes `Carro` e `Papagaio`. Para criar objetos destas classes e guardá-los em variáveis, teríamos que utilizar o new:
-
-```java
-Carro carro = new Carro();
-Papagaio passaro = new Papagaio();
-```
-
-Seguindo esta lógica, teríamos que fazer o mesmo com a String, certo? Afinal, ela é uma classe! Teríamos que fazer algo como:
-
-```java
-String dia = new String();
-```
-
-Ainda que isto seja possível, não é necessário, pois String é uma classe tão comumente utilizada, que o Java nos dá a facilidade de utilizar as aspas duplas em vez de new:
-
-```java
-String dia = "Sexta";
-```
 
 ## Manipulando Strings
 
@@ -257,7 +237,9 @@ Strings são úteis para resolver incontáveis tipos de problemas, por isso, é 
 
 **length**
 
-> Nome em portugues length: tamanho
+Nome em português:
+
+> length: tamanho
 
 Retorna o tamanho da String. O tamanho é a quantidade de caracteres que a String possui:
 
@@ -269,7 +251,9 @@ int tamanho = texto.length(); // tamanho sera 2;
 
 **equals**
 
-> Nome em português _equals: igual ou é igual a_
+Nome em português:
+
+> equals: igual ou é igual a
 
 Compara duas strings e retorna verdadeiro \(`true`\) caso elas sejam iguais:
 
@@ -291,7 +275,9 @@ boolean saoIguais = texto.equals(outroTexto); //saoIguais sera false
 
 **replace**
 
-> Nome em portugues replace: substitui
+Nome em português:
+
+> replace: substituir
 
 Este método recebe dois argumentos:
 
@@ -323,7 +309,9 @@ String pedaco = texto.substring(0, 3); // pedaco sera "Ace"
 
 **split**
 
-> Nome em portugues split: separar
+Nome em português:
+
+> split: separar
 
 Este método recebe um argumento:
 
@@ -347,7 +335,9 @@ String[] pedacos = texto.split(""); //pedacos sera um array contendo {"d", "i", 
 
 **contains**
 
-> Nome em portugues contains: contém
+Nome em português:
+
+> contains: contém
 
 Este método recebe um argumento:
 
@@ -366,7 +356,9 @@ texto.contains("radora"); // sera verdadeiro
 
 **toLowerCase**
 
-> Nome em portugues toLowerCase: para minusculas
+Nome em português:
+
+> toLowerCase: para minusculas
 
 Retorna uma nova String com todas as letras maiúsculas trocadas por minúsculas:
 
@@ -383,7 +375,9 @@ String outroTextoMinusculo = texto.toLowerCase(); // outroTextoMinusculo sera "b
 
 **toUpperCase**
 
-> Nome em portugues toUpperCase: para maiusculas
+Nome em português:
+
+> toUpperCase: para maiusculas
 
 Retorna uma nova String com todas as letras minúsculas trocadas por maiúsculas:
 
@@ -590,11 +584,44 @@ numero *= 2; // numero agora tem o valor 8
 numero /= 2; // numero agora tem o valor 4
 ```
 
+## Fim do capítulo
+
+E isso é quase tudo que você deve saber para começar a se aventurar no Java! Este capítulo serve como um pontapé inicial, mas ainda temos muita coisa para ver! Caso você tenha interesse, dê uma lida nos tópicos complementares mais abaixo, que tentam explicar um pouco mais sobre algumas coisas que foram comentadas neste capítulo, mas que podem ser meio confusas neste momento. 
+
+Recomendamos revisitar estes tópicos complementares depois da leitura do capítulo de orientação a objetos e da realização de alguns exercícios.
+
+### Exercícios de fixação
+
+No repositório da trilha de exercícios, você encontrará alguns desafios de lógica de programação que lhe ajudarão a fixar os conceitos apresentados nesta introdução.
+
+Acesse o repositório aqui: https://github.com/aceleradora-TW/trilha-de-exercicios
+
 ## Tópicos complementares
 
-### Strings são imutáveis
+### Strings
 
-Sempre que buscamos al
+#### Representação literal
+
+Quando falamos _representação literal_, estamos nos referindo às _aspas duplas_. No Java, quando queremos criar um objeto de alguma classe, sempre temos que utilizar a palavra `new`. Vamos supor que nosso programa tem as classes `Carro` e `Papagaio`. Para criar objetos destas classes e guardá-los em variáveis, teríamos que utilizar o new:
+
+```java
+Carro carro = new Carro();
+Papagaio passaro = new Papagaio();
+```
+
+Seguindo esta lógica, teríamos que fazer o mesmo com a String, certo? Afinal, ela é uma classe! Teríamos que fazer algo como:
+
+```java
+String dia = new String();
+```
+
+Ainda que isto seja possível, não é necessário, pois String é uma classe tão comumente utilizada, que o Java nos dá a facilidade de utilizar as aspas duplas em vez de new:
+
+```java
+String dia = "Sexta";
+```
+
+### Imutabilidade
 
 Quando dizemos que as Strings são imutáveis, basicamente significa que o valor de uma variável String não pode ser alterado em algumas situações. Isto gera bastante confusão.
 
