@@ -33,6 +33,10 @@ No exemplo acima, criamos a classe `Ola`, que possui o método `main`, o qual ir
 
 > Existem algumas palavras chave neste exemplo que podem parecer bastante confusas \(`public`, `static`, `void`, `String[]`\). Por enquanto, não precisamos nos preocupar com elas, e iremos entender o que cada uma significa em outros capítulos.
 
+{% hint style="info" %}
+Existem algumas palavras chave neste exemplo que podem parecer bastante confusas \(`public`, `static`, `void`, `String[]`\). Por enquanto, não precisamos nos preocupar com elas, e iremos entender o que cada uma significa em outros capítulos.
+{% endhint %}
+
 ## Tipos de dados
 
 A linguagem Java oferece diversos tipos de dados com os quais podemos trabalhar. Há basicamente duas categorias em que se encaixam estes tipos de dados: **tipos primitivos** e **tipos de referência**.
@@ -230,8 +234,7 @@ String dia = "Sexta";
 
 Ao começar no Java, muitas pessoas pensam que String é um tipo primitivo, o que não é verdade, pois ela é uma classe e valores String armazenados em variáveis são do tipo referência. Esta confusão geralmente acontece pois ela é a única classe na linguagem que possui uma **representação literal**, ou seja, é possível criar novas Strings utilizando aspas duplas.
 
-
-## Manipulando Strings
+### Manipulando Strings
 
 Strings são úteis para resolver incontáveis tipos de problemas, por isso, é interessante revisar como manipulamos valores String utilizando seus métodos. Vejamos alguns métodos úteis:
 
@@ -586,7 +589,7 @@ numero /= 2; // numero agora tem o valor 4
 
 ## Fim do capítulo
 
-E isso é quase tudo que você deve saber para começar a se aventurar no Java! Este capítulo serve como um pontapé inicial, mas ainda temos muita coisa para ver! Caso você tenha interesse, dê uma lida nos tópicos complementares mais abaixo, que tentam explicar um pouco mais sobre algumas coisas que foram comentadas neste capítulo, mas que podem ser meio confusas neste momento. 
+E isso é quase tudo que você deve saber para começar a se aventurar no Java! Este capítulo serve como um pontapé inicial, mas ainda temos muita coisa para ver! Caso você tenha interesse, dê uma lida nos tópicos complementares mais abaixo, que tentam explicar um pouco mais sobre algumas coisas que foram comentadas neste capítulo, mas que podem ser meio confusas neste momento.
 
 Recomendamos revisitar estes tópicos complementares depois da leitura do capítulo de orientação a objetos e da realização de alguns exercícios.
 
@@ -594,7 +597,7 @@ Recomendamos revisitar estes tópicos complementares depois da leitura do capít
 
 No repositório da trilha de exercícios, você encontrará alguns desafios de lógica de programação que lhe ajudarão a fixar os conceitos apresentados nesta introdução.
 
-Acesse o repositório aqui: https://github.com/aceleradora-TW/trilha-de-exercicios
+Acesse o repositório aqui: [https://github.com/aceleradora-TW/trilha-de-exercicios](https://github.com/aceleradora-TW/trilha-de-exercicios)
 
 ## Tópicos complementares
 

@@ -1,9 +1,9 @@
 ---
-title: "HTML"
-date: 2014-07-22 16:25:06 -0700
+title: HTML
+date: '2014-07-22 16:25:06 -0700'
 ---
 
-## Estrutura básica de uma página HTML
+# HTML
 
 A estrutura básica de uma página HTML pode ser vista na Listagem 1, na qual podemos ver as principais tags que são necessárias para que o documento seja corretamente interpretado pelos browsers.
 
@@ -15,7 +15,7 @@ A estrutura básica de uma página HTML pode ser vista na Listagem 1, na qual po
 
 **Linhas 3 e 6:** Abertura e fechamento da tag head, que define o cabeçalho do documento. O conteúdo neste espaço não é visível no browser, mas contém instruções sobre seu conteúdo e comportamento. Dentro dessa tag, por exemplo, podem ser inseridas folhas de estilo e scripts;
 
-**Linha 4:** A tag meta, nesse caso, especifica qual conjunto de caracteres (character set ou charset) será usado para renderizar o texto da página. O UTF-8 contém todos os caracteres dos padrões Unicode e ASCII, sendo, portanto, o mais utilizado em páginas web.
+**Linha 4:** A tag meta, nesse caso, especifica qual conjunto de caracteres \(character set ou charset\) será usado para renderizar o texto da página. O UTF-8 contém todos os caracteres dos padrões Unicode e ASCII, sendo, portanto, o mais utilizado em páginas web.
 
 **Linha 5:** A tag title define o título da página, aquele que aparece na janela/aba do navegador;
 
@@ -25,7 +25,7 @@ A estrutura básica de uma página HTML pode ser vista na Listagem 1, na qual po
 
 **Tags do HTML**
 
-Um documento HTML é composto por tags, as quais possuem um nome e aparecem entre os sinais `<` e `>` , por exemplo, em  `<html>` e `<head>` . Naquele exemplo também vimos que algumas tags precisam ser abertas e fechadas, como em `<body></body>`.Nesse caso, a tag de fechamento deve conter a barra `/` antes do nome. Outras, porém, não precisam ser fechadas, como a tag `<meta>`. Nesses casos, a adição da barra / no final da própria tag é opcional.
+Um documento HTML é composto por tags, as quais possuem um nome e aparecem entre os sinais `<` e `>` , por exemplo, em `<html>` e `<head>` . Naquele exemplo também vimos que algumas tags precisam ser abertas e fechadas, como em `<body></body>`.Nesse caso, a tag de fechamento deve conter a barra `/` antes do nome. Outras, porém, não precisam ser fechadas, como a tag `<meta>`. Nesses casos, a adição da barra / no final da própria tag é opcional.
 
 **Títulos do HTML**
 
@@ -35,8 +35,7 @@ Títulos são normalmente utilizados para identificar páginas e seções, e pos
 
 ![exemplo2](https://lh3.googleusercontent.com/MFExgd9esIJwcXYcVP0KtGalqAFVVzVclo1wZ8M4-YaMC2PKLtqXDyxrnS_pLbUWYcYDnN7JrBoMQPUP6Rft6bVne3FY_HBXS6hEQDcRIyMzF3aUBLKPfmt6DD9FhbeHLHHea_GZ)
 
-Valendo lembrar que essas tags servem apenas para atribuir a importância do título (título, subtítulo, etc) e não apenas para regular o tamanho. O tamanho poderá ser regulado no arquivo do CSS. 
-
+Valendo lembrar que essas tags servem apenas para atribuir a importância do título \(título, subtítulo, etc\) e não apenas para regular o tamanho. O tamanho poderá ser regulado no arquivo do CSS.
 
 O que resultaria em:
 
@@ -66,8 +65,7 @@ Resultado:
 
 **Links no HTML**
 
-Links são normalmente utilizados para direcionar o usuário para outras páginas, ou para outras partes da mesma página. Nos dois casos, utilizamos a tag a, que possui o atributo href no qual indicamos o destino daquele link.
-O seguinte código mostra como adicionar um link para outra página, neste caso, indicada pelo arquivo pagina2.html.
+Links são normalmente utilizados para direcionar o usuário para outras páginas, ou para outras partes da mesma página. Nos dois casos, utilizamos a tag a, que possui o atributo href no qual indicamos o destino daquele link. O seguinte código mostra como adicionar um link para outra página, neste caso, indicada pelo arquivo pagina2.html.
 
 ![exemplo1](https://lh4.googleusercontent.com/m1IUaE_gE8cpC8qwNQVTjYXt48ADnPyW0L2wwIsI5OWHjsCw4UfMv-pHVK1Zy6daFUrc2Z8BvaOOGd6h0gHXmzSQu10ihbPbCzbN7lU)
 
@@ -77,7 +75,7 @@ Já o código abaixo mostra como adicionar um link para um elemento na mesma pá
 
 **Tabelas no HTML**
 
-Tabelas são elementos utilizados com frequência para exibir dados de forma organizada em linhas e colunas. No HTML, elas são formadas por três tags básicas: table, para delimitar a tabela; tr, para indicar as linhas; e td para formar as colunas. 
+Tabelas são elementos utilizados com frequência para exibir dados de forma organizada em linhas e colunas. No HTML, elas são formadas por três tags básicas: table, para delimitar a tabela; tr, para indicar as linhas; e td para formar as colunas.
 
 ![exemplo3](https://lh3.googleusercontent.com/QDkhXriQsRgzYqgVjQALuEjzgYurYTBIvGwVrxpMqvSUQumJeSVIVcsJv1f6cvwlsh9QrzNUtWSQxpGVJA5kOmZ_hBJREhsJ_i5fcDwvV4-7_rWjJ7oogR9YG1WwRQSm2hYu4lX3)
 
@@ -85,7 +83,7 @@ Este seria o resultado do código:
 
 ![resultadoExemplo](https://lh4.googleusercontent.com/IvSTYxlqvfgBNtKlkf_v9bncODm_BoVatxLTiX2DNqutxMVjgOfrg-pKRaTAOYmfpQjMwTeCL2odWdg48HjS-OadGGMcbsdMW1shNX2uq-oGJizYMl5u2f6CsyvsIBTsedtDSKdS)
 
-Existem ainda outras três tags utilizadas para delimitar, de forma mais organizada, as partes da tabela: thead para o cabeçalho; tbody para o corpo; e tfoot para o rodapé. 
+Existem ainda outras três tags utilizadas para delimitar, de forma mais organizada, as partes da tabela: thead para o cabeçalho; tbody para o corpo; e tfoot para o rodapé.
 
 Exemplo de tabela mais complexa, utilizando todas as tags:
 
@@ -97,11 +95,11 @@ Observação: por padrão, as tabelas não possuem bordas, isto pode ser adicion
 
 **Formulários no HTML**
 
-Formulários são normalmente utilizados para integrar a página HTML a algum processamento no lado servidor. Nesses casos, a página envia dados para uma aplicação (Java, PHP, .NET, etc), que os recebe, trata e retorna algum resultado.
+Formulários são normalmente utilizados para integrar a página HTML a algum processamento no lado servidor. Nesses casos, a página envia dados para uma aplicação \(Java, PHP, .NET, etc\), que os recebe, trata e retorna algum resultado.
 
-No HTML, geralmente usamos a tag form para delimitar a área na qual se encontram os campos a serem preenchidos pelo usuário, a fim de serem enviados para processamento no back-end (enquanto a página HTML é chamada de front-end da aplicação).
+No HTML, geralmente usamos a tag form para delimitar a área na qual se encontram os campos a serem preenchidos pelo usuário, a fim de serem enviados para processamento no back-end \(enquanto a página HTML é chamada de front-end da aplicação\).
 
-A figura mostra um exemplo de formulário com vários tipos de campos para entrada de dados e um botão para submetê-los ao servidor. 
+A figura mostra um exemplo de formulário com vários tipos de campos para entrada de dados e um botão para submetê-los ao servidor.
 
 ![exemplo](https://lh6.googleusercontent.com/PnVlPP27-bhGK6jxQKnfi520bZpb4qlZKbTV96rssGqzLZXezLb_DtTndcc4fqhxpnfHcaS0quJvbg9k340vlJjo4L837WeHNKmliHZJ)
 
@@ -109,13 +107,12 @@ Como ficaria no browser:
 
 ![resultadoExemplo](https://lh5.googleusercontent.com/WgTqYx_Ch5EeAI57MBpQolYyeuu80smhgcgu6rLgNshH7VjlhlPjleCyFaDQWsr-aEhqneXDVzw_kQbk07wurOHTKp41Fx2AEfvOsaM)
 
-Formatação de texto
-As tags de formatação de texto ajudam a destacar trechos da parte escrita da página, seja para fins de SEO ou por requisitos do conteúdo. Formatações como negrito e itálico podem ser aplicadas com facilidade utilizando as várias tags disponíveis para esse fim:
+Formatação de texto As tags de formatação de texto ajudam a destacar trechos da parte escrita da página, seja para fins de SEO ou por requisitos do conteúdo. Formatações como negrito e itálico podem ser aplicadas com facilidade utilizando as várias tags disponíveis para esse fim:
 
-* __b__ e __strong__ para __negrito/texto__ forte;
-* __i__ e __em__ para __itálico/ênfase__;
-* __small__ para textos menores que o padrão;
-* __mark__ para texto destacado.
+* **b** e **strong** para **negrito/texto** forte;
+* **i** e **em** para **itálico/ênfase**;
+* **small** para textos menores que o padrão;
+* **mark** para texto destacado.
 
 ![exemplo1](https://lh6.googleusercontent.com/HrU-C2Kjw4AQW8cBeAmSuwTJXHUTAAF0cKXfpsmDjToIVvMF8_-6xxQrwI_92LyaRKspHH0qc9PFGRL5A84e0xoawaBcpmlnoHQXWV47Eye12oJQHFENJDIHL7RZznwxhfEftfty)
 
@@ -125,12 +122,12 @@ As tags de formatação de texto ajudam a destacar trechos da parte escrita da p
 
 As tags div e span são duas das mais utilizadas no HTML, com objetivos distintos, porém com grande importância para a composição do layout das páginas e formatação do texto.
 
-As divs são normalmente utilizados para representarem containers para outros elementos, agrupando-os visualmente dentro de um bloco que pode conter dimensões e posição definidas. Por padrão, uma div não possui aparência características visuais definidas, isso precisa ser feito via CSS ao atribuir bordas, cores, etc. Sua principal característica, no entanto, é que essa tag representa um elemento do tipo bloco, ou seja, que quando adicionado na página, automaticamente gera uma nova linha no layout (semelhante a um parágrafo), ao invés de ser alocado lateralmente nos demais componentes.
+As divs são normalmente utilizados para representarem containers para outros elementos, agrupando-os visualmente dentro de um bloco que pode conter dimensões e posição definidas. Por padrão, uma div não possui aparência características visuais definidas, isso precisa ser feito via CSS ao atribuir bordas, cores, etc. Sua principal característica, no entanto, é que essa tag representa um elemento do tipo bloco, ou seja, que quando adicionado na página, automaticamente gera uma nova linha no layout \(semelhante a um parágrafo\), ao invés de ser alocado lateralmente nos demais componentes.
 
 O código a seguir demonstra um uso básico das divs:
 
 ![exemplo](https://lh3.googleusercontent.com/q6BVTd8PaYB00Orm18V91BJurkMxwS_TSijtcLiFe9ZSZLXACBk053e1gxsOn5SIxkfPmw3gIoK4H7t9zweNcY9qgmLAptGZHOSPn8cRlGuxUTjTogI30JxDWyTa-1BY7iXHbGPf)
- 
+
 Perceba no resultado da imagem que, enquanto os dois primeiros inputs são dispostos lateralmente, os dois últimos aparecem um abaixo do outro, uma vez que estão dentro de divs diferentes.
 
 ![exemploResultado](https://lh4.googleusercontent.com/KSNR8Oo9Y1OJrZn6CPzk-n8775HyAgWdPeJenVUx565PSc12MmB_UCKY6LtEASSN1jNN_od0Z3UFH5fWr40QXeWbqO57TNLzeisFeKA)
@@ -143,30 +140,26 @@ O resultado pode ser visto na imagem abaixo e, como esperado, no primeiro caso n
 
 ![imagem](https://lh4.googleusercontent.com/y8CLWU3dNWYrA1fz0U4sAF_ZBkU9g5iO5g3MnQMiMomv5LfQeiMiB7AZZ-IKgDUi7nXN0fPFynP5LGH8eAMkWfNoT9qz-02y2JIG4quxgFz48Off9VUC4LHchl2M_mtjvyuLtHMF)
 
-# EXERCÍCIOS DE FIXAÇÃO
+## EXERCÍCIOS DE FIXAÇÃO
 
 Baseado no material desta apostila realize cada uma das tarefas a seguir:
 
 Use as imagens em anexo nesta apostila como exemplo para recriar uma página que contenha:
 
 * Título e subtítulo;
-
 * Um parágrafo de texto;
-
 * Uma imagem de sua preferência;
-
 * Crie uma tabela com os seguintes dados:
 
-| Nome      | E-mail               | Idade |
-|-----------|----------------------|-------|
-| João      | joao@gmail.com       | 19    |
-| Ana Júlia | anajulia@outlook.com | 23    |
-| Cláudia   | claudia@hotmail.com  | 29    |
+| Nome | E-mail | Idade |
+| :--- | :--- | :--- |
+| João | joao@gmail.com | 19 |
+| Ana Júlia | anajulia@outlook.com | 23 |
+| Cláudia | claudia@hotmail.com | 29 |
 
 * Crie um formulário com input para preencher nome e cidade;
-
 * Crie um radio button com opções de gênero;
-
 * Por fim, crie um botão do tipo “submit” no final do formulário.
 
-Para um resultado melhor, poderá consultar a apostila de CSS e utilizar junto aos exercícios de HTML.    
+Para um resultado melhor, poderá consultar a apostila de CSS e utilizar junto aos exercícios de HTML.
+
