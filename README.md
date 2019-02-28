@@ -59,25 +59,25 @@ __Caso você não queira instalar o Node nem o Calibre, utilize o Docker__
 Caso você pretenda usar Docker, construa a imagem primeiro:
 
 ```bash
-./tarefas docker-build
+./apostila docker-build
 ```
 
 __Visualizar apostila no browser local__
 
 ```bash
 # Sem docker
-./tarefas serve
+./apostila serve
 
 # Com docker
-./tarefas docker-serve
+./apostila docker-serve
 ```
 
 __Gerar PDF__
 
 ```bash
 # Sem docker
-./tarefas pdf
+./apostila pdf
 
 # Com docker
-./tarefas docker-pdf
+./apostila docker-pdf
 ```

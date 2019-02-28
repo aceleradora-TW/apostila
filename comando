@@ -1,0 +1,1 @@
+tail -q -n +4 capitulos/2019-01-23-java-introducao.md capitulos/orientacao-a-objetos-com-java.md  > sem-header.md

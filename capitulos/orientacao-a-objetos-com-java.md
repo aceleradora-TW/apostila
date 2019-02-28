@@ -1,8 +1,6 @@
 ---
-layout: post
 title: Introdução ao Java
 date: '2018-12-19 13:25:06 -0700'
-categories: java
 ---
 
 # Orientação a Objetos
