@@ -33,10 +33,6 @@ No exemplo acima, criamos a classe `Ola`, que possui o método `main`, o qual ir
 
 > Existem algumas palavras chave neste exemplo que podem parecer bastante confusas \(`public`, `static`, `void`, `String[]`\). Por enquanto, não precisamos nos preocupar com elas, e iremos entender o que cada uma significa em outros capítulos.
 
-{% hint style="info" %}
-Existem algumas palavras chave neste exemplo que podem parecer bastante confusas \(`public`, `static`, `void`, `String[]`\). Por enquanto, não precisamos nos preocupar com elas, e iremos entender o que cada uma significa em outros capítulos.
-{% endhint %}
-
 ## Tipos de dados
 
 A linguagem Java oferece diversos tipos de dados com os quais podemos trabalhar. Há basicamente duas categorias em que se encaixam estes tipos de dados: **tipos primitivos** e **tipos de referência**.
