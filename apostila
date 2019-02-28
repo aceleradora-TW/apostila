@@ -1,6 +1,6 @@
 #! /bin/bash
 
-readonly IMAGE_NAME="apostila-aceleradora"
+readonly IMAGE_NAME="aceleradoratw/apostila"
 readonly PDF_FILE_NAME="apostila-aceleradora.pdf"
 readonly CONTAINER_NAME="apostila-aceleradora"
 

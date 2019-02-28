@@ -1,10 +1,8 @@
 language: node_js
 services:
 - docker
-before_install:
-- docker build -t aceleradora-tw/apostila .
 script:
-- docker run -v ${PWD}:/book aceleradora-tw/apostila gitbook pdf . apostila-aceleradora.pdf
+- docker run -v ${PWD}:/book aceleradoratw/apostila gitbook pdf . apostila-aceleradora.pdf
 before_deploy:
 - git config --local user.name "yrachid"
 - git config --local user.email "anuar.yasser@gmail.com"
