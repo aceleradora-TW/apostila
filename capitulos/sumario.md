@@ -1,6 +1,4 @@
-# Table of contents
-
-* [Sumário](sumario.md)
+# Sumário
 
 ## Ferramentas indispensáveis
 
