@@ -1,0 +1,13 @@
+{
+  "name": "apostila-vuepress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "vuepress dev docs"
+  },
+  "devDependencies": {
+    "vuepress": "1.0.0-alpha.33",
+    "vuepress-plugin-export": "^0.1.0"
+  }
+}
