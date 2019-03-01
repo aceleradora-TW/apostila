@@ -5,7 +5,10 @@
   "license": "MIT",
   "scripts": {
     "start": "vuepress dev capitulos",
-    "build": "vuepress build capitulos",
+    "build:html": "vuepress build capitulos",
+    "build:pdf": "node pdf.js",
+    "build": "yarn build:html && yarn build:pdf",
+    "deploy": "./deploy.sh",
     "test": "jest"
   },
   "devDependencies": {
