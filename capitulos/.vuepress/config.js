@@ -1,7 +1,13 @@
 const path = require('path')
 
+const base = process.env.APOSTILA_ACELERADORA_BASE_OVERRIDE || '/'
+
+console.log('::::::: Base', base)
+
 module.exports = {
+  base,
   title: 'Apostila Aceleradora',
+  description: 'Primeiros passos na Aceleradora Ágil',
   cache: false,
   plugins: [
     [

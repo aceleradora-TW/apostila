@@ -8,6 +8,7 @@
     "build:html": "vuepress build capitulos",
     "build:pdf": "node pdf.js",
     "build": "yarn build:html && yarn build:pdf",
+    "build:prod": "APOSTILA_ACELERADORA_BASE_OVERRIDE='/apostila-vuepress/' yarn build:html && yarn build:pdf",
     "deploy": "./deploy.sh",
     "test": "jest"
   },

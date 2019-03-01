@@ -1,7 +1,9 @@
 const express = require('express')
 
+const vuePressConfig = require('./capitulos/.vuepress/config')
+
 const server = express()
-  .use(express.static('capitulos/.vuepress/dist'))
+  .use(vuePressConfig.base, express.static('capitulos/.vuepress/dist'))
   .use((req, res) => {
     console.log('::::::: Page unavailable ', req.url)
     res.sendStatus(404)

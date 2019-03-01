@@ -8,7 +8,10 @@ const vuePressConfig = require('./capitulos/.vuepress/config.js')
 
 const { output, serverPort, printOptions } = vuePressConfig.apostila.pdf
 
-const url = (endpoint) => `http://localhost:${serverPort}/${endpoint}`
+const url = (endpoint) => endpoint === vuePressConfig.base
+  ? `http://localhost:${serverPort}${vuePressConfig.base}`
+  : `http://localhost:${serverPort}${vuePressConfig.base}${endpoint}`
+
 const pdfPagePath = (pageIndex) => path.join(output.renderDir, `page-${pageIndex}.pdf`)
 
 const listGeneratedPdfPages = () => fs
@@ -17,7 +20,7 @@ const listGeneratedPdfPages = () => fs
   .map(pdfPage => path.join(output.renderDir, pdfPage))
 
 const toEndpoint = ([path]) => path === '/'
-  ? path
+  ? vuePressConfig.base
   : path.replace(/\.md/, '.html')
 
 const endpoints = vuePressConfig
@@ -62,10 +65,9 @@ const startBrowser = async (callback) => {
 }
 
 const server = express()
-  .use(express.static('capitulos/.vuepress/dist'))
+  .use(vuePressConfig.base, express.static('capitulos/.vuepress/dist'))
   .use((req, res) => {
-    console.log('::::::: Page unavailable ', req.url)
-    console.log('')
+    console.log('::::::: Resource unavailable ', req.url)
     res.sendStatus(404)
   })
   .listen(serverPort, () => {
