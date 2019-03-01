@@ -4,10 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "vuepress dev docs"
+    "start": "vuepress dev capitulos",
+    "build": "vuepress build capitulos"
   },
   "devDependencies": {
-    "vuepress": "1.0.0-alpha.33",
+    "vuepress": "^0.14.9",
     "vuepress-plugin-export": "^0.1.0"
   }
 }
