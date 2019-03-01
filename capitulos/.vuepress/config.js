@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   title: 'Apostila Aceleradora',
   cache: false,
@@ -13,6 +15,26 @@ module.exports = {
   ],
   markdown: {
     lineNumbers: true
+  },
+  apostila: {
+    pdf: {
+      output: {
+        renderDir: path.join(__dirname, '.pdf-output'),
+        mergedFilePath: path.join(__dirname, 'dist', 'assets', 'apostila.pdf')
+      },
+      serverPort: 3030,
+      printOptions: {
+        format: 'A4',
+        scale: 0.8,
+        displayHeaderFooter: false,
+        margin: {
+          top: '15mm',
+          bottom: '25mm',
+          left: '25mm',
+          right: '25mm'
+        }
+      }
+    }
   },
   themeConfig: {
     nav: [
