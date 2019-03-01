@@ -1,5 +1,9 @@
 
 @media print {
+  body, html {
+    margin: 25cm 25cm 25cm 25cm;
+  }
+
   header.navbar, .page-nav {
     display: none;
   }
@@ -12,5 +16,15 @@
   .content pre code, .content pre[class*="language-"] code, .content code {
     color: #000 !important;
     font-weight: bold;
+  }
+
+  span.line-number {
+    color: #000;
+    font-weight: bold;
+  }
+
+  hr {
+    border: none;
+    page-break-after: always;
   }
 }

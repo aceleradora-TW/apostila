@@ -30,17 +30,19 @@ No exemplo acima, criamos a classe `Ola`, que possui o método `main`, o qual ir
 
 > Existem algumas palavras chave neste exemplo que podem parecer bastante confusas \(`public`, `static`, `void`, `String[]`\). Por enquanto, não precisamos nos preocupar com elas, e iremos entender o que cada uma significa em outros capítulos.
 
+---
+
 ## Tipos de dados
 
 A linguagem Java oferece diversos tipos de dados com os quais podemos trabalhar. Há basicamente duas categorias em que se encaixam estes tipos de dados: **tipos primitivos** e **tipos de referência**.
 
 ### Tipos primitivos
 
-Os tipos primitivos correspondem a dados simples escalares \(que possuem um tamanho fixo na memória\). No java, existem oito tipos primitivos, mas nem todos são comumente utilizados. Os tipos que você utilizará com mais frequência serão:
+Os tipos primitivos correspondem a dados simples escalares (que possuem um tamanho fixo na memória). No java, existem oito tipos primitivos, mas nem todos são comumente utilizados. Os tipos que você utilizará com mais frequência serão:
 
-  * **boolean:** Assume os valores booleanos `true` \(verdadeiro\) ou `false` \(falso\).
-  * **int:** serve para armazenar números inteiros entre
-  * **double:** armazena números decimais \(quebrados, ou com vírgula\).
+  * **boolean:** Assume os valores booleanos `true` (verdadeiro) ou `false` (falso).
+  * **int:** serve para armazenar números inteiros entre $-2 ^ {31}$ e $2 ^ {31} - 1$
+  * **double:** armazena números decimais (quebrados, ou com vírgula).
   * **char:** O char é um tipo de variável que aceita a inserção de um caractere apenas.
 
 ```java
@@ -62,6 +64,8 @@ Além dos tipos mais comuns, ainda temos alguns outros tipos primitivos para gua
 * **long:** armazena valores inteiros entre.
 * **byte:** armazena valores inteiros entre `-128` e `127`
 
+---
+
 > Estes tipos são muito similares aos tipos mais comuns. No entanto, eles existem para casos muito específicos, especialmente para quando precisamos economizar memória ou precisamos utilizar valores inteiros muito grandes \(declarando-os como `long` em vez de `int`, por exemplo\). Não estamos preocupados com estas situações neste momento.
 
 **Links da documentação**
@@ -82,6 +86,8 @@ Nas primeiras interações com a linguagem, você irá utilizar quase que consta
 * Strings
 
 Portanto, neste momento, vamos nos concentrar em entender estes tipos primeiro.
+
+---
 
 ## Arrays \(vetores\)
 
@@ -197,6 +203,8 @@ for (int i = 0; i < valores.length; i++) {
 }
 ```
 
+---
+
 Sabemos que ainda não chegamos na parte das estruturas de repetição, mas tenha em mente que em algumas situações, é melhor utilizar arrays e eles existem por ótimos motivos, não se preocupe em entender como tudo funciona agora, por enquanto, apenas guarde isso na sua mente:
 
 > **"Arrays existem por bons motivos, fique de olho em onde você poderá utilizá-los."**
@@ -226,6 +234,8 @@ String dia = "Sexta";
 ```
 
 Ao começar no Java, muitas pessoas pensam que String é um tipo primitivo, o que não é verdade, pois ela é uma classe e valores String armazenados em variáveis são do tipo referência. Esta confusão geralmente acontece pois ela é a única classe na linguagem que possui uma **representação literal**, ou seja, é possível criar novas Strings utilizando aspas duplas.
+
+---
 
 ### Manipulando Strings
 

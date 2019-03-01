@@ -2899,6 +2899,11 @@ eslint-scope@^4.0.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
+esm@^3.0.34:
+  version "3.2.7"
+  resolved "https://registry.yarnpkg.com/esm/-/esm-3.2.7.tgz#5fcb7649cce55323bce9ac02496e89339df86f9f"
+  integrity sha512-zsyD5gO8CY9dpK3IrdC4WHtvtHGXEFOpYA4zB+6p+Kygf3vv/6kF3YMEQLOArwKPPNvKt8gjI8UYhQW8bXM/YQ==
+
 esprima@^2.6.0:
   version "2.7.3"
   resolved "https://registry.yarnpkg.com/esprima/-/esprima-2.7.3.tgz#96e3b70d5779f6ad49cd032673d1c312767ba581"
@@ -5040,6 +5045,13 @@ math-expression-evaluator@^1.2.14:
   version "1.2.17"
   resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.17.tgz#de819fdbcd84dccd8fae59c6aeb79615b9d266ac"
   integrity sha1-3oGf282E3M2PrlnGrreWFbnSZqw=
+
+mathjax3@^3.0.0-beta.3:
+  version "3.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/mathjax3/-/mathjax3-3.0.0-beta.3.tgz#c3072a59304b4b612aa9516eb672b07000c9a3d5"
+  integrity sha512-MgXK56KOLk5b8/Y01RXB/C0+QgC2Kc+SJmKBilP+Jwxout/4SdV8AjsPp+WMzlotnAacQWFpn24CPdLkdej9AA==
+  dependencies:
+    esm "^3.0.34"
 
 md5.js@^1.3.4:
   version "1.3.5"
@@ -8032,6 +8044,14 @@ vuepress-plugin-export@^0.1.0:
   dependencies:
     easy-pdf-merge "^0.2.0"
     puppeteer "^1.11.0"
+
+vuepress-plugin-mathjax@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-mathjax/-/vuepress-plugin-mathjax-1.2.0.tgz#5b08d105304132bae4f4e0a7f1b9daa562e818b0"
+  integrity sha512-EREnt+Go5goZew/pEuZDBIjmWqzEwX18a09QBdyPPlMWA0U5x5MrVcAW8W7QieBZojEbJKf2j6IopcfKEJGR0w==
+  dependencies:
+    lru-cache "^5.1.1"
+    mathjax3 "^3.0.0-beta.3"
 
 vuepress@1.0.0-alpha.33:
   version "1.0.0-alpha.33"
