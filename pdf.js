@@ -32,15 +32,23 @@ const startBrowser = async (callback) => {
   console.log('::: Browser starting')
   const browser = await puppeteer.launch()
 
-  console.log('::: New page')
-  const page = await browser.newPage()
-
   for (const [idx, endpoint] of endpoints.entries()) {
 
+    console.log('::: New page')
+    const page = await browser.newPage()
+
+    await page.setViewport({
+      height: 1080,
+      width: 1920,
+      isMobile: false,
+      hasTouch: false
+    })
+
     console.log('::: Accessing ' + endpoint)
-    await page.goto(url(endpoint))
+    await page.goto(url(endpoint), { waitUntil: ['domcontentloaded', 'networkidle0', 'load'] })
 
     console.log(`::: Generating PDF ${pdfPagePath(idx + 1)}`)
+
     await page.pdf({
       path: pdfPagePath(idx + 1),
       ...printOptions
@@ -81,7 +89,6 @@ const server = express()
         }
 
         console.log(':::::::: Merge succeeded')
-        process.exit(0)
       })
     })
   })
