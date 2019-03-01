@@ -2,6 +2,8 @@ const fs = require('fs')
 const util = require('util')
 const path = require('path')
 
+const noHiddenFiles = (file) => !file.startsWith('.')
+
 module.exports = (rootDirectory) => (initialFolder) =>  {
   const basePath = path.join(rootDirectory, initialFolder)
   const firstLevelDir = fs.readdirSync(basePath)
@@ -16,34 +18,20 @@ module.exports = (rootDirectory) => (initialFolder) =>  {
       }
     }
 
-    const childrenFileNames = fs.readdirSync(folderPath)
+    const childrenFileNames = fs
+      .readdirSync(folderPath)
+      .filter(noHiddenFiles)
 
     return {
       isDirectory,
       path: folderPath,
       children: childrenFileNames
-      .filter(file => !file.startsWith('.'))
+      .filter(noHiddenFiles)
       .map(file => readFolders(path.join(folderPath, file)))
     }
   }
 
-  const bleep = firstLevelDir
-    .filter(file => !file.startsWith('.'))
-    .map(file => {
-      const filePath = path.join(basePath, file)
-      const isDirectory = fs.lstatSync(filePath).isDirectory()
-
-      return isDirectory
-        ? {
-          isDirectory,
-          path: filePath,
-          children: readFolders(filePath)
-        }
-        : {
-          isDirectory,
-          path: filePath
-        }
-    })
-
-  return bleep
+  return firstLevelDir
+    .filter(noHiddenFiles)
+    .map(file => readFolders(path.join(basePath, file)))
 }
