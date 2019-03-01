@@ -5,10 +5,12 @@
   "license": "MIT",
   "scripts": {
     "start": "vuepress dev capitulos",
-    "build": "vuepress build capitulos"
+    "build": "vuepress build capitulos",
+    "test": "jest"
   },
   "devDependencies": {
     "express": "^4.16.4",
+    "jest": "^24.1.0",
     "puppeteer": "^1.12.2",
     "vuepress": "1.0.0-alpha.33",
     "vuepress-plugin-export": "^0.1.0"
