@@ -8,7 +8,9 @@
     "build": "vuepress build capitulos"
   },
   "devDependencies": {
-    "vuepress": "^0.14.9",
+    "express": "^4.16.4",
+    "puppeteer": "^1.12.2",
+    "vuepress": "1.0.0-alpha.33",
     "vuepress-plugin-export": "^0.1.0"
   }
 }
