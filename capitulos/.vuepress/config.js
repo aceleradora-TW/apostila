@@ -62,7 +62,10 @@ module.exports = {
       ['front-end/css.md', 'CSS'],
       ['front-end/javascript.md', 'JavaScript'],
       ['front-end/thymeleaf.md', 'Thymeleaf'],
-      ['front-end/bulma.md', 'Bulma']
+      ['front-end/bulma.md', 'Bulma'],
+      ['infraestrutura-integracao-e-entrega-continua/heroku.md', 'Heroku'],
+      ['infraestrutura-integracao-e-entrega-continua/docker.md', 'Docker'],
+      ['infraestrutura-integracao-e-entrega-continua/circle-ci.md', 'Circle CI']
     ]
   }
 }
