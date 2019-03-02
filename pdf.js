@@ -7,7 +7,15 @@ const puppeteer = require('puppeteer')
 const vuePressConfig = require('./capitulos/.vuepress/config.js')
 const { output, serverPort, printOptions } = vuePressConfig.apostila.pdf
 
-const pdfPagePath = (pageIndex) => path.join(output.renderDir, `page-${pageIndex}.pdf`)
+const pdfPagePath = (pageIndex) => {
+  const largestNumberLength = vuePressConfig.themeConfig.sidebar.length.toString().length
+
+  const lengthDifference = largestNumberLength  - pageIndex.toString().length
+
+  const paddedIndex = '0'.repeat(lengthDifference) + pageIndex.toString()
+
+  return path.join(output.renderDir, `page-${paddedIndex}.pdf`)
+}
 
 const listGeneratedPdfPages = () => fs
   .readdirSync(output.renderDir)
@@ -71,7 +79,7 @@ console.log('::: Static files path: ' + vuePressConfig.apostila.pdf.assetsPath)
 const server = express()
   .use(vuePressConfig.base, express.static(vuePressConfig.apostila.pdf.assetsPath))
   .use((req, res) => {
-    console.log('::::::: Resource unavailable ', req.url)
+    console.log('::::::: Unavailable resource ', req.url)
     res.sendStatus(404)
   })
   .listen(serverPort, () => {
