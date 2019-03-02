@@ -35,7 +35,7 @@ module.exports = {
         scale: 0.8,
         displayHeaderFooter: false,
         margin: {
-          top: '15mm',
+          top: '10mm',
           bottom: '25mm',
           left: '25mm',
           right: '25mm'
