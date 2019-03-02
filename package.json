@@ -6,8 +6,8 @@
   "scripts": {
     "start": "vuepress dev capitulos",
     "clean:html": "rm -rf capitulos/.vuepress/dist",
-    "clean:pdf": "rm -rf capitulos/.vuepress/.pdf-output; mkdir -p capitulos/.vuepress/.pdf-output",
-    "clean": "pwd; ls -la; yarn clean:html && yarn clean:pdf",
+    "clean:pdf": "rm -f capitulos/.vuepress/.pdf-output/*.pdf",
+    "clean": "yarn clean:html && yarn clean:pdf",
     "build:html": "vuepress build capitulos",
     "build:pdf": "node pdf.js",
     "build": "yarn clean && yarn build:html && yarn build:pdf",
