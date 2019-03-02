@@ -9,5 +9,6 @@ deploy:
   github-token: $GITHUB_TOKEN
   keep-history: true
   local-dir: capitulos/.vuepress/dist
+  target-branch: gh-pages
   on:
-    branch: gh-pages
+    branch: master
