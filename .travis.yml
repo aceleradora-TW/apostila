@@ -1,6 +1,7 @@
 services:
   - docker
 script:
+  - docker run -ti -v ${PWD}:/apostila aceleradoratw/apostila-vuepress yarn
   - docker run -ti -v ${PWD}:/apostila aceleradoratw/apostila-vuepress yarn build
 deploy:
   provider: pages
