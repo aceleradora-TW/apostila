@@ -1,3 +1,6 @@
+
+[Versão PDF disponível para download aqui](/apostila-vuepress/apostila.pdf)
+
 # Sumário
 
 ## Ferramentas indispensáveis

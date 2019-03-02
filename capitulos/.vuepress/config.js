@@ -26,7 +26,7 @@ module.exports = {
     pdf: {
       output: {
         renderDir: path.join(__dirname, '.pdf-output'),
-        mergedFilePath: path.join(__dirname, 'dist', 'assets', 'apostila.pdf')
+        mergedFilePath: path.join(__dirname, 'dist', 'apostila.pdf')
       },
       serverPort: 3030,
       assetsPath: path.join(__dirname, 'dist'),
