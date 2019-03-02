@@ -29,6 +29,7 @@ module.exports = {
         mergedFilePath: path.join(__dirname, 'dist', 'assets', 'apostila.pdf')
       },
       serverPort: 3030,
+      assetsPath: path.join(__dirname, 'dist'),
       printOptions: {
         format: 'A4',
         scale: 0.8,

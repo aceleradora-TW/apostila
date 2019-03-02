@@ -5,12 +5,7 @@ const express = require('express')
 const puppeteer = require('puppeteer')
 
 const vuePressConfig = require('./capitulos/.vuepress/config.js')
-
 const { output, serverPort, printOptions } = vuePressConfig.apostila.pdf
-
-const url = (endpoint) => endpoint === vuePressConfig.base
-  ? `http://localhost:${serverPort}${vuePressConfig.base}`
-  : `http://localhost:${serverPort}${vuePressConfig.base}${endpoint}`
 
 const pdfPagePath = (pageIndex) => path.join(output.renderDir, `page-${pageIndex}.pdf`)
 
@@ -19,16 +14,17 @@ const listGeneratedPdfPages = () => fs
   .filter(file => file.endsWith('.pdf'))
   .map(pdfPage => path.join(output.renderDir, pdfPage))
 
-const toEndpoint = ([path]) => path === '/'
-  ? vuePressConfig.base
-  : path.replace(/\.md/, '.html')
+const toUrl = ([resource]) => resource === '/'
+  ? `http://localhost:${serverPort}${vuePressConfig.base}`
+  : `http://localhost:${serverPort}${vuePressConfig.base}${resource.replace(/\.md/, '.html')}`
 
 const endpoints = vuePressConfig
   .themeConfig
   .sidebar
-  .map(toEndpoint)
+  .map(toUrl)
 
-console.log(':::: Endpoints ', endpoints)
+console.log(':::: Calls ')
+endpoints.forEach(endpoint => console.log('\t', endpoint))
 
 const startBrowser = async (callback) => {
 
@@ -48,7 +44,7 @@ const startBrowser = async (callback) => {
     })
 
     console.log('::: Accessing ' + endpoint)
-    await page.goto(url(endpoint), { waitUntil: ['domcontentloaded', 'networkidle0', 'load'] })
+    await page.goto(endpoint, { waitUntil: ['domcontentloaded', 'networkidle0', 'load'] })
 
     console.log(`::: Generating PDF ${pdfPagePath(idx + 1)}`)
 
@@ -64,14 +60,17 @@ const startBrowser = async (callback) => {
   callback()
 }
 
+console.log('::: Static files prefix: ' + vuePressConfig.base)
+console.log('::: Static files path: ' + vuePressConfig.apostila.pdf.assetsPath)
+
 const server = express()
-  .use(vuePressConfig.base, express.static('capitulos/.vuepress/dist'))
+  .use(vuePressConfig.base, express.static(vuePressConfig.apostila.pdf.assetsPath))
   .use((req, res) => {
     console.log('::::::: Resource unavailable ', req.url)
     res.sendStatus(404)
   })
   .listen(serverPort, () => {
-    console.log(':::  Rendering server up')
+    console.log('::: Rendering server up')
 
     startBrowser(() => {
       console.log('::: Closing rendering server')
