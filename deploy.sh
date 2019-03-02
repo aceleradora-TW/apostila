@@ -14,6 +14,10 @@ cd capitulos/.vuepress/dist
 
 git init
 git add -A
+
+git config user.name "yrachid"
+git config user.email "anuar.yasser@gmail.com"
+
 git commit -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io

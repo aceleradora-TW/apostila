@@ -1,0 +1,12 @@
+services:
+  - docker
+script:
+  - docker run -ti -v ${PWD}:/apostila aceleradoratw/apostila-vuepress yarn build
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  local-dir: capitulos/.vuepress/dist
+  on:
+    branch: gh-pages

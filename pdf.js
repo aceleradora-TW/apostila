@@ -29,7 +29,12 @@ endpoints.forEach(endpoint => console.log('\t', endpoint))
 const startBrowser = async (callback) => {
 
   console.log('::: Browser starting')
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox'
+    ]
+  })
 
   for (const [idx, endpoint] of endpoints.entries()) {
 

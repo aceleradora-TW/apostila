@@ -1,6 +1,6 @@
 const path = require('path')
 
-const base = process.env.APOSTILA_ACELERADORA_BASE_OVERRIDE || '/'
+const base = '/apostila-vuepress/'
 
 console.log('::::::: Base', base)
 
