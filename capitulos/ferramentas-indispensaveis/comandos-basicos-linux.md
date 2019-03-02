@@ -1,6 +1,6 @@
 # Se virando no Linux
 
-### Comandos Básicos
+## Comandos Básicos
 
 `cd [nome da pasta/]` Comando para entrar ou mudar de pasta.
 
@@ -26,7 +26,7 @@
 
 O comando "man" exibe a função de determinado comando. Ele é muito útil quando não se sabe o que um comando faz, ou quando se pretende aprender mais sobre a sua utilização. Aconselha-se a leitura do manual sempre que houver dúvidas.
 
-### Flags
+## Flags
 
 Flags são diferentes funcionalidades do comando que podemos utilizar, ou seja, moldar o que o comando irá fazer.
 
@@ -68,7 +68,7 @@ Por exemplo, quando chamamos o comando como no exemplo `rm -rf` a parte em que u
 rm --recursive --force
 ```
 
-### Exemplos
+## Exemplos
 
 **man ls** – Exibe o que faz o comando ls e quais são suas variações. Para sair do man pressione a tecla “q”.
 

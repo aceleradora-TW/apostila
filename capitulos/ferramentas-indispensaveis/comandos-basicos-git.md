@@ -1,14 +1,14 @@
 # Se virando no Git
 
-### Git
+## Git
 
 Git é um sistema de controle de versão de arquivos. Através deles podemos desenvolver projetos na qual diversas pessoas podem contribuir simultaneamente no mesmo, permitindo que os mesmos possam existir sem o risco de suas alterações serem sobrescritas. Se não houvesse um sistema de versão, imagine o caos entre duas pessoas abrindo o mesmo arquivo ao mesmo tempo. Uma das aplicações do git é justamente essa, permitir que um arquivo possa ser editado ao mesmo tempo por pessoas diferentes.
 
-### GitHub
+## GitHub
 
 O GitHub é uma plataforma de hospedagem de código-fonte com controle de versão usando Git. Nele criamos repositórios onde colocamos nossos projetos que vamos desenvolver. No Github o projeto é dividido em branches,elas são separações de código. Normalmente são utilizados para separar alterações ou novas funcionalidades do projeto.
 
-#### Instalação
+### Instalação
 
 Você instalará o Git com este comando \(via terminal - Linux\):
 
@@ -29,7 +29,7 @@ Após isso já poderá realizar os comando do git pelo terminal.
 
 **Nota:** Esse exemplo configura o mesmo usuário para todos os projetos presentes no computador \(isso se dá por conta da flag --global\). Podemos também configurar usuários para cada projeto, bastando remover a flag `--global`.
 
-#### Comando básicos
+## Comando básicos
 
 **Criando um repositório:**
 
@@ -83,7 +83,7 @@ Caso já tenha enviado ao seu repositório será necessário executar este coman
 
 **Importante: Não é muito recomendável usar estes últimos dois comandos exceto em casos muito extremos, eles podem causar grandes complicações.**
 
-## EXERCÍCIOS DE FIXAÇÃO
+## Exercícios de Fixação
 
 Baseado no material desta apostila informe os comandos necessários para realizar cada uma das tarefas a seguir:
 
