@@ -32,6 +32,8 @@ Flags são diferentes funcionalidades do comando que podemos utilizar, ou seja, 
 
 Tomemos o comando `ls` como exemplo. Como mencionado anteriormente, este comando serve para listar o conteúdo de um diretório. Temos a seguinte estrutura de pastas:
 
+---
+
 ```bash
 uma-pasta/
 ├── arquivo.txt

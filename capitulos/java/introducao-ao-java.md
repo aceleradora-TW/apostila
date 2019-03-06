@@ -64,9 +64,9 @@ Além dos tipos mais comuns, ainda temos alguns outros tipos primitivos para gua
 * **long:** armazena valores inteiros entre.
 * **byte:** armazena valores inteiros entre `-128` e `127`
 
----
-
 > Estes tipos são muito similares aos tipos mais comuns. No entanto, eles existem para casos muito específicos, especialmente para quando precisamos economizar memória ou precisamos utilizar valores inteiros muito grandes \(declarando-os como `long` em vez de `int`, por exemplo\). Não estamos preocupados com estas situações neste momento.
+
+---
 
 **Links da documentação**
 

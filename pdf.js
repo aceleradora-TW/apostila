@@ -50,7 +50,8 @@ const startBrowser = async (callback) => {
     })
 
     console.log('::: Accessing ' + endpoint)
-    await page.goto(endpoint, { waitUntil: ['domcontentloaded', 'networkidle0', 'load'] })
+    // await page.goto(endpoint, { waitUntil: ['domcontentloaded', 'networkidle0', 'load'] })
+    await page.goto(endpoint)
 
     console.log(`::: Generating PDF ${pdfPagePath(idx + 1)}`)
 

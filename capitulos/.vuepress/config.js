@@ -19,9 +19,6 @@ module.exports = {
       }
     ],
   ],
-  markdown: {
-    lineNumbers: true
-  },
   apostila: {
     pdf: {
       output: {
@@ -32,13 +29,13 @@ module.exports = {
       assetsPath: path.join(__dirname, 'dist'),
       printOptions: {
         format: 'A4',
-        scale: 0.8,
+        scale: 0.9,
         displayHeaderFooter: false,
         margin: {
           top: '10mm',
-          bottom: '25mm',
-          left: '25mm',
-          right: '25mm'
+          bottom: '10mm',
+          left: '5mm',
+          right: '5mm'
         }
       }
     }
