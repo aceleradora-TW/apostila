@@ -70,6 +70,30 @@ const startBrowser = async (callback) => {
 console.log('::: Static files prefix: ' + vuePressConfig.base)
 console.log('::: Static files path: ' + vuePressConfig.apostila.pdf.assetsPath)
 
+/*
+
+First steps for decent code
+
+TODO:
+
+  - Write server and browser logic into separate modules
+  - Write a module that wraps PDF operations (merge only?) into Promises
+  - Use new modules with async/await to maximize code karma and get along with code goddessess:
+
+ const server = await setupServer(vuePressConfig)
+ const generatedPages = await runBrowser()
+
+  try {
+   // merge module should probably be wrapped into a promise
+   await pdfOperations.merge(generatedPages, output.mergedFilePath)
+  } catch (error) {
+    // log
+  }
+
+ server.close()
+
+*/
+
 const server = express()
   .use(vuePressConfig.base, express.static(vuePressConfig.apostila.pdf.assetsPath))
   .use((req, res) => {
