@@ -6,6 +6,7 @@ const puppeteer = require('puppeteer')
 
 const vuePressConfig = require('./capitulos/.vuepress/config.js')
 const { output, serverPort, printOptions } = vuePressConfig.apostila.pdf
+const serverSetup = require('./server')
 
 const pdfPagePath = (pageIndex) =>
   path.join(output.renderDir, `page-${new Date().getTime().toString()}.pdf`)
@@ -27,7 +28,7 @@ const endpoints = vuePressConfig
 console.log(':::: Calls ')
 endpoints.forEach(endpoint => console.log('\t', endpoint))
 
-const startBrowser = async (callback) => {
+const startBrowser = async () => {
 
   console.log('::: Browser starting')
   const browser = await puppeteer.launch({
@@ -64,7 +65,6 @@ const startBrowser = async (callback) => {
   console.log('::: Closing browser')
   await browser.close()
 
-  callback()
 }
 
 console.log('::: Static files prefix: ' + vuePressConfig.base)
@@ -94,33 +94,29 @@ TODO:
 
 */
 
-const server = express()
-  .use(vuePressConfig.base, express.static(vuePressConfig.apostila.pdf.assetsPath))
-  .use((req, res) => {
-    console.log('::::::: Unavailable resource ', req.url)
-    res.sendStatus(404)
+const main = async () => {
+  const server = await serverSetup(vuePressConfig)
+
+  await startBrowser()
+
+  console.log('::: Closing rendering server')
+  server.close()
+
+  const pages = listGeneratedPdfPages()
+  console.log('::: PDF Pages generated: ')
+
+  pages.forEach(page => console.log('\t', page))
+
+  console.log('::: Merging pages into ' + output.mergedFilePath)
+
+  pdfMerge(pages, output.mergedFilePath, (error) => {
+    if (error) {
+      console.log('ERROR ::::: ' + error)
+      process.exit(1)
+    }
+
+    console.log(':::::::: Merge succeeded')
   })
-  .listen(serverPort, () => {
-    console.log('::: Rendering server up')
+}
 
-    startBrowser(() => {
-      console.log('::: Closing rendering server')
-      server.close()
-
-      const pages = listGeneratedPdfPages()
-      console.log('::: PDF Pages generated: ')
-
-      pages.forEach(page => console.log('\t', page))
-
-      console.log('::: Merging pages into ' + output.mergedFilePath)
-
-      pdfMerge(pages, output.mergedFilePath, (error) => {
-        if (error) {
-          console.log('ERROR ::::: ' + error)
-          process.exit(1)
-        }
-
-        console.log(':::::::: Merge succeeded')
-      })
-    })
-  })
+main()
