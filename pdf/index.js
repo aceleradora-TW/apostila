@@ -4,7 +4,7 @@ const pdfMerge = require('easy-pdf-merge')
 const express = require('express')
 const puppeteer = require('puppeteer')
 
-const vuePressConfig = require('./capitulos/.vuepress/config.js')
+const vuePressConfig = require('../capitulos/.vuepress/config.js')
 const { output, serverPort, printOptions } = vuePressConfig.apostila.pdf
 const serverSetup = require('./server')
 

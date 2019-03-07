@@ -9,9 +9,8 @@
     "clean:pdf": "rm -f capitulos/.vuepress/.pdf-output/*.pdf",
     "clean": "yarn clean:html && yarn clean:pdf",
     "build:html": "vuepress build capitulos",
-    "build:pdf": "yarn clean:pdf && node pdf.js",
+    "build:pdf": "yarn clean:pdf && node pdf",
     "build": "yarn clean && yarn build:html && yarn build:pdf",
-    "deploy": "./deploy.sh",
     "test": "jest"
   },
   "devDependencies": {
