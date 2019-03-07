@@ -5,10 +5,14 @@ const notFoundMiddleware = (req, res) => {
   res.sendStatus(404)
 }
 
-module.exports = async (config) => express()
+const createAndStart = (config) => async () => express()
   .use(config.base, express.static('capitulos/.vuepress/dist'))
   .use(notFoundMiddleware)
   .listen(config.apostila.pdf.serverPort, () => {
     console.log('::: Rendering server up on port ', config.apostila.pdf.serverPort)
   })
 
+
+module.exports = (config) => ({
+  createAndStart: createAndStart(config)
+})

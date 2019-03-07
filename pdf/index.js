@@ -1,102 +1,36 @@
-const puppeteer = require('puppeteer')
-
 const vuePressConfig = require('../capitulos/.vuepress/config.js')
-const serverSetup = require('./server')
+
+const server = require('./server')(vuePressConfig)
 const pdfOperations = require('./operations')(vuePressConfig)
-
-const baseServerUrl = `http://localhost:${vuePressConfig.apostila.pdf.serverPort}${vuePressConfig.base}`
-
-const isSummaryPage = (resource) => resource === '/'
-
-const toUrl = ([resource]) => isSummaryPage(resource)
-  ? `${baseServerUrl}${vuePressConfig.base}`
-  : `${baseServerUrl}${resource.replace(/\.md/, '.html')}`
-
-const endpoints = vuePressConfig
-  .themeConfig
-  .sidebar
-  .map(toUrl)
+const browser = require('./browser')(pdfOperations, vuePressConfig)
 
 console.log('::: Static files prefix: ' + vuePressConfig.base)
 console.log('::: Static files path: ' + vuePressConfig.apostila.pdf.assetsPath)
-console.log('::: Calls ')
-endpoints.forEach(endpoint => console.log('\t', endpoint))
-
-const startBrowser = async () => {
-
-  console.log('::: Browser starting')
-  const browser = await puppeteer.launch({
-    args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox'
-    ]
-  })
-
-  for (const [idx, endpoint] of endpoints.entries()) {
-
-    console.log('::: New page')
-    const page = await browser.newPage()
-
-    await page.setViewport({
-      height: 1080,
-      width: 1920,
-      isMobile: false,
-      hasTouch: false
-    })
-
-    console.log('::: Accessing ' + endpoint)
-    // await page.goto(endpoint, { waitUntil: ['domcontentloaded', 'networkidle0', 'load'] })
-    await page.goto(endpoint)
-
-    const tempPagePath = pdfOperations.generateTemporaryPagePath()
-
-    console.log(`::: Generating PDF ${tempPagePath}`)
-
-    await page.pdf({
-      path: tempPagePath,
-      ...vuePressConfig.apostila.pdf.printOptions
-    })
-  }
-
-  console.log('::: Closing browser')
-  await browser.close()
-
-}
-
-
-/*
-
-First steps for decent code
-
-TODO:
-
-  - DONE Write server logic into separate module
-  - DONE Write a module that wraps PDF operations (merge only?) into Promises
-  - Write browser logic into separate module
-  - Use new modules with async/await to maximize code karma and get along with code goddessess:
-
- const server = await setupServer(vuePressConfig)
- const generatedPages = await runBrowser()
-
-  try {
-   // merge module should probably be wrapped into a promise
-   await pdfOperations.merge(generatedPages, output.mergedFilePath)
-  } catch (error) {
-    // log
-  }
-
- server.close()
-
-*/
 
 const generate = async() => {
-  const server = await serverSetup(vuePressConfig)
 
-  // await startBrowser(endpoints, vuePressConfig)
-  await startBrowser()
+  const baseUrl = `http://localhost:${vuePressConfig.apostila.pdf.serverPort}${vuePressConfig.base}`
+
+  const isSummaryPage = (resource) => resource === '/'
+
+  const toUrl = ([resource]) => isSummaryPage(resource)
+    ? `${baseUrl}`
+    : `${baseUrl}${resource.replace(/\.md/, '.html')}`
+
+  const endpoints = vuePressConfig
+    .themeConfig
+    .sidebar
+    .map(toUrl)
+
+  console.log('::: Calls ')
+  endpoints.forEach(endpoint => console.log('\t', endpoint))
+
+  const runningServer = await server.createAndStart()
+
+  await browser.printPagesAsPdf(endpoints)
 
   console.log('::: Closing rendering server')
-  server.close()
+  runningServer.close()
 
   const pages = pdfOperations.generatedPages()
   console.log('::: PDF Pages generated: ')
