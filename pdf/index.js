@@ -1,30 +1,25 @@
-const path = require('path')
-const fs = require('fs')
 const puppeteer = require('puppeteer')
 
 const vuePressConfig = require('../capitulos/.vuepress/config.js')
-const { output, serverPort, printOptions } = vuePressConfig.apostila.pdf
 const serverSetup = require('./server')
-const { merge } = require('./operations')
+const pdfOperations = require('./operations')(vuePressConfig)
 
-const pdfPagePath = (pageIndex) =>
-  path.join(output.renderDir, `page-${new Date().getTime().toString()}.pdf`)
+const baseServerUrl = `http://localhost:${vuePressConfig.apostila.pdf.serverPort}${vuePressConfig.base}`
 
-const listGeneratedPdfPages = () => fs
-  .readdirSync(output.renderDir)
-  .filter(file => file.endsWith('.pdf'))
-  .map(pdfPage => path.join(output.renderDir, pdfPage))
+const isSummaryPage = (resource) => resource === '/'
 
-const toUrl = ([resource]) => resource === '/'
-  ? `http://localhost:${serverPort}${vuePressConfig.base}`
-  : `http://localhost:${serverPort}${vuePressConfig.base}${resource.replace(/\.md/, '.html')}`
+const toUrl = ([resource]) => isSummaryPage(resource)
+  ? `${baseServerUrl}${vuePressConfig.base}`
+  : `${baseServerUrl}${resource.replace(/\.md/, '.html')}`
 
 const endpoints = vuePressConfig
   .themeConfig
   .sidebar
   .map(toUrl)
 
-console.log(':::: Calls ')
+console.log('::: Static files prefix: ' + vuePressConfig.base)
+console.log('::: Static files path: ' + vuePressConfig.apostila.pdf.assetsPath)
+console.log('::: Calls ')
 endpoints.forEach(endpoint => console.log('\t', endpoint))
 
 const startBrowser = async () => {
@@ -53,11 +48,13 @@ const startBrowser = async () => {
     // await page.goto(endpoint, { waitUntil: ['domcontentloaded', 'networkidle0', 'load'] })
     await page.goto(endpoint)
 
-    console.log(`::: Generating PDF ${pdfPagePath(idx + 1)}`)
+    const tempPagePath = pdfOperations.generateTemporaryPagePath()
+
+    console.log(`::: Generating PDF ${tempPagePath}`)
 
     await page.pdf({
-      path: pdfPagePath(idx + 1),
-      ...printOptions
+      path: tempPagePath,
+      ...vuePressConfig.apostila.pdf.printOptions
     })
   }
 
@@ -66,8 +63,6 @@ const startBrowser = async () => {
 
 }
 
-console.log('::: Static files prefix: ' + vuePressConfig.base)
-console.log('::: Static files path: ' + vuePressConfig.apostila.pdf.assetsPath)
 
 /*
 
@@ -75,8 +70,9 @@ First steps for decent code
 
 TODO:
 
-  - Write server and browser logic into separate modules
-  - Write a module that wraps PDF operations (merge only?) into Promises
+  - DONE Write server logic into separate module
+  - DONE Write a module that wraps PDF operations (merge only?) into Promises
+  - Write browser logic into separate module
   - Use new modules with async/await to maximize code karma and get along with code goddessess:
 
  const server = await setupServer(vuePressConfig)
@@ -93,7 +89,7 @@ TODO:
 
 */
 
-const main = async () => {
+const generate = async() => {
   const server = await serverSetup(vuePressConfig)
 
   // await startBrowser(endpoints, vuePressConfig)
@@ -102,15 +98,14 @@ const main = async () => {
   console.log('::: Closing rendering server')
   server.close()
 
-  const pages = listGeneratedPdfPages()
+  const pages = pdfOperations.generatedPages()
   console.log('::: PDF Pages generated: ')
 
   pages.forEach(page => console.log('\t', page))
 
-  console.log('::: Merging pages into ' + output.mergedFilePath)
-
   try {
-    await merge(pages, output.mergedFilePath)
+    console.log('::: Merging pages into ' + vuePressConfig.apostila.pdf.output.mergedFilePath)
+    await pdfOperations.merge(pages)
     console.log(':::::::: Merge succeeded')
   } catch(mergeError) {
       console.error('::::::::: Error while merging pdf pages: ' + mergeError)
@@ -118,4 +113,23 @@ const main = async () => {
   }
 }
 
-main()
+const invalidOption = (message) => () => console.log(message)
+
+const main = async (cliArgs) => {
+  const options = {
+    generate
+  }
+
+  const option = options[Object.keys(options).find(op => cliArgs[2] === op)] || invalidOption(
+    `::: Error:
+    Invalid Option '${cliArgs[2]}'.
+
+    Try any of the following:
+    ${Object.keys(options).map(option => '  - ' + option).join('\n  - ')}
+    `
+  )
+
+  option()
+}
+
+main(process.argv)
