@@ -1,12 +1,11 @@
 const path = require('path')
 const fs = require('fs')
-const pdfMerge = require('easy-pdf-merge')
-const express = require('express')
 const puppeteer = require('puppeteer')
 
 const vuePressConfig = require('../capitulos/.vuepress/config.js')
 const { output, serverPort, printOptions } = vuePressConfig.apostila.pdf
 const serverSetup = require('./server')
+const { merge } = require('./operations')
 
 const pdfPagePath = (pageIndex) =>
   path.join(output.renderDir, `page-${new Date().getTime().toString()}.pdf`)
@@ -97,6 +96,7 @@ TODO:
 const main = async () => {
   const server = await serverSetup(vuePressConfig)
 
+  // await startBrowser(endpoints, vuePressConfig)
   await startBrowser()
 
   console.log('::: Closing rendering server')
@@ -109,14 +109,13 @@ const main = async () => {
 
   console.log('::: Merging pages into ' + output.mergedFilePath)
 
-  pdfMerge(pages, output.mergedFilePath, (error) => {
-    if (error) {
-      console.log('ERROR ::::: ' + error)
-      process.exit(1)
-    }
-
+  try {
+    await merge(pages, output.mergedFilePath)
     console.log(':::::::: Merge succeeded')
-  })
+  } catch(mergeError) {
+      console.error('::::::::: Error while merging pdf pages: ' + mergeError)
+      process.exit(1)
+  }
 }
 
 main()
