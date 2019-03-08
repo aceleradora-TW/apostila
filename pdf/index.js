@@ -6,6 +6,7 @@ const browser = require('./browser')(pdfOperations, vuePressConfig)
 
 console.log('::: Static files prefix: ' + vuePressConfig.base)
 console.log('::: Static files path: ' + vuePressConfig.apostila.pdf.assetsPath)
+console.log('::: PDF chapters temporary output directory: ' + vuePressConfig.apostila.pdf.output.renderDir)
 
 const generate = async() => {
 
@@ -47,11 +48,22 @@ const generate = async() => {
   }
 }
 
+const clean = async () => {
+  try {
+    await pdfOperations.clearGeneratedPages()
+    console.log('::: Output directory successfully cleaned')
+  } catch (error) {
+      console.error('::::::::: Error while deleting generated pages: ' + error)
+      process.exit(1)
+  }
+}
+
 const invalidOption = (message) => () => console.log(message)
 
 const main = async (cliArgs) => {
   const options = {
-    generate
+    generate,
+    clean
   }
 
   const option = options[Object.keys(options).find(op => cliArgs[2] === op)] || invalidOption(
@@ -59,7 +71,7 @@ const main = async (cliArgs) => {
     Invalid Option '${cliArgs[2]}'.
 
     Try any of the following:
-    ${Object.keys(options).map(option => '  - ' + option).join('\n  - ')}
+    ${Object.keys(options).map(option => '  - ' + option).join('\n    ')}
     `
   )
 
