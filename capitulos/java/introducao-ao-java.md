@@ -592,7 +592,7 @@ E isso é quase tudo que você deve saber para começar a se aventurar no Java! 
 
 Recomendamos revisitar o apêndice depois da leitura do capítulo de orientação a objetos e da realização de alguns exercícios.
 
-### Exercícios de fixação
+## Exercícios de fixação
 
 Olhando para o código abaixo, preencha os comentários indicando o que está acontecendo em cada uma das linhas. Logo abaixo você encontrará o gabarito, recomendamos tentar resolver o exercício antes de olhar para o gabarito:
 
