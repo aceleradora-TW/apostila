@@ -6,11 +6,11 @@
 
 Via web:
 
-  - aceleradora-tw.github.io/apostila
+  - https://aceleradora-tw.github.io/apostila
 
 Via PDF:
 
-  - aceleradora-tw.github.io/apostila/apostila.pdf
+  - https://aceleradora-tw.github.io/apostila/apostila.pdf
 
 ## Como contribuir
 
