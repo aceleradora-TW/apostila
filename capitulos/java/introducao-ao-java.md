@@ -8,13 +8,13 @@ Neste capítulo, veremos alguns conceitos fundamentais do Java para que possamos
 
   * Escrevendo um "olá, mundo" em Java
   * Tipos de dados
-  * Estruturas condicionais \(se, senão, senão se\)
-  * Estruturas de repetição \(enquanto, para\)
+  * Estruturas condicionais (se, senão, senão se)
+  * Estruturas de repetição (enquanto, para)
   * Operadores
 
 ## Olá, mundo
 
-No Java o seu código sempre será escrito dentro de classes e métodos. Uma classe é um bloco de código que contém atributos \(variáveis\) e métodos \(funções\). Os atributos irão guardar dados e os métodos irão executar lógica/comportamento. Para este capítulo, isto é tudo que precisamos saber sobre classes e métodos, veremos mais sobre eles no capítulo de orientação a objetos.
+No Java o seu código sempre será escrito dentro de classes e métodos. Uma classe é um bloco de código que contém atributos (variáveis) e métodos (funções). Os atributos irão guardar dados e os métodos irão executar lógica/comportamento. Para este capítulo, isto é tudo que precisamos saber sobre classes e métodos, veremos mais sobre eles no capítulo de orientação a objetos.
 
 Sabendo disto, vejamos então como escrever um olá, mundo em Java:
 
@@ -28,7 +28,7 @@ public class Ola {
 
 No exemplo acima, criamos a classe `Ola`, que possui o método `main`, o qual irá escrever uma mensagem na tela utilizando o método `System.out.println` do Java.
 
-> Existem algumas palavras chave neste exemplo que podem parecer bastante confusas \(`public`, `static`, `void`, `String[]`\). Por enquanto, não precisamos nos preocupar com elas, e iremos entender o que cada uma significa em outros capítulos.
+> Existem algumas palavras chave neste exemplo que podem parecer bastante confusas (`public`, `static`, `void`, `String[]`). Por enquanto, não precisamos nos preocupar com elas, e iremos entender o que cada uma significa em outros capítulos.
 
 ---
 
@@ -59,12 +59,12 @@ char umCaractere = 'a';
 
 Além dos tipos mais comuns, ainda temos alguns outros tipos primitivos para guardar números:
 
-* **float:** armazena números decimais \(quebrados, ou com vírgula\) com uma precisão menor \(menos números depois da vírgula\) que o `double`.
+* **float:** armazena números decimais (quebrados, ou com vírgula) com uma precisão menor (menos números depois da vírgula) que o `double`.
 * **short:** armazena valores inteiros entre `-32768` e `32767`
 * **long:** armazena valores inteiros entre.
 * **byte:** armazena valores inteiros entre `-128` e `127`
 
-> Estes tipos são muito similares aos tipos mais comuns. No entanto, eles existem para casos muito específicos, especialmente para quando precisamos economizar memória ou precisamos utilizar valores inteiros muito grandes \(declarando-os como `long` em vez de `int`, por exemplo\). Não estamos preocupados com estas situações neste momento.
+> Estes tipos são muito similares aos tipos mais comuns. No entanto, eles existem para casos muito específicos, especialmente para quando precisamos economizar memória ou precisamos utilizar valores inteiros muito grandes (declarando-os como `long` em vez de `int`, por exemplo). Não estamos preocupados com estas situações neste momento.
 
 ---
 
@@ -74,7 +74,7 @@ Alguns destes são tópicos bastante avançados, mas caso queira entender um pou
 
 * [Sobre tipos primitivos](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
 * [Explicação sobre a precisão de números decimais](https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3)
-* [O padrão Unicode \(utilizado pelo Java para representar variáveis do tipo char\)](https://en.wikipedia.org/wiki/Unicode)
+* [O padrão Unicode (utilizado pelo Java para representar variáveis do tipo char)](https://en.wikipedia.org/wiki/Unicode)
 
 ### Tipos de referência
 
@@ -82,16 +82,16 @@ Os tipos de referência armazenam objetos. Neste momento, não faz sentido tenta
 
 Nas primeiras interações com a linguagem, você irá utilizar quase que constantemente dois tipos de referências:
 
-* Arrays \(vetores\)
+* Arrays (vetores)
 * Strings
 
 Portanto, neste momento, vamos nos concentrar em entender estes tipos primeiro.
 
 ---
 
-## Arrays \(vetores\)
+## Arrays (vetores)
 
-Arrays \(ou vetores\) são uma estrutura utilizada para quando necessitamos armazenar um conjunto de valores em uma variável, como uma lista.
+Arrays (ou vetores) são uma estrutura utilizada para quando necessitamos armazenar um conjunto de valores em uma variável, como uma lista.
 
 **Por que utilizamos vetores?**
 
@@ -178,7 +178,7 @@ valores[9] = 4;
 
 **Segura o cavaco!**
 
-Parando para pensar, até agora não ganhamos muita coisa ao utilizar um array em vez de 10 variáveis, nosso código está ficando muito parecido e até um pouco mais complexo que a primeira alternativa \(de criarmos dez variáveis\).
+Parando para pensar, até agora não ganhamos muita coisa ao utilizar um array em vez de 10 variáveis, nosso código está ficando muito parecido e até um pouco mais complexo que a primeira alternativa (de criarmos dez variáveis).
 
 _**Qual é a moral de usar esse negócio então?**_
 
@@ -261,7 +261,7 @@ Nome em português:
 
 > equals: igual ou é igual a
 
-Compara duas strings e retorna verdadeiro \(`true`\) caso elas sejam iguais:
+Compara duas strings e retorna verdadeiro (`true`) caso elas sejam iguais:
 
 ```java
 String texto = "Oi";
@@ -270,7 +270,7 @@ String outroTexto = "Oi";
 boolean saoIguais = texto.equals(outroTexto); //saoIguais sera true
 ```
 
-ou falso \(`false`\) caso elas sejam diferentes:
+ou falso (`false`) caso elas sejam diferentes:
 
 ```java
 String texto = "Oi";
@@ -413,7 +413,7 @@ Alguns links da documentação oficial do Java:
 
 **Operador de atribuição**
 
-Pode ser que isto passe despercebido, mas ao atribuir um valor à uma variável, estamos utilizando um operador, o operador de atribuição \(`=`\):
+Pode ser que isto passe despercebido, mas ao atribuir um valor à uma variável, estamos utilizando um operador, o operador de atribuição (`=`):
 
 ```java
 int cinco = 5;
@@ -458,11 +458,11 @@ if (cincoEhMaiorQueDois) {
 
 **Operadores Condicionais**
 
-Operadores condicionais são utilizados em valores booleanos. Eles são úteis quando precisamos verificar mais de uma condição ou precisamos inverter o valor de um booleano \(trocar de `true` para `false` ou vice-versa\):
+Operadores condicionais são utilizados em valores booleanos. Eles são úteis quando precisamos verificar mais de uma condição ou precisamos inverter o valor de um booleano (trocar de `true` para `false` ou vice-versa):
 
-**And \(&&\)**:
+**And (&&)**:
 
-Em inglês a palavra "and" é equivalente ao "e" do português \(como na frase Maria `e` João\), logo, este operador verifica duas condições e resulta em verdadeiro somente se as duas forem verdadeiras, caso contrário, resulta em falso:
+Em inglês a palavra "and" é equivalente ao "e" do português (como na frase Maria `e` João), logo, este operador verifica duas condições e resulta em verdadeiro somente se as duas forem verdadeiras, caso contrário, resulta em falso:
 
 ```java
 if (vaiChover == true && ehSexta == true) {
@@ -474,7 +474,7 @@ if (vaiChover == true && ehSexta == true) {
 
 No código acima, a pessoa só iria para casa somente se fosse sexta e fosse chover.
 
-**Or \(\|\|\)**:
+**Or (\|\|)**:
 
 Em inglês a palavra "or" significa "ou", logo, este operador verifica duas condições e resulta em verdadeiro se pelo menos uma das duas for verdadeira, e, somente caso as duas sejam falsas, resulta em falso:
 
@@ -488,7 +488,7 @@ if (vaiChover == true || ehSexta == true) {
 
 No código acima, a pessoa iria para casa se fosse chover, independentemente do dia da semana. Ou, caso fosse sexta mas não estivesse chovendo, ela também iria para casa.
 
-**Not \(!\)**:
+**Not (!)**:
 
 Em inglês, "not" significa "não" ou negação. Este operador inverte o valor booleano de uma expressão ou variável:
 
@@ -565,7 +565,7 @@ public class Calculadora {
 
 **Unários**
 
-São operadores que executam operações com apenas **um** número. Estes operadores não funcionam diretamente em números literais, apenas variáveis \(veja os exemplos para entender isto melhor\):
+São operadores que executam operações com apenas **um** número. Estes operadores não funcionam diretamente em números literais, apenas variáveis (veja os exemplos para entender isto melhor):
 
 | Nome | Sintaxe |
 | :--- | :--- |
@@ -637,7 +637,7 @@ Podemos sobrescrever o valor de uma variável
 
 Existem grandes diferenças entre estes tipos, no entanto, para nós esta diferença ainda não é clara, pois não exploramos os conceitos de orientação a objetos. Basicamente, tipos primitivos guardam valores, enquanto tipos de referência guardam a referência para um objeto na memória. Esta ideia pode soar bastante estranha por enquanto, pois ainda não sabemos o que é um objeto.
 
-Para saber quando uma variável é primitiva e quando ela é referência, podemos observar o uso da palavra chave `new` \(exceto com as Strings\). Esta palavra é responsável por criar uma instância de objeto. Em outras palavras, ela colocará os dados do objeto em memória e adicionará na variável uma referência para a posição de memória onde estão estes dados para que possamos manipulá-los \(daí o nome tipo de referência\).
+Para saber quando uma variável é primitiva e quando ela é referência, podemos observar o uso da palavra chave `new` (exceto com as Strings). Esta palavra é responsável por criar uma instância de objeto. Em outras palavras, ela colocará os dados do objeto em memória e adicionará na variável uma referência para a posição de memória onde estão estes dados para que possamos manipulá-los (daí o nome tipo de referência).
 
 Não se preocupe se nada disto fizer sentido agora, recapitularemos estas ideias posteriormente com mais detalhes.
 

@@ -4,6 +4,14 @@
 
 ## Como Acessar
 
+Via web:
+
+  - aceleradora-tw.github.io/apostila
+
+Via PDF:
+
+  - aceleradora-tw.github.io/apostila/apostila.pdf
+
 ## Como contribuir
 
 ### Gerando Conteúdo
