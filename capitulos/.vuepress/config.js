@@ -1,6 +1,6 @@
 const path = require('path')
 
-const base = '/apostila-vuepress/'
+const base = '/apostila/'
 
 console.log('::::::: Base', base)
 

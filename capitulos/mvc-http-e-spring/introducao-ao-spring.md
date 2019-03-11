@@ -7,19 +7,19 @@ categories: spring
 
 # Introdução ao Spring
 
-**O que é:**
+## O que é
 
 O Spring é um framework Java criado com o objetivo de facilitar o desenvolvimento de aplicações, oferecendo um conjunto de soluções prontas para serem implementadas na mesma \(Algumas das soluções seriam: MVC, Persistencia, Transaction\). O Spring utiliza os conceitos de Inversão de Controle e Injeção de Dependências.
 
-**Inversão de Controle:**
+## Inversão de Controle
 
 É um padrão de desenvolvimento onde se insere determinado código da aplicação dentro do framework, que ficará responsável pelo controle da chamada dos métodos diferente da programação tradicional, ou seja, não é determinada diretamente pelo programador. Se um dia o nome da classe ou o lugar onde ela está armazenada for alterado, nós apenas alteraríamos um arquivo de configuração, não mexeríamos em uma única linha do código da classe.
 
-**Injeção de Dependência:**
+## Injeção de Dependência
 
 Nesta solução as dependências entre os módulos não são definidas programaticamente, mas sim pela configuração de uma infraestrutura de software \(container\) que é responsável por "injetar" em cada componente suas dependências declaradas. A Injeção de dependência se relaciona com o padrão Inversão de controle mas não pode ser considerada um sinônimo deste.
 
-**Outros projetos Spring**
+## Outros projetos Spring
 
 * Spring MVC: para desenvolvimento de aplicações web \(módulo do Spring Framework\).
 * Spring Security: para inserção de funcionalidades de autenticação e autorização.
@@ -28,11 +28,11 @@ Nesta solução as dependências entre os módulos não são definidas programat
 
 ## Spring Boot
 
-**O que é:**
+## O que é
 
 O Spring Boot é **opinativo** e **customizável** e por isso seu objetivo é fornecer um conjunto de ferramentas que facilita a criação de aplicativos baseados em Spring autônomos e de produção que você pode "executar". É uma estrutura leve que simplifica a configuração de aplicativos baseados em Spring e facilita a publicação de nossas aplicações. A intenção é ter o seu projeto rodando o mais rápido possível e sem complicação.
 
-**Vantagens do Spring Boot:**
+## Vantagens do Spring Boot
 
 Em primeiro lugar o Spring Boot é opinativo, ou seja, tem opiniões. É outra forma de dizer que o Spring Boot tem padrões razoáveis; assim, é possível desenvolver um aplicativo rapidamente utilizando esses valores usados com frequência.
 
@@ -42,7 +42,7 @@ Em segundo lugar, ele é customizável, ou seja, uma estrutura opinativa não se
 
 Por exemplo, se você prefere o Maven, pode facilmente fazer alterações de `<dependência>` no seu arquivo **pom** para substituir o valor padrão do Spring Boot.
 
-**Por onde iniciar?**
+## Por onde iniciar?
 
 Existem várias formas de se criar um projeto com Spring Boot. Você pode fazer “na mão”, pode-se usar o Spring Boot pela linha de comando, uma IDE ou utilizar o **Spring Initializr**.
 
@@ -50,7 +50,7 @@ Existem várias formas de se criar um projeto com Spring Boot. Você pode fazer 
 
 Caso você esteja utilizando o **IntelliJ**, ele fornece uma opção para se criar um projeto utilizando o Spring Initializr.
 
-**Anotações**
+## Anotações
 
 `@SpringBootApplication` Para quem usa Spring Boot, essa é uma das primeiras que você. Ela engloba a @Component, @ComponentScan e mais uma chamada @EnableAutoConfiguration, que é utilizada pelo Spring Boot para tentar advinhar as configurações necessárias para rodar o seu projeto.
 
@@ -67,7 +67,7 @@ Veja como é simples criar um Controller, mas veja que este não possui nenhum �
 public class HomeController {
 
     @RequestMapping("/home") //Define a URL que quando for requisitada ira chamar o metodo
-    public ModelAndView home(){
+    public ModelAndView home() {
          //Retorna a view que deve ser chamada, no caso home (home.jsp) aqui o .jsp é omitido
         return new ModelAndView("home");
     }
@@ -86,13 +86,11 @@ _**Exemplo:**_
 @Controller
 public class HomeController {
 
-    @ResponseBody
-    //Essa anotação renderiza a pagina,que no nosso caso, retorna esse texto: Hello World
-
-    @RequestMapping("/home") 
-    public home(){
-        return "Hello World";
-    }
+  @RequestMapping("/home")
+  @ResponseBody // Essa anotação indica para o Spring renderizar o retorno do metodo como conteudo da pagina
+  public String home() {
+      return "<h1>Hello World</h1>";
+  }
 }
 ```
 
