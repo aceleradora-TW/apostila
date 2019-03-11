@@ -1,20 +1,20 @@
----
-next: ./orientacao-a-objetos-com-java.md
----
-
 # Introdução ao Java
 
 Neste capítulo, veremos alguns conceitos fundamentais do Java para que possamos começar a utilizar a linguagem.
 
-  * Escrevendo um "olá, mundo" em Java
-  * Tipos de dados
-  * Estruturas condicionais (se, senão, senão se)
-  * Estruturas de repetição (enquanto, para)
-  * Operadores
+[[toc]]
 
 ## Olá, mundo
 
-No Java o seu código sempre será escrito dentro de classes e métodos. Uma classe é um bloco de código que contém atributos (variáveis) e métodos (funções). Os atributos irão guardar dados e os métodos irão executar lógica/comportamento. Para este capítulo, isto é tudo que precisamos saber sobre classes e métodos, veremos mais sobre eles no capítulo de orientação a objetos.
+No Java o seu código sempre será escrito dentro de classes e métodos. O código de uma classe, por sua vez, deve ser escrito dentro de um
+arquivo com extensão `.java` que tenha o mesmo nome da classe que estará contida nele. Ou seja, se quero escrever uma classe `Ola`, esta
+deve ser escrita dentro do arquivo `Ola.java`:
+
+<img src="/imagens/estrutura-de-classes-java.png" alt="Estrutura de classes Java" style="width: 8cm; height: 7cm;" />
+
+Uma classe é apenas um bloco de código que contém atributos (variáveis) e métodos (funções).
+
+Os atributos irão guardar dados e os métodos irão executar lógica/comportamento. Para este capítulo, isto é tudo que precisamos saber sobre classes e métodos, veremos mais sobre eles no capítulo de orientação a objetos.
 
 Sabendo disto, vejamos então como escrever um olá, mundo em Java:
 
@@ -66,8 +66,6 @@ Além dos tipos mais comuns, ainda temos alguns outros tipos primitivos para gua
 
 > Estes tipos são muito similares aos tipos mais comuns. No entanto, eles existem para casos muito específicos, especialmente para quando precisamos economizar memória ou precisamos utilizar valores inteiros muito grandes (declarando-os como `long` em vez de `int`, por exemplo). Não estamos preocupados com estas situações neste momento.
 
----
-
 **Links da documentação**
 
 Alguns destes são tópicos bastante avançados, mas caso queira entender um pouco mais sobre alguns detalhes, aqui estão alguns links da documentação oficial do Java:
@@ -75,6 +73,8 @@ Alguns destes são tópicos bastante avançados, mas caso queira entender um pou
 * [Sobre tipos primitivos](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
 * [Explicação sobre a precisão de números decimais](https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3)
 * [O padrão Unicode (utilizado pelo Java para representar variáveis do tipo char)](https://en.wikipedia.org/wiki/Unicode)
+
+---
 
 ### Tipos de referência
 
@@ -86,8 +86,6 @@ Nas primeiras interações com a linguagem, você irá utilizar quase que consta
 * Strings
 
 Portanto, neste momento, vamos nos concentrar em entender estes tipos primeiro.
-
----
 
 ## Arrays (vetores)
 
@@ -122,6 +120,8 @@ System.out.println(valor7 * 2);
 System.out.println(valor8 * 2);
 System.out.println(valor9 * 2);
 ```
+
+---
 
 Esta alternativa não é um bom caminho, pois nosso código ficaria imenso e confuso. Imagine ter que fazer isto com 100 variáveis?
 
@@ -203,8 +203,6 @@ for (int i = 0; i < valores.length; i++) {
 }
 ```
 
----
-
 Sabemos que ainda não chegamos na parte das estruturas de repetição, mas tenha em mente que em algumas situações, é melhor utilizar arrays e eles existem por ótimos motivos, não se preocupe em entender como tudo funciona agora, por enquanto, apenas guarde isso na sua mente:
 
 > **"Arrays existem por bons motivos, fique de olho em onde você poderá utilizá-los."**
@@ -234,8 +232,6 @@ String dia = "Sexta";
 ```
 
 Ao começar no Java, muitas pessoas pensam que String é um tipo primitivo, o que não é verdade, pois ela é uma classe e valores String armazenados em variáveis são do tipo referência. Esta confusão geralmente acontece pois ela é a única classe na linguagem que possui uma **representação literal**, ou seja, é possível criar novas Strings utilizando aspas duplas.
-
----
 
 ### Manipulando Strings
 
@@ -592,17 +588,109 @@ numero /= 2; // numero agora tem o valor 4
 
 ## Fim do capítulo
 
-E isso é quase tudo que você deve saber para começar a se aventurar no Java! Este capítulo serve como um pontapé inicial, mas ainda temos muita coisa para ver! Caso você tenha interesse, dê uma lida nos tópicos complementares mais abaixo, que tentam explicar um pouco mais sobre algumas coisas que foram comentadas neste capítulo, mas que podem ser meio confusas neste momento.
+E isso é quase tudo que você deve saber para começar a se aventurar no Java! Este capítulo serve como um pontapé inicial, mas ainda temos muita coisa para ver! Caso você tenha interesse, dê uma lida nos apêndice, mais abaixo, que tentam explicar um pouco mais sobre algumas coisas que foram comentadas neste capítulo, mas que podem ser meio confusas neste momento.
 
-Recomendamos revisitar estes tópicos complementares depois da leitura do capítulo de orientação a objetos e da realização de alguns exercícios.
+Recomendamos revisitar o apêndice depois da leitura do capítulo de orientação a objetos e da realização de alguns exercícios.
 
 ### Exercícios de fixação
+
+Olhando para o código abaixo, preencha os comentários indicando o que está acontecendo em cada uma das linhas. Logo abaixo você encontrará o gabarito, recomendamos tentar resolver o exercício antes de olhar para o gabarito:
+
+---
+
+```java
+
+//
+public class IntrducaoJava {
+
+  //
+  String umAtributo;
+
+  //
+  public void executar() {
+
+    //
+    int valor = 10;
+
+    //
+    Cachorro cachorro = new Cachorro();
+
+    //
+    cachorro.brincar();
+
+    //
+    int i = 1;
+
+    //
+    while (i < valor) {
+      //
+      System.out.println("Iteracao: " + i);
+
+      //
+      if (i % 2 == 0) {
+        //
+        System.out.println("Iteracao par")
+      }
+
+     //
+     i++;
+    }
+  }
+}
+```
+
+---
+
+__Gabarito__
+
+```java
+
+// Declara a classe IntroducaoJava
+public class IntrducaoJava {
+
+  // declara um atributo chamado "umAtributo" do tipo String
+  String umAtributo;
+
+  // declara um metodo chamado executar que nao retorna nenhum valor (tipo de retorno void)
+  public void executar() {
+
+    // declara uma variavel inteira "valor" com valor 10
+    int valor = 10;
+
+    // Declara a variavel cachorro do tipo Cachorro e atribui a ela numa nova instância de objeto da classe cachorro
+    Cachorro cachorro = new Cachorro();
+
+    // Chama o metodo brincar do objeto cachorro
+    cachorro.brincar();
+
+    // declara uma variavel i do tipo int com valor 1
+    int i = 1;
+
+    // repete enquanto i for menor que valor
+    while (i < valor) {
+      // imprime o valor de i na tela
+      System.out.println("Iteracao: " + i);
+
+      // Verifica se i é par
+      if (i % 2 == 0) {
+        // Se i for par, imprime mensagem na tela
+        System.out.println("Iteracao par")
+      }
+
+     // Soma 1 ao valor de i (o que se chama de incrementar)
+     i++;
+    }
+  }
+}
+```
+
+## Exercícios práticos
 
 No repositório da trilha de exercícios, você encontrará alguns desafios de lógica de programação que lhe ajudarão a fixar os conceitos apresentados nesta introdução.
 
 Acesse o repositório aqui: [https://github.com/aceleradora-TW/trilha-de-exercicios](https://github.com/aceleradora-TW/trilha-de-exercicios)
 
-## Tópicos complementares
+## Apêndice
 
 ### Strings
 
