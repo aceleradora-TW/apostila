@@ -10,7 +10,7 @@ No Java o seu código sempre será escrito dentro de classes e métodos. O códi
 arquivo com extensão `.java` que tenha o mesmo nome da classe que estará contida nele. Ou seja, se quero escrever uma classe `Ola`, esta
 deve ser escrita dentro do arquivo `Ola.java`:
 
-<img src="/imagens/estrutura-de-classes-java.png" alt="Estrutura de classes Java" style="width: 8cm; height: 7cm;" />
+<img :src="$withBase('/imagens/estrutura-de-classes-java.png')" alt="Estrutura de classes Java" style="width: 8cm; height: 7cm;" />
 
 Uma classe é apenas um bloco de código que contém atributos (variáveis) e métodos (funções).
 
