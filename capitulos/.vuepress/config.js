@@ -12,7 +12,7 @@ module.exports = {
   plugins: [
     [
       'mathjax', {
-        target: 'chtml',
+        target: 'svg',
         macros: {
           '*': '\\times',
         },

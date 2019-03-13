@@ -32,6 +32,26 @@ No exemplo acima, criamos a classe `Ola`, que possui o método `main`, o qual ir
 
 ---
 
+### Comentários no código
+
+Em alguns exemplos de código você verá o que se chamam comentários. Comentários são pedaços de texto no código que são ignorados pela linguagem de programação e suas ferramentas. Ou seja, podemos escrever qualquer coisa nestes comentários e o programa seguirá funcionando, pois eles não serão interpretados como um comando. Eles servem para documentar o código.
+
+```java
+/*
+Sou um comentario de multiplas linhas.
+Posso escrever varias coisas entre as barras e asteriscos.
+Nao serei interpretado como codigo
+
+*/
+public void umMetodo() {
+
+// Sou um comentario de uma linha, eu tambem nao serei interpretado como codigo
+
+}
+
+```
+
+
 ## Tipos de dados
 
 A linguagem Java oferece diversos tipos de dados com os quais podemos trabalhar. Há basicamente duas categorias em que se encaixam estes tipos de dados: **tipos primitivos** e **tipos de referência**.
@@ -41,8 +61,8 @@ A linguagem Java oferece diversos tipos de dados com os quais podemos trabalhar.
 Os tipos primitivos correspondem a dados simples escalares (que possuem um tamanho fixo na memória). No java, existem oito tipos primitivos, mas nem todos são comumente utilizados. Os tipos que você utilizará com mais frequência serão:
 
   * **boolean:** Assume os valores booleanos `true` (verdadeiro) ou `false` (falso).
-  * **int:** serve para armazenar números inteiros entre $-2 ^ {31}$ e $2 ^ {31} - 1$
-  * **double:** armazena números decimais (quebrados, ou com vírgula).
+  * **int:** Armazena números inteiros entre $-2 ^ {31}$ e $2 ^ {31} - 1$
+  * **double:** Armazena números decimais (quebrados, ou com vírgula).
   * **char:** O char é um tipo de variável que aceita a inserção de um caractere apenas.
 
 ```java
@@ -59,10 +79,10 @@ char umCaractere = 'a';
 
 Além dos tipos mais comuns, ainda temos alguns outros tipos primitivos para guardar números:
 
-* **float:** armazena números decimais (quebrados, ou com vírgula) com uma precisão menor (menos números depois da vírgula) que o `double`.
-* **short:** armazena valores inteiros entre `-32768` e `32767`
-* **long:** armazena valores inteiros entre.
-* **byte:** armazena valores inteiros entre `-128` e `127`
+* **float:** Armazena números decimais (quebrados, ou com vírgula) com uma precisão menor (menos números depois da vírgula) que o `double`.
+* **short:** Armazena números inteiros entre `-32768` e `32767`
+* **long:** Armazena números inteiros entre $-2 ^ {63}$ e $2 ^ {63} - 1$
+* **byte:** Armazena números inteiros entre `-128` e `127`
 
 > Estes tipos são muito similares aos tipos mais comuns. No entanto, eles existem para casos muito específicos, especialmente para quando precisamos economizar memória ou precisamos utilizar valores inteiros muito grandes (declarando-os como `long` em vez de `int`, por exemplo). Não estamos preocupados com estas situações neste momento.
 
@@ -237,9 +257,9 @@ Ao começar no Java, muitas pessoas pensam que String é um tipo primitivo, o qu
 
 Strings são úteis para resolver incontáveis tipos de problemas, por isso, é interessante revisar como manipulamos valores String utilizando seus métodos. Vejamos alguns métodos úteis:
 
-**length**
+### Saber o tamanho de uma String
 
-Nome em português:
+Usa-se o método **length**. Nome em português:
 
 > length: tamanho
 
@@ -251,9 +271,9 @@ String texto = "Oi";
 int tamanho = texto.length(); // tamanho sera 2;
 ```
 
-**equals**
+### Comparar duas Strings
 
-Nome em português:
+Usa-se o método **equals**. Nome em português:
 
 > equals: igual ou é igual a
 
@@ -275,16 +295,16 @@ String outroTexto = "Opa";
 boolean saoIguais = texto.equals(outroTexto); //saoIguais sera false
 ```
 
-**replace**
+### Substituir parte do conteúdo de uma String
 
-Nome em português:
+Usa-se o método **replace**. Nome em português:
 
 > replace: substituir
 
 Este método recebe dois argumentos:
 
-* conteudoAntigo
-* conteudoNovo
+* `conteudoAntigo`
+* `conteudoNovo`
 
 Ele retorna uma nova String substituindo todas as ocorrências do valor `conteudoAntigo` encontradas na String por `conteudoNovo`:
 
@@ -294,14 +314,16 @@ String bomDia = "Bom Dia!";
 String boaNoite = bomDia.replace("Dia", "Noite"); // boaNoite sera "Boa Noite!"
 ```
 
-**substring**
+### Obter um pedaço da string
+
+Usa-se o método **substring**.
 
 Este método recebe dois argumentos:
 
 * indiceInicial
 * indiceFinal
 
-Retorna uma nova String contendo a porção que está entre as posições indiceInicial e indiceFinal:
+Retorna uma nova String contendo a porção que está entre as posições `indiceInicial` e `indiceFinal`:
 
 ```java
 String texto = "Aceleradora";
@@ -309,9 +331,9 @@ String texto = "Aceleradora";
 String pedaco = texto.substring(0, 3); // pedaco sera "Ace"
 ```
 
-**split**
+### Separar uma String em vários pedaços
 
-Nome em português:
+Usa-se o método **split**. Nome em português:
 
 > split: separar
 
@@ -335,9 +357,9 @@ String texto = "dica";
 String[] pedacos = texto.split(""); //pedacos sera um array contendo {"d", "i", "c", "a"}
 ```
 
-**contains**
+### Verificar se a String contém um conteúdo específico
 
-Nome em português:
+Usa-se o método **contains**. Nome em português:
 
 > contains: contém
 
@@ -356,28 +378,28 @@ texto.contains("Ace"); // sera verdadeiro
 texto.contains("radora"); // sera verdadeiro
 ```
 
-**toLowerCase**
+### Converter tudo para minúsculas
 
-Nome em português:
+Usa-se o método **toLowerCase**. Nome em português:
 
 > toLowerCase: para minusculas
 
 Retorna uma nova String com todas as letras maiúsculas trocadas por minúsculas:
 
 ```java
-String texto = "BOM DIA";
+String texto = "BOM DIA! 123";
 
-String textoMinusculo = texto.toLowerCase(); // textoMinusculo sera "bom dia"
+String textoMinusculo = texto.toLowerCase(); // textoMinusculo sera "bom dia! 123"
 
 
 String outroTexto = "Bom Dia";
 
-String outroTextoMinusculo = texto.toLowerCase(); // outroTextoMinusculo sera "bom dia"
+String outroTextoMinusculo = texto.toLowerCase(); // outroTextoMinusculo sera "bom dia! 123"
 ```
 
-**toUpperCase**
+### Converter tudo para maiúsculas
 
-Nome em português:
+Usa-se o método **toUpperCase**. Nome em português:
 
 > toUpperCase: para maiusculas
 
@@ -407,7 +429,7 @@ Alguns links da documentação oficial do Java:
 * [Introdução a operadores Java](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html)
 * [Resumo sobre operadores](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html)
 
-**Operador de atribuição**
+### Operador de atribuição
 
 Pode ser que isto passe despercebido, mas ao atribuir um valor à uma variável, estamos utilizando um operador, o operador de atribuição (`=`):
 
@@ -415,7 +437,7 @@ Pode ser que isto passe despercebido, mas ao atribuir um valor à uma variável,
 int cinco = 5;
 ```
 
-**Operadores de Igualdade**
+### Operadores de Igualdade
 
 Os operadores de igualdade são utilizados para fazer a comparação de dois valores, ou seja, utilizamos estes operadores quando precisamos saber se um valor é `igual`, `diferente`, `maior` ou `menor` do que outro:
 
@@ -452,11 +474,11 @@ if (cincoEhMaiorQueDois) {
 }
 ```
 
-**Operadores Condicionais**
+### Operadores Condicionais
 
 Operadores condicionais são utilizados em valores booleanos. Eles são úteis quando precisamos verificar mais de uma condição ou precisamos inverter o valor de um booleano (trocar de `true` para `false` ou vice-versa):
 
-**And (&&)**:
+### E/And (&&)
 
 Em inglês a palavra "and" é equivalente ao "e" do português (como na frase Maria `e` João), logo, este operador verifica duas condições e resulta em verdadeiro somente se as duas forem verdadeiras, caso contrário, resulta em falso:
 
@@ -470,7 +492,7 @@ if (vaiChover == true && ehSexta == true) {
 
 No código acima, a pessoa só iria para casa somente se fosse sexta e fosse chover.
 
-**Or (\|\|)**:
+### Ou/Or (\|\|)
 
 Em inglês a palavra "or" significa "ou", logo, este operador verifica duas condições e resulta em verdadeiro se pelo menos uma das duas for verdadeira, e, somente caso as duas sejam falsas, resulta em falso:
 
@@ -484,7 +506,7 @@ if (vaiChover == true || ehSexta == true) {
 
 No código acima, a pessoa iria para casa se fosse chover, independentemente do dia da semana. Ou, caso fosse sexta mas não estivesse chovendo, ela também iria para casa.
 
-**Not (!)**:
+### Negação/Not (!)
 
 Em inglês, "not" significa "não" ou negação. Este operador inverte o valor booleano de uma expressão ou variável:
 
@@ -519,7 +541,7 @@ public void verificaEmbarque(int idade, boolean possuiPassaporte) {
 }
 ```
 
-**Operadores Numéricos**
+### Operadores Numéricos
 
 Os operadores numéricos servem para executar operações com números. Temos dois tipos de operadores numéricos:
 
@@ -641,48 +663,6 @@ public class IntrducaoJava {
 
 ---
 
-__Gabarito__
-
-```java
-
-// Declara a classe IntroducaoJava
-public class IntrducaoJava {
-
-  // declara um atributo chamado "umAtributo" do tipo String
-  String umAtributo;
-
-  // declara um metodo chamado executar que nao retorna nenhum valor (tipo de retorno void)
-  public void executar() {
-
-    // declara uma variavel inteira "valor" com valor 10
-    int valor = 10;
-
-    // Declara a variavel cachorro do tipo Cachorro e atribui a ela numa nova instância de objeto da classe cachorro
-    Cachorro cachorro = new Cachorro();
-
-    // Chama o metodo brincar do objeto cachorro
-    cachorro.brincar();
-
-    // declara uma variavel i do tipo int com valor 1
-    int i = 1;
-
-    // repete enquanto i for menor que valor
-    while (i < valor) {
-      // imprime o valor de i na tela
-      System.out.println("Iteracao: " + i);
-
-      // Verifica se i é par
-      if (i % 2 == 0) {
-        // Se i for par, imprime mensagem na tela
-        System.out.println("Iteracao par")
-      }
-
-     // Soma 1 ao valor de i (o que se chama de incrementar)
-     i++;
-    }
-  }
-}
-```
 
 ## Exercícios práticos
 
@@ -765,3 +745,45 @@ Já nos tipos, primitivos, nada disto é possível, pois eles não possuem atrib
 
 Depois de ler o capítulo de orientação a objetos, recomendamos que vocês revisite esta parte, prometemos que tudo fará um pouco mais de sentido.
 
+## Gabaritos dos exercícios
+
+```java
+
+// Declara a classe IntroducaoJava
+public class IntrducaoJava {
+
+  // declara um atributo chamado "umAtributo" do tipo String
+  String umAtributo;
+
+  // declara um metodo chamado executar que nao retorna nenhum valor (tipo de retorno void)
+  public void executar() {
+
+    // declara uma variavel inteira "valor" com valor 10
+    int valor = 10;
+
+    // Declara a variavel cachorro do tipo Cachorro e atribui a ela numa nova instância de objeto da classe cachorro
+    Cachorro cachorro = new Cachorro();
+
+    // Chama o metodo brincar do objeto cachorro
+    cachorro.brincar();
+
+    // declara uma variavel i do tipo int com valor 1
+    int i = 1;
+
+    // repete enquanto i for menor que valor
+    while (i < valor) {
+      // imprime o valor de i na tela
+      System.out.println("Iteracao: " + i);
+
+      // Verifica se i é par
+      if (i % 2 == 0) {
+        // Se i for par, imprime mensagem na tela
+        System.out.println("Iteracao par")
+      }
+
+     // Soma 1 ao valor de i (o que se chama de incrementar)
+     i++;
+    }
+  }
+}
+```
