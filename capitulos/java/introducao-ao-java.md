@@ -365,6 +365,8 @@ if (numero > 10) {
 }
 ```
 
+No programa acima, Verificamos uma condição (o número é maior que 10) e executamos ações com base nesta condição. Como `numero` tem o valor fixo de `5`, este programa sempre irá mostrar a mensagem `Este numero nao eh maior que 10`, mas caso alteremos o valor de numero para `11`, a mensagem exibida mudará para a primeira.
+
 #### O Senão se (else if)
 
 O Java possui a estrutura `else if`, para quando precisamos encadear mais de uma verificação de condição:
@@ -390,7 +392,23 @@ if (ehDiaDePagamento == true) {
 }
 ```
 
-No programa acima, Verificamos uma condição (o número é maior que 10) e executamos ações com base nesta condição. Como `numero` tem o valor fixo de `5`, este programa sempre irá mostrar a mensagem `Este numero nao eh maior que 10`, mas caso alteremos o valor de numero para `11`, a mensagem exibida mudará para a primeira.
+Caso a condição anterior seja falsa, a condição do else if será verificada e caso, seja verdadeira, será executado. Caso contrário, a ação contida no else será executada.
+
+É possível encadear inúmeros `else ifs` em um bloco:
+
+```java
+if (condicao) {
+  // Acao
+} else if (condicao2) {
+  // Outra Acao
+} else if (condicao3) {
+  // Mais Outra Acao
+} else if (condicao4) {
+  // Ainda Mais Outra Acao
+} else {
+  // Nada deu certo, outra acao
+}
+```
 
 ### Switch
 
@@ -409,21 +427,21 @@ Caso seja Quinta, dobrarei roupas.
 
 Caso seja Sexta, farei comida.
 
-Se não for nenhum dos dias anteriores, comerei um dogão.
+Se não for nenhum dos dias anteriores, comerei um dogão, pois ninguém é de ferro.
 ```
 
 Para expressar isto em forma de if encadeados, teríamos mais ou menos o seguinte:
 
 ```java
-if (dia == Segunda) {
+if (dia == SEGUNDA) {
   System.out.println("Levarei o lixo para fora");
-} else if (dia == Terca) {
+} else if (dia == TERCA) {
   System.out.println("Lavarei a roupa");
-} else if (dia == Quarta) {
+} else if (dia == QUARTA) {
   System.out.println("Passarei pano no chao");
-} else if (dia == Quinta) {
+} else if (dia == QUINTA) {
   System.out.println("Dobrarei roupas");
-} else if (dia == Sexta) {
+} else if (dia == SEXTA) {
   System.out.println("Farei comida");
 } else {
   System.out.println("Comerei um dogão");
@@ -434,23 +452,23 @@ O mesmo código, representado em um switch seria o seguinte:
 
 ```java
 switch(dia) {
-  case Segunda:
+  case SEGUNDA:
     System.out.println("Levarei o lixo para fora");
     break;
 
-  case Terca:
+  case TERCA:
     System.out.println("Lavarei a roupa");
     break;
 
-  case Quarta:
+  case QUARTA:
     System.out.println("Passarei pano no chao");
     break;
 
-  case Quinta:
+  case QUINTA:
     System.out.println("Dobrarei roupas");
     break;
 
-  case Sexta:
+  case SEXTA:
     System.out.println("Farei comida");
     break;
 
@@ -463,6 +481,61 @@ switch(dia) {
 ## Estruturas de repetição
 
 ### Enquanto (while)
+
+Assim como as estruturas de condição, o enquanto (ou `while`) também funciona verificando uma condição. A diferença é que o enquanto é uma estrutura de repetição, ou seja, ele repetirá o código enquanto aquela condição for verdadeira.
+
+Vamos pensar em mais um exemplo da vida cotidiana:
+
+```
+Um dogão triplo custa 10 reais.
+
+Eu tenho 0 reais na minha poupança.
+
+Enquanto a quantia da poupança for menor que o preço do dogão, eu guardo um real
+
+Depois de ter guardado dinheiro suficiente, eu comprarei o dogão
+
+```
+
+Vamos reformular para o exemplo acima do jeito Java:
+
+``` java
+int precoDoDogao = 10;
+
+int valorNaPoupanca = 0;
+
+while (valorNaPoupanca < precoDoDogao) {
+  valorNaPoupanca++;
+  System.out.println("Valor na poupanca: " + valorNaPoupanca);
+}
+
+System.out.println("Tenho dinheiro para um dogao triplo");
+```
+
+Ao executar este código, a saída é a seguinte:
+
+```
+Valor na poupanca: 1
+Valor na poupanca: 2
+Valor na poupanca: 3
+Valor na poupanca: 4
+Valor na poupanca: 5
+Valor na poupanca: 6
+Valor na poupanca: 7
+Valor na poupanca: 8
+Valor na poupanca: 9
+Valor na poupanca: 10
+Tenho dinheiro para um dogao triplo
+```
+
+Ou seja, o código dentro do `while` foi repetido até a condição (`valorNaPoupanca < precoDoDogao`) deixar de ser verdadeira.
+
+Cada vez que o código se repetia, ele fazia duas coisas:
+
+  - Incrementa `1` ao `valorNaPoupanca`
+  - Imprime o valor atual de `valorNaPoupanca`
+
+Após dez repetições (e consequentemente dez incrementos ao valor de `valorNaPoupanca`), o valor da variável `valorNaPoupanca` passou a ser `10`, que é igual ao valor de `precoDoDogao`. A partir deste momento, a condição `valorNaPoupanca < precoDoDogao` é falsa, pois os dois valores são iguais.
 
 ### Para (for)
 
