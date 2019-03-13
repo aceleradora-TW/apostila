@@ -10,19 +10,41 @@ Já um sistema de gerenciamento de banco de dados (SGBD) é um software que poss
 
 Para criar a base de dados o SGBD utiliza uma linguagem. A mais utilizada atualmente é o SQL, (Structured Query Language). Para armazenar um dado em um banco de dados, é necessário criar tabelas e dentro delas são criadas colunas, onde as informações são armazenadas.
 
-**sudo apt-get udpdate** - Geralmente quando vamos instalar algum programa via terminal, precisamos digitar sudo apt-get update.
+```bash
+sudo apt udpdate
+```
 
-**sudo apt-get install postgresql postgresql-contrib** - Esse comando instala o pacote Postgres junto com um -contribpacote que adicione alguns utilitários e funcionalidades adicionais.
+Quando vamos instalar algum programa via terminal, é sempre uma boa ideia executar antes `sudo apt update`, pois ele irá atualizar os links para os repositórios de onde o Linux faz download dos programas (como se fossem links para o Baixaki que o Linux usa internamente para encontrar os instaladores dos programas).
 
-**sudo -i -u postgres** - Alternando para a conta postgres.
+```bash
+sudo apt install postgresql postgresql-contrib
+```
 
-**Comandos SQL (utilizando PostgreSQL)**
+Esse comando instala o pacote Postgres junto com o pacote contrib, que adiciona alguns utilitários e funcionalidades adicionais.
 
-**psql** - Acessando um prompt do Postgres
+```bash
+sudo -i -u postgres
+```
 
-Isso fará você entrar no prompt do PostgreSQL e, a partir daqui, você estará livre para interagir com o sistema de gerenciamento de banco de dados imediatamente.
+Alternando para a conta postgres.
 
-**\q** - Saia do prompt do PostgreSQL digitando esse comando.
+## Comandos SQL (utilizando PostgreSQL)
+
+Antes de executar qualquer comando `SQL`, precisamos acessar o Postgres. Para isso, executamos:
+
+```bash
+psql
+```
+
+Isso fará você entrar no prompt do PostgreSQL e, a partir daqui, você estará livre para interagir com o sistema de gerenciamento de banco de dados imediatamente (consultando e alterando dados de tabelas e bancos).
+
+Para sair do prompt do Postgres e voltar ao terminal comum, digite:
+
+```bash
+\q
+```
+
+### Agora sim, SQL
 
 ```sql
 CREATE TABLE pessoa (
@@ -33,7 +55,7 @@ nome varchar(255));
 O comando CREATE TABLE cria uma tabela, pessoa é um exemplo de nome para sua tabela e dentro dos () vai as suas colunas, como exemplos temos id e nome.
 
 ```sql
-INSERT INTO TABLE pessoa VALUES (1,”Ingrid”);
+INSERT INTO TABLE pessoa VALUES (1, "Ingrid");
 ```
 
 O comando INSERT INTO TABLE insere na tabela pessoa respectivamente os seguintes valores: id=1 e nome=Ingrid.
@@ -45,7 +67,7 @@ SELECT * FROM  pessoa;
 Seleciona toda a tabela pessoa.
 
 ```sql
-UPDATE pessoa SET nome = ‘Brenda’ WHERE id = 1;
+UPDATE pessoa SET nome = 'Brenda' WHERE id = 1;
 ```
 
 Atualiza o nome do cliente para Brenda se o Id for igual a 1
@@ -56,33 +78,23 @@ DELETE FROM pessoa WHERE id = 1;
 
 Exclui as linhas onde o id é igual a 1 na tabela especificada. Se o id não for especificado, o efeito é excluir todas as linhas da tabela.
 
-## EXERCÍCIOS DE FIXAÇÃO
+## Ferramentas Adicionais
 
-**Baixe o postgreSQL**
-
-Comandos para Linux:
-
-sudo apt-get update
-
-sudo apt-get install postgresql postgresql-contrib
-
-sudo -i -u postgres
-
-psql
-
-\q
-
-**FERRAMENTAS ADICIONAIS**
-
-_PGADMIN 3_
+### PgAdmin 3
 
 Para uma interface gráfica de usuário do PostgreSQL, use o seguinte comando:
 
-**sudo apt-get install pgadmin3**
+```bash
+sudo apt-get install pgadmin3
+```
 
-**sudo su postgres -c psql postgres**
+```bash
+sudo su postgres -c psql postgres
+```
 
-**ALTER USER postgres WITH PASSWORD 'postgres';**
+```bash
+ALTER USER postgres WITH PASSWORD 'postgres';
+```
 
 ### Execute os seguintes comandos
 
@@ -119,11 +131,11 @@ INSERT INTO pedido(id_pedido,total,cliente_id_cliente) VALUES (101, 456.87, 8275
 
 SELECT * FROM cliente;
 
-SELECT * FROM pedido; 
+SELECT * FROM pedido;
 
-UPDATE cliente SET nome_cliente = 'Ronaldo'; 
+UPDATE cliente SET nome_cliente = 'Ronaldo';
 
-SELECT * FROM cliente; 
+SELECT * FROM cliente;
 
 DELETE FROM cliente WHERE id_cliente = 8275;
 ```
