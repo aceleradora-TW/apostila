@@ -4,13 +4,22 @@
 
 Git é um sistema de controle de versão de arquivos. Através deles podemos desenvolver projetos na qual diversas pessoas podem contribuir simultaneamente no mesmo, permitindo que os mesmos possam existir sem o risco de suas alterações serem sobrescritas. Se não houvesse um sistema de versão, imagine o caos entre duas pessoas abrindo o mesmo arquivo ao mesmo tempo. Uma das aplicações do git é justamente essa, permitir que um arquivo possa ser editado ao mesmo tempo por pessoas diferentes.
 
-## GitHub
-
-O GitHub é uma plataforma de hospedagem de código-fonte com controle de versão usando Git. Nele criamos repositórios onde colocamos nossos projetos que vamos desenvolver. No Github o projeto é dividido em branches,elas são separações de código. Normalmente são utilizados para separar alterações ou novas funcionalidades do projeto.
 
 ### Instalação
 
-Você instalará o Git com este comando \(via terminal - Linux\):
+Muitas das distribuições do Linux mais atuais já vêm com o git instalado. Verifique se o git já está instalado em sua máquina. No terminal, execute:
+
+```bash
+git --version
+```
+
+A saída do comando deve ser algo similar ao seguinte:
+
+```
+git version 2.17.2
+```
+
+Caso você não tenha o git na máquina, instale-o com este comando (via terminal - Linux):
 
 ```bash
 sudo apt-get install git
@@ -27,7 +36,11 @@ A partir daí, o Git irá usar essas informações para registrar quem foi que f
 
 Após isso já poderá realizar os comando do git pelo terminal.
 
-**Nota:** Esse exemplo configura o mesmo usuário para todos os projetos presentes no computador \(isso se dá por conta da flag --global\). Podemos também configurar usuários para cada projeto, bastando remover a flag `--global`.
+**Nota**
+
+> Esse exemplo configura o mesmo usuário para todos os projetos presentes no computador (isso se dá por conta da flag --global).
+> Podemos também configurar usuários para cada projeto individualmente, basta acessar a pasta do projeto em questão e executar os mesmos
+> comandos do exemplo sem a flag `--global`.
 
 ## Comando básicos
 
@@ -35,11 +48,11 @@ Após isso já poderá realizar os comando do git pelo terminal.
 
 Criar um repositório no Git é muito simples, apenas siga esta sequência completa dos comandos:
 
-`mkdir meu-projeto`\(irá criar o diretório\)
+`mkdir meu-projeto`(irá criar o diretório)
 
-`cd meu-projeto`\(irá entrar dentro do diretório\)
+`cd meu-projeto`(irá entrar dentro do diretório)
 
-`git init`\(irá criar o repositório git\)
+`git init`(irá criar o repositório git)
 
 Após isso, basta começar a trabalhar, criando, removendo e alterando arquivos.
 
@@ -57,7 +70,7 @@ Após isso, basta começar a trabalhar, criando, removendo e alterando arquivos.
 
 `git commit -m [“mensagem”]` Para você comentar brevemente sobre as modificações feitas;
 
-`git push origin [nome da branch]` Sobe as alterações feitas para a branch remota\(para onde quero enviar, por isso usamos _origin_\) do **GitHub**
+`git push origin [nome da branch]` Sobe as alterações feitas para a branch remota(para onde quero enviar, por isso usamos _origin_) do **GitHub**
 
 `git pull origin master` Recebe as alterações feitas na branch remota origin master;
 
@@ -83,6 +96,10 @@ Caso já tenha enviado ao seu repositório será necessário executar este coman
 
 **Importante: Não é muito recomendável usar estes últimos dois comandos exceto em casos muito extremos, eles podem causar grandes complicações.**
 
+## GitHub
+
+O GitHub é uma plataforma de hospedagem de código-fonte com controle de versão usando Git. Nele criamos repositórios onde colocamos nossos projetos que vamos desenvolver. No Github o projeto é dividido em branches,elas são separações de código. Normalmente são utilizados para separar alterações ou novas funcionalidades do projeto.
+
 ## Exercícios de Fixação
 
 Baseado no material desta apostila informe os comandos necessários para realizar cada uma das tarefas a seguir:
@@ -95,8 +112,8 @@ Imagine que criamos um repositório no GitHub:
 * [ ] Envie as modificações para o repositório
 * [ ] Acesse o site do GitHub e crie um repositório chamado `exercicioGitHubAcelera`
 * [ ] Agora, dentro de algum diretório de seu computador, inicie um repositório Git local
-* [ ] Clone este repositório \(`exercicioGitHubAcelera`\) para seu computador
-* [ ] Faça qualquer alteração neste diretório \(crie arquivos novos, modifique algum existente e etc\) e em seguida adicione estas alterações neste repositório Git local
+* [ ] Clone este repositório (`exercicioGitHubAcelera`) para seu computador
+* [ ] Faça qualquer alteração neste diretório (crie arquivos novos, modifique algum existente e etc) e em seguida adicione estas alterações neste repositório Git local
 * [ ] Realize um `commit` destas alterações ao seu repositório Git local, informando uma mensagem explicando o que esta sendo salvo neste `commit`
 * [ ] Agora, envie as modificações para o repositório
 

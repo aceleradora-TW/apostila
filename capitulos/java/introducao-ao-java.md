@@ -2,8 +2,6 @@
 
 Neste capítulo, veremos alguns conceitos fundamentais do Java para que possamos começar a utilizar a linguagem.
 
-[[toc]]
-
 ## Olá, mundo
 
 No Java o seu código sempre será escrito dentro de classes e métodos. O código de uma classe, por sua vez, deve ser escrito dentro de um
@@ -353,19 +351,15 @@ se (estiver chovendo) {
 
 #### Exemplo de código
 
-Pensando em código, vejamos como utilizariamos as estruturas de `se` e `senão` (as quais se chamam `if` e `else` no Java):
+Pensando em código, vejamos como utilizaríamos as estruturas de `se` e `senão` (as quais se chamam `if` e `else` no Java):
 
 ```java
-int numero = 5;
-
-if (numero > 10) {
-  System.out.println("Este numero eh maior que 10");
+if (estaChovendo == true) {
+  System.out.println("ficarei em casa");
 } else {
-  System.out.println("Este numero nao eh maior que 10")
+  System.out.println("irei até a lancheira do Zico comprar um dogão")
 }
 ```
-
-No programa acima, Verificamos uma condição (o número é maior que 10) e executamos ações com base nesta condição. Como `numero` tem o valor fixo de `5`, este programa sempre irá mostrar a mensagem `Este numero nao eh maior que 10`, mas caso alteremos o valor de numero para `11`, a mensagem exibida mudará para a primeira.
 
 #### O Senão se (else if)
 
@@ -539,7 +533,89 @@ Após dez repetições (e consequentemente dez incrementos ao valor de `valorNaP
 
 ### Para (for)
 
+A estrutura `for` é similar ao `while`, mas se organiza de uma maneira um pouco diferente.
+
+Embora possa funcionar de outras maneiras (que não nos interessam agora), o loop `for` foi pensado para funcionar junto com um
+`incrementador`:
+
+> uma variável inteira, que geralmente começa com valor 0 e tem seu valor aumentado (geralmente de 1 em 1, mas pode ser de outras formas).
+
+Um laço for convencional é construído à partir de três coisas:
+
+  - Declaração do incrementador
+  - Condição de execução
+  - Incremento
+
+__Declaração do incrementador__
+
+É quando declaramos a variável que servirá de incrementadora. Nada mais do que isso.
+
+__Condição de execução__
+
+Definimos uma condição que será verficada pela estrutura a cada repetição (ou iteração). Assim como no loop `while`, enquanto esta condição for verdadeira, a repetição seguirá acontecendo, quando ela tornar-se falsa, a repetição para de acontecer.
+
+__Incremento__
+
+Defnimos como a variável incrementadora terá seu valor aumentado após cada repetição. Podemos dizer, por exemplo,  que o valor aumentará de 1 em 1 (`incrementadora++`) ou de 2 em 2 (`incrementadora += 2`). Este incremento acontece sempre ao final de cada repetição.
+
+#### Sintaxe do for
+
+```java
+for (incrementador; condicao; incremento) {
+  // Codigo a ser repetido
+}
+```
+
+#### Exemplos de código
+
+Vejamos como calcular a taboada do 5 usando o for:
+
+```java
+System.out.println("Taboada do 5:");
+
+for (int i = 0; i <= 10; i++) {
+  System.out.println(5 * i);
+}
+```
+
+Saída:
+
+```
+Taboada do 5:
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+```
+
+#### O dogão
+
+Podemos resolver o problema que resolvemos com o `while` (de guardar a grana do dogão) também com o `for`:
+
+```java
+int valorDoDogao = 10;
+
+for (int poupanca = 0; poupanca < valorDoDogao; poupanca++) {
+  System.out.println("Valor na poupanca: " + valorNaPoupanca);
+}
+
+System.out.println("Tenho dinheiro para um dogao triplo");
+```
+
+#### Meio confuso?
+
+O `for` pode parecer meio confuso agora, mas ele será extremamente útil para resolver vários problemas, especialmente quando começarmos a lidar com vetores e listas (situações para as quais o `for` foi especialmente desenhado). Não se preocupe, tudo ficará mais concreto nos próximos capítulos.
+
 ## Tipos de referência
+
+Lá no começo do capítulo havíamos comentado sobre tipos de variáveis: `primitivas` e `por referência`. Deixamos as de referência por último pois era importante visitar alguns conceitos antes. Vamos tentar entender um pouco mais sobre as variáveis de referência.
 
 Os tipos de referência armazenam objetos. Neste momento, não faz sentido tentarmos entender a fundo o que isto significa. Sugerimos que depois de você dar uma lida no capítulo de orientação a objetos, revisite esta parte da apostila para entender um pouco melhor.
 
@@ -666,11 +742,9 @@ for (int i = 0; i < valores.length; i++) {
 }
 ```
 
-Sabemos que ainda não chegamos na parte das estruturas de repetição, mas tenha em mente que em algumas situações, é melhor utilizar arrays e eles existem por ótimos motivos, não se preocupe em entender como tudo funciona agora, por enquanto, apenas guarde isso na sua mente:
-
-> **"Arrays existem por bons motivos, fique de olho em onde você poderá utilizá-los."**
+> _**"Arrays existem por bons motivos, fique de olho em onde você poderá utilizá-los."**_
 >
-> * Regina Casé
+>  _Regina Casé_
 
 **Bônus: Definindo valores direto na declaração**
 
