@@ -568,10 +568,10 @@ for (incrementador; condicao; incremento) {
 
 #### Exemplos de código
 
-Vejamos como calcular a taboada do 5 usando o for:
+Vejamos como calcular a tabuada do 5 usando o for:
 
 ```java
-System.out.println("Taboada do 5:");
+System.out.println("Tabuada do 5:");
 
 for (int i = 0; i <= 10; i++) {
   System.out.println(5 * i);
@@ -581,7 +581,7 @@ for (int i = 0; i <= 10; i++) {
 Saída:
 
 ```
-Taboada do 5:
+Tabuada do 5:
 0
 5
 10
