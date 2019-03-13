@@ -51,10 +51,9 @@ public void umMetodo() {
 
 ```
 
-
 ## Tipos de dados
 
-A linguagem Java oferece diversos tipos de dados com os quais podemos trabalhar. Há basicamente duas categorias em que se encaixam estes tipos de dados: **tipos primitivos** e **tipos de referência**.
+A linguagem Java oferece diversos tipos de dados com os quais podemos trabalhar. Há basicamente duas categorias em que se encaixam estes tipos de dados: **tipos primitivos** e **tipos de referência**. Veremos primeiro os tipos primitivos e, depois, lá no final do capítulo, um pouco sobre os tipos de referência.
 
 ### Tipos primitivos
 
@@ -94,9 +93,380 @@ Alguns destes são tópicos bastante avançados, mas caso queira entender um pou
 * [Explicação sobre a precisão de números decimais](https://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3)
 * [O padrão Unicode (utilizado pelo Java para representar variáveis do tipo char)](https://en.wikipedia.org/wiki/Unicode)
 
----
+### Exercícios sobre tipos
 
-### Tipos de referência
+__Exercício 1:__
+
+Substitua as lacunas com os tipos que você achar mais adequados para guardar os valores das variáveis:
+
+```java
+
+// Veja este exemplo:
+
+boolean v0 = false;
+
+// Agora preencha as lacunas para as variaveis restantes:
+
+_____ v1 = 1;
+
+_____ v2 = 5000;
+
+_____ v3 = 1.00;
+
+_____ v4 = 42000;
+
+_____ v5 = 'a';
+
+_____ v6 = '5';
+
+_____ v7 = 2147483648;
+
+_____ v8 = true;
+```
+
+
+## Operadores
+
+Como o próprio nome diz, os operadores permitem executar operações sobre um ou dois **valores primitivos**.
+
+Alguns links da documentação oficial do Java:
+
+* [Introdução a operadores Java](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html)
+* [Resumo sobre operadores](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html)
+
+### Operador de atribuição
+
+Pode ser que isto passe despercebido, mas ao atribuir um valor à uma variável, estamos utilizando um operador, o operador de atribuição (`=`):
+
+```java
+int cinco = 5;
+```
+
+### Operadores de Igualdade
+
+Os operadores de igualdade são utilizados para fazer a comparação de dois valores, ou seja, utilizamos estes operadores quando precisamos saber se um valor é `igual`, `diferente`, `maior` ou `menor` do que outro:
+
+| Nome | Sintaxe | Exemplo | Significado |
+| :--- | :--- | :--- | :--- |
+| Igual | `==` | `x == y` | `x` é igual a `y` |
+| Diferente | `!=` | `x != y` | `x` é diferente de `y` |
+| Maior que | `>` | `x > y` | `x` é maior que `y` |
+| Menor que | `<` | `x < y` | `x` é menor que `y` |
+| Maior ou igual | `>=` | `x >= y` | `x` é maior ou igual a `y` |
+| Menor ou igual | `<=` | `x <= y` | `x` é menor ou igual a `y` |
+
+O uso de operadores de igualdade resulta em um valor booleano, o que permite utilizar estes operadores de diferentes maneiras:
+
+Podemos utilizá-los diretamente dentro de estruturas condicionais:
+
+```java
+if (5 > 2) {
+  System.out.println("5 eh maior que 2");
+} else {
+  System.out.println("5 nao eh maior que 2");
+}
+```
+
+Ou podemos guardar o resultado em uma variável, o que nos ajuda escrever código de uma maneira um pouco mais legível em algumas situações:
+
+```java
+boolean cincoEhMaiorQueDois = 5 > 2;
+
+if (cincoEhMaiorQueDois) {
+   System.out.println("5 eh maior que 2");
+} else {
+  System.out.println("5 nao eh maior que 2");
+}
+```
+
+### Operadores Condicionais
+
+Operadores condicionais são utilizados em valores booleanos. Eles são úteis quando precisamos verificar mais de uma condição ou precisamos inverter o valor de um booleano (trocar de `true` para `false` ou vice-versa):
+
+#### E/And (&&)
+
+Em inglês a palavra "and" é equivalente ao "e" do português (como na frase Maria `e` João), logo, este operador verifica duas condições e resulta em verdadeiro somente se as duas forem verdadeiras, caso contrário, resulta em falso:
+
+```java
+if (vaiChover == true && ehSexta == true) {
+  System.out.println("Hoje irei embora mais cedo, pois eh sexta E esta chovendo.");
+} else {
+  System.out.println("Hoje ficarei até mais tarde.");
+}
+```
+
+No código acima, a pessoa só iria para casa somente se fosse sexta e fosse chover.
+
+#### Ou/Or (\|\|)
+
+Em inglês a palavra "or" significa "ou", logo, este operador verifica duas condições e resulta em verdadeiro se pelo menos uma das duas for verdadeira, e, somente caso as duas sejam falsas, resulta em falso:
+
+```java
+if (vaiChover == true || ehSexta == true) {
+  System.out.println("Hoje irei embora mais cedo, pois eh sexta ou esta chovendo.");
+} else {
+  System.out.println("Hoje ficarei até mais tarde.");
+}
+```
+
+No código acima, a pessoa iria para casa se fosse chover, independentemente do dia da semana. Ou, caso fosse sexta mas não estivesse chovendo, ela também iria para casa.
+
+#### Negação/Not (!)
+
+Em inglês, "not" significa "não" ou negação. Este operador inverte o valor booleano de uma expressão ou variável:
+
+Expressão:
+
+```java
+boolean naoEhCincoNemMaiorQueDez = !(numero == 5 || numero > 10)
+```
+
+Variável:
+
+```java
+boolean verdade = true;
+boolean mentira = !verdade;
+```
+
+**Exemplo de uso:**
+
+Temos que escrever um programa que valida o embarque de passageiros em um avião. O programa só deve permitir pessoas maiores de idade `e` que possuam passaporte. Caso a pessoa seja maior de idade mas não possua passaporte o sistema deve notificá-la. Caso a pessoa seja menor de idade, o programa deve notificá-la para estar acompanhada dos pais:
+
+```java
+public void verificaEmbarque(int idade, boolean possuiPassaporte) {
+  boolean ehMaiorDeIdade = idade >= 18;
+
+  if (ehMaiorDeIdade && possuiPassaporte) {
+    System.out.println("Pode embarcar");
+  } else if (ehMaiorDeIdade && !possuiPassaporte) {
+    System.out.println("Nao pode embarcar. Apresente o passaporte.");
+  } else if (!ehMaiorDeIdade) {
+    System.out.println("Nao pode embarcar. Venha com seus pais.");
+  }
+}
+```
+
+### Operadores Numéricos
+
+Os operadores numéricos servem para executar operações com números. Temos dois tipos de operadores numéricos:
+
+**Binários**
+
+São os operadores que executam operações entre **dois** números:
+
+| Nome | Sintaxe | Exemplo | Resultado |
+| :--- | :--- | :--- | :--- |
+| Soma | `+` | `1 + 1` | `2` |
+| Subtração | `-` | `2 - 2` | `0` |
+| Multiplicação | `*` | `2 * 2` | `4` |
+| Divisão | `/` | `4 / 2` | `2` |
+| Módulo | `%` | `4 % 2` | `0` |
+
+**Exemplos de uso**
+
+Podemos utilizá-los para criar uma calculadora em Java:
+
+```java
+public class Calculadora {
+    public int soma(int a, int b) {
+        return a + b;
+    }
+
+    public int subtrai(int a, int b) {
+        return a - b;
+    }
+
+    public int multiplica(int a , int b) {
+        return a * b;
+    }
+
+    public int divide(int a, int b) {
+        return a / b;
+    }
+}
+```
+
+**Unários**
+
+São operadores que executam operações com apenas **um** número. Estes operadores não funcionam diretamente em números literais, apenas variáveis (veja os exemplos para entender isto melhor):
+
+| Nome | Sintaxe |
+| :--- | :--- |
+| Incrementa | `++` |
+| Decrementa | `--` |
+| Acumula soma | `+=` |
+| Acumula multiplicação | `*=` |
+| Acumula subtração | `-=` |
+| Acumula divisão | `/=` |
+
+**Exemplo:**
+
+```java
+5++; // nao funciona
+
+int numero = 4;
+numero++; // numero agora tem o valor 5
+numero--; // numero agora tem o valor 4
+numero += 2; // numero agora tem o valor 6
+numero -= 2; // numero agora tem o valor 4
+numero *= 2; // numero agora tem o valor 8
+numero /= 2; // numero agora tem o valor 4
+```
+
+### Exercícios sobre Operadores
+
+__Exercício 4:__
+
+## Estruturas condicionais
+
+As estruturas condicionais permitem com que tomemos decisões nos nossos programas. Como o próprio nome indica, elas nos permitem validar se alguma condição é verdadeira ou falsa e nos permitem decidir o que fazer em cada situação (o que fazer caso uma condição seja verdadeira e o que fazer caso uma situação seja falsa).
+
+Estas estruturas foram criadas para imitar a maneira como o idioma inglês (ou português, neste caso) funciona. Ou seja, no nosso dia a dia, expressamos condições e decisões o tempo todo de maneira natural.
+
+### Se (if) senão se (else if)  e senão (else)
+
+Vejamos um exemplo de como expressamos condições e decisões usando o bom e charmoso português:
+
+```
+Se estiver chovendo, ficarei em casa.
+
+Senão, irei até a lancheira do Zico comprar um dogão.
+```
+
+Na frase acima, expressamos uma condição:
+  - `Se estiver chovendo`
+
+E duas decisões:
+  - `Ficarei em casa`
+  - `irei até a lancheira do Zico comprar um dogão`
+
+Vamos mudar um pouco a estrutura da frase acima para tentar deixar um pouco mais parecido com a maneira do Java expressar condições e
+decisões:
+
+```
+se (estiver chovendo) {
+  ficarei em casa
+} senao {
+  irei até a lancheira do Zico comprar um dogão
+}
+```
+
+#### Exemplo de código
+
+Pensando em código, vejamos como utilizariamos as estruturas de `se` e `senão` (as quais se chamam `if` e `else` no Java):
+
+```java
+int numero = 5;
+
+if (numero > 10) {
+  System.out.println("Este numero eh maior que 10");
+} else {
+  System.out.println("Este numero nao eh maior que 10")
+}
+```
+
+#### O Senão se (else if)
+
+O Java possui a estrutura `else if`, para quando precisamos encadear mais de uma verificação de condição:
+
+```
+Se for dia de pagamento, comprarei um dogão
+
+Senão se for fim de semana, descansarei em casa
+
+Senão, seguirei trabalhando para poder comprar um dogão
+```
+
+#### Exemplo de código
+
+```java
+
+if (ehDiaDePagamento == true) {
+  System.out.println("Eh dia de dogao");
+} else if (ehFimDeSemana == true) {
+  System.out.println("Nao eh dia de dogao, eh dia de descanso");
+} else {
+  System.out.println("Nao eh dia de dogao, muito menos de descanso");
+}
+```
+
+No programa acima, Verificamos uma condição (o número é maior que 10) e executamos ações com base nesta condição. Como `numero` tem o valor fixo de `5`, este programa sempre irá mostrar a mensagem `Este numero nao eh maior que 10`, mas caso alteremos o valor de numero para `11`, a mensagem exibida mudará para a primeira.
+
+### Switch
+
+O switch é muito útil para quando precisamos tomar muitas decisões com base em muitas condições. Se pode utilizar um monte de ifs encadeados para fazer a mesma coisa que o switch, mas ele é muito mais legível.
+
+Vamos pensar em condições da vida cotidiana:
+
+```
+Caso seja Segunda, levarei o lixo para fora.
+
+Caso seja Terça, lavarei a roupa.
+
+Caso seja Quarta, passarei pano no chão.
+
+Caso seja Quinta, dobrarei roupas.
+
+Caso seja Sexta, farei comida.
+
+Se não for nenhum dos dias anteriores, comerei um dogão.
+```
+
+Para expressar isto em forma de if encadeados, teríamos mais ou menos o seguinte:
+
+```java
+if (dia == Segunda) {
+  System.out.println("Levarei o lixo para fora");
+} else if (dia == Terca) {
+  System.out.println("Lavarei a roupa");
+} else if (dia == Quarta) {
+  System.out.println("Passarei pano no chao");
+} else if (dia == Quinta) {
+  System.out.println("Dobrarei roupas");
+} else if (dia == Sexta) {
+  System.out.println("Farei comida");
+} else {
+  System.out.println("Comerei um dogão");
+}
+```
+
+O mesmo código, representado em um switch seria o seguinte:
+
+```java
+switch(dia) {
+  case Segunda:
+    System.out.println("Levarei o lixo para fora");
+    break;
+
+  case Terca:
+    System.out.println("Lavarei a roupa");
+    break;
+
+  case Quarta:
+    System.out.println("Passarei pano no chao");
+    break;
+
+  case Quinta:
+    System.out.println("Dobrarei roupas");
+    break;
+
+  case Sexta:
+    System.out.println("Farei comida");
+    break;
+
+  default:
+    System.out.println("Comerei um dogão");
+    break;
+}
+```
+
+## Estruturas de repetição
+
+### Enquanto (while)
+
+### Para (for)
+
+## Tipos de referência
 
 Os tipos de referência armazenam objetos. Neste momento, não faz sentido tentarmos entender a fundo o que isto significa. Sugerimos que depois de você dar uma lida no capítulo de orientação a objetos, revisite esta parte da apostila para entender um pouco melhor.
 
@@ -240,6 +610,32 @@ for (int i = 0; i < valores.length; i++) {
   System.out.println(valores[i] * 2);
 }
 ```
+
+### Exercícios sobre vetores
+
+__Exercício 2__
+
+Complete o código abaixo para criar um novo vetor vazio de numeros inteiros e tamanho 10:
+
+```java
+int [] vetor = _____;
+```
+
+Complete o código abaixo criando um vetor de inteiros com os valores pre-determinados `1, 3, 5 e 7`:
+
+```java
+int [] vetor = _____;
+```
+
+No código abaixo:
+
+```java
+int [] vetor = {2, 4, 6, 8};
+
+int a = vetor[1];
+```
+
+Qual será o valor da variável `a `?
 
 ## Strings
 
@@ -420,194 +816,6 @@ Documentação Java:
 
 * [Lista completa dos métodos da classe string](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html)
 
-## Operadores
-
-Como o próprio nome diz, os operadores permitem executar operações sobre um ou dois **valores primitivos**.
-
-Alguns links da documentação oficial do Java:
-
-* [Introdução a operadores Java](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html)
-* [Resumo sobre operadores](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html)
-
-### Operador de atribuição
-
-Pode ser que isto passe despercebido, mas ao atribuir um valor à uma variável, estamos utilizando um operador, o operador de atribuição (`=`):
-
-```java
-int cinco = 5;
-```
-
-### Operadores de Igualdade
-
-Os operadores de igualdade são utilizados para fazer a comparação de dois valores, ou seja, utilizamos estes operadores quando precisamos saber se um valor é `igual`, `diferente`, `maior` ou `menor` do que outro:
-
-| Nome | Sintaxe | Exemplo | Significado |
-| :--- | :--- | :--- | :--- |
-| Igual | `==` | `x == y` | `x` é igual a `y` |
-| Diferente | `!=` | `x != y` | `x` é diferente de `y` |
-| Maior que | `>` | `x > y` | `x` é maior que `y` |
-| Menor que | `<` | `x < y` | `x` é menor que `y` |
-| Maior ou igual | `>=` | `x >= y` | `x` é maior ou igual a `y` |
-| Menor ou igual | `<=` | `x <= y` | `x` é menor ou igual a `y` |
-
-O uso de operadores de igualdade resulta em um valor booleano, o que permite utilizar estes operadores de diferentes maneiras:
-
-Podemos utilizá-los diretamente dentro de estruturas condicionais:
-
-```java
-if (5 > 2) {
-  System.out.println("5 eh maior que 2");
-} else {
-  System.out.println("5 nao eh maior que 2");
-}
-```
-
-Ou podemos guardar o resultado em uma variável, o que nos ajuda escrever código de uma maneira um pouco mais legível em algumas situações:
-
-```java
-boolean cincoEhMaiorQueDois = 5 > 2;
-
-if (cincoEhMaiorQueDois) {
-   System.out.println("5 eh maior que 2");
-} else {
-  System.out.println("5 nao eh maior que 2");
-}
-```
-
-### Operadores Condicionais
-
-Operadores condicionais são utilizados em valores booleanos. Eles são úteis quando precisamos verificar mais de uma condição ou precisamos inverter o valor de um booleano (trocar de `true` para `false` ou vice-versa):
-
-### E/And (&&)
-
-Em inglês a palavra "and" é equivalente ao "e" do português (como na frase Maria `e` João), logo, este operador verifica duas condições e resulta em verdadeiro somente se as duas forem verdadeiras, caso contrário, resulta em falso:
-
-```java
-if (vaiChover == true && ehSexta == true) {
-  System.out.println("Hoje irei embora mais cedo, pois eh sexta E esta chovendo.");
-} else {
-  System.out.println("Hoje ficarei até mais tarde.");
-}
-```
-
-No código acima, a pessoa só iria para casa somente se fosse sexta e fosse chover.
-
-### Ou/Or (\|\|)
-
-Em inglês a palavra "or" significa "ou", logo, este operador verifica duas condições e resulta em verdadeiro se pelo menos uma das duas for verdadeira, e, somente caso as duas sejam falsas, resulta em falso:
-
-```java
-if (vaiChover == true || ehSexta == true) {
-  System.out.println("Hoje irei embora mais cedo, pois eh sexta ou esta chovendo.");
-} else {
-  System.out.println("Hoje ficarei até mais tarde.");
-}
-```
-
-No código acima, a pessoa iria para casa se fosse chover, independentemente do dia da semana. Ou, caso fosse sexta mas não estivesse chovendo, ela também iria para casa.
-
-### Negação/Not (!)
-
-Em inglês, "not" significa "não" ou negação. Este operador inverte o valor booleano de uma expressão ou variável:
-
-Expressão:
-
-```java
-boolean naoEhCincoNemMaiorQueDez = !(numero == 5 || numero > 10)
-```
-
-Variável:
-
-```java
-boolean verdade = true;
-boolean mentira = !verdade;
-```
-
-**Exemplo de uso:**
-
-Temos que escrever um programa que valida o embarque de passageiros em um avião. O programa só deve permitir pessoas maiores de idade `e` que possuam passaporte. Caso a pessoa seja maior de idade mas não possua passaporte o sistema deve notificá-la. Caso a pessoa seja menor de idade, o programa deve notificá-la para estar acompanhada dos pais:
-
-```java
-public void verificaEmbarque(int idade, boolean possuiPassaporte) {
-  boolean ehMaiorDeIdade = idade >= 18;
-
-  if (ehMaiorDeIdade && possuiPassaporte) {
-    System.out.println("Pode embarcar");
-  } else if (ehMaiorDeIdade && !possuiPassaporte) {
-    System.out.println("Nao pode embarcar. Apresente o passaporte.");
-  } else if (!ehMaiorDeIdade) {
-    System.out.println("Nao pode embarcar. Venha com seus pais.");
-  }
-}
-```
-
-### Operadores Numéricos
-
-Os operadores numéricos servem para executar operações com números. Temos dois tipos de operadores numéricos:
-
-**Binários**
-
-São os operadores que executam operações entre **dois** números:
-
-| Nome | Sintaxe | Exemplo | Resultado |
-| :--- | :--- | :--- | :--- |
-| Soma | `+` | `1 + 1` | `2` |
-| Subtração | `-` | `2 - 2` | `0` |
-| Multiplicação | `*` | `2 * 2` | `4` |
-| Divisão | `/` | `4 / 2` | `2` |
-| Módulo | `%` | `4 % 2` | `0` |
-
-**Exemplos de uso**
-
-Podemos utilizá-los para criar uma calculadora em Java:
-
-```java
-public class Calculadora {
-    public int soma(int a, int b) {
-        return a + b;
-    }
-
-    public int subtrai(int a, int b) {
-        return a - b;
-    }
-
-    public int multiplica(int a , int b) {
-        return a * b;
-    }
-
-    public int divide(int a, int b) {
-        return a / b;
-    }
-}
-```
-
-**Unários**
-
-São operadores que executam operações com apenas **um** número. Estes operadores não funcionam diretamente em números literais, apenas variáveis (veja os exemplos para entender isto melhor):
-
-| Nome | Sintaxe |
-| :--- | :--- |
-| Incrementa | `++` |
-| Decrementa | `--` |
-| Acumula soma | `+=` |
-| Acumula multiplicação | `*=` |
-| Acumula subtração | `-=` |
-| Acumula divisão | `/=` |
-
-**Exemplo:**
-
-```java
-5++; // nao funciona
-
-int numero = 4;
-numero++; // numero agora tem o valor 5
-numero--; // numero agora tem o valor 4
-numero += 2; // numero agora tem o valor 6
-numero -= 2; // numero agora tem o valor 4
-numero *= 2; // numero agora tem o valor 8
-numero /= 2; // numero agora tem o valor 4
-```
-
 ## Fim do capítulo
 
 E isso é quase tudo que você deve saber para começar a se aventurar no Java! Este capítulo serve como um pontapé inicial, mas ainda temos muita coisa para ver! Caso você tenha interesse, dê uma lida nos apêndice, mais abaixo, que tentam explicar um pouco mais sobre algumas coisas que foram comentadas neste capítulo, mas que podem ser meio confusas neste momento.
@@ -670,6 +878,111 @@ No repositório da trilha de exercícios, você encontrará alguns desafios de l
 
 Acesse o repositório aqui: [https://github.com/aceleradora-TW/trilha-de-exercicios](https://github.com/aceleradora-TW/trilha-de-exercicios)
 
+## Gabaritos dos exercícios
+
+__Exercício 1:__
+
+```java
+
+// Veja este exemplo:
+
+boolean v0 = false;
+
+// Agora preencha as lacunas para as variaveis restantes:
+
+byte v1 = 1; // int, short ou long tambem sao respostas corretas. Se utiliza byte neste caso, por conta do tamanho pequeno do numero.
+
+short v2 = 5000; // int ou long tambem seriam corretoa. Short nao poderia ser utilizado aqui, pois o numero eh muito grande.
+
+double v3 = 1.00; // float tambem seria correto.
+
+int v4 = 42000; // long tambem serviria.
+
+char v5 = 'a'; // caraceteres sao representados utilizando aspas simples (')
+
+char v6 = '5'; // apesar de cinco ser um numero, aqui ele esta representado como um caracetere, pois esta envolto de aspas simples
+
+long v7 = 2147483648; // Este numero nao cabe no tipo int. O compilador geraria um erro com a mensagem "integer number too large" se usassemos int (ou um tipo ainda menor, como short) aqui
+
+boolean v8 = true; // O tipo booleano representa apenas os valores logicos true (verdadeiro) e false (falso).
+```
+
+__Exercício 2__
+
+Complete o código abaixo para criar um novo vetor vazio de numeros inteiros e tamanho 10:
+
+```java
+int [] vetor = new int [10];
+```
+
+Complete o código abaixo criando um vetor de inteiros com os valores pre-determinados `1, 3, 5 e 7`:
+
+```java
+int [] vetor = {1, 3, 5, 7};
+```
+
+Outra forma de resolver esta questão, seria:
+
+```java
+int [] vetor = new int[4];
+vetor[0] = 1;
+vetor[1] = 3;
+vetor[2] = 5;
+vetor[3] = 7;
+```
+
+No código abaixo:
+
+```java
+int [] vetor = {2, 4, 6, 8};
+
+int a = vetor[1];
+```
+
+Qual será o valor da variável `a `? __4__
+
+
+```java
+
+// Declara a classe IntroducaoJava
+public class IntrducaoJava {
+
+  // declara um atributo chamado "umAtributo" do tipo String
+  String umAtributo;
+
+  // declara um metodo chamado executar que nao retorna nenhum valor (tipo de retorno void)
+  public void executar() {
+
+    // declara uma variavel inteira "valor" com valor 10
+    int valor = 10;
+
+    // Declara a variavel cachorro do tipo Cachorro e atribui a ela numa nova instância de objeto da classe cachorro
+    Cachorro cachorro = new Cachorro();
+
+    // Chama o metodo brincar do objeto cachorro
+    cachorro.brincar();
+
+    // declara uma variavel i do tipo int com valor 1
+    int i = 1;
+
+    // repete enquanto i for menor que valor
+    while (i < valor) {
+      // imprime o valor de i na tela
+      System.out.println("Iteracao: " + i);
+
+      // Verifica se i é par
+      if (i % 2 == 0) {
+        // Se i for par, imprime mensagem na tela
+        System.out.println("Iteracao par")
+      }
+
+     // Soma 1 ao valor de i (o que se chama de incrementar)
+     i++;
+    }
+  }
+}
+```
+
 ## Apêndice
 
 ### Strings
@@ -695,11 +1008,27 @@ Ainda que isto seja possível, não é necessário, pois String é uma classe t�
 String dia = "Sexta";
 ```
 
-### Imutabilidade
+#### Imutabilidade
 
-Quando dizemos que as Strings são imutáveis, basicamente significa que o valor de uma variável String não pode ser alterado em algumas situações. Isto gera bastante confusão.
+Quando dizemos que as Strings são imutáveis, basicamente significa que o valor de uma variável String não pode ser alterado em algumas situações.
 
-Podemos sobrescrever o valor de uma variável
+Isto gera bastante confusão, mas vejamos o que isto significa na prática.
+
+Quando o código a seguir é executado:
+
+```java
+String saudacao = "Bom dia";
+
+saudacao.substring(0, 3);
+```
+
+Qual será o valor da variável saudação? Continuará sendo `Bom dia`, pois os métodos da String retornam novas Strings e mantém os valores originais inalterados, basicamente isto é que significa imutabilidade das Strings. Se quiséssemos utilizar o valores resultante de `substring`, deveríamos guardá-lo em uma outra variável:
+
+```java
+String saudacao = "Bom dia";
+
+String bom = saudacao.substring(0, 3); // tera o valor "Bom"
+```
 
 ### Qual a diferença entre tipos primitivos e tipos de referência?
 
@@ -745,45 +1074,3 @@ Já nos tipos, primitivos, nada disto é possível, pois eles não possuem atrib
 
 Depois de ler o capítulo de orientação a objetos, recomendamos que vocês revisite esta parte, prometemos que tudo fará um pouco mais de sentido.
 
-## Gabaritos dos exercícios
-
-```java
-
-// Declara a classe IntroducaoJava
-public class IntrducaoJava {
-
-  // declara um atributo chamado "umAtributo" do tipo String
-  String umAtributo;
-
-  // declara um metodo chamado executar que nao retorna nenhum valor (tipo de retorno void)
-  public void executar() {
-
-    // declara uma variavel inteira "valor" com valor 10
-    int valor = 10;
-
-    // Declara a variavel cachorro do tipo Cachorro e atribui a ela numa nova instância de objeto da classe cachorro
-    Cachorro cachorro = new Cachorro();
-
-    // Chama o metodo brincar do objeto cachorro
-    cachorro.brincar();
-
-    // declara uma variavel i do tipo int com valor 1
-    int i = 1;
-
-    // repete enquanto i for menor que valor
-    while (i < valor) {
-      // imprime o valor de i na tela
-      System.out.println("Iteracao: " + i);
-
-      // Verifica se i é par
-      if (i % 2 == 0) {
-        // Se i for par, imprime mensagem na tela
-        System.out.println("Iteracao par")
-      }
-
-     // Soma 1 ao valor de i (o que se chama de incrementar)
-     i++;
-    }
-  }
-}
-```
