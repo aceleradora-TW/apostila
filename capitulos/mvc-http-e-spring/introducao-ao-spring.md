@@ -1,23 +1,62 @@
----
-layout: post
-title: Introdução
-date: '2014-06-22 16:25:06 -0700'
-categories: spring
----
-
 # Introdução ao Spring
 
-## O que é
+O Spring é um framework Java criado com o objetivo de facilitar o desenvolvimento de aplicações (de vários tipos, não somente web),
+oferecendo um conjunto de soluções prontas para problemas comuns. Alguns dos problemas que o Spring resolve:
 
-O Spring é um framework Java criado com o objetivo de facilitar o desenvolvimento de aplicações, oferecendo um conjunto de soluções prontas para serem implementadas na mesma \(Algumas das soluções seriam: MVC, Persistencia, Transaction\). O Spring utiliza os conceitos de Inversão de Controle e Injeção de Dependências.
+  - Implementação do padrão MVC
+  - Persistência de dados (comunicação com bancos de dados)
+  - Injeção de dependências
+  - Autenticação de usuários
+  - Comunicação com mecanismos de fila
+  - Processamento em lote (Spring Batch)
+
+O Spring é uma ferramenta extremamente poderosa, especialmente para aplicações web. Vamos revisar abaixo como ele pode nos ajudar a
+construir uma aplicação web de maneira eficiente.
+
+## O padrão MVC
+
+O MVC é um padrão arquitetural muito utilizado no desenvolvimento de aplicações web.
+
+### O que é um padrão arquitetural?
+
+Um padrão arquitetural nada mais é do que a forma como organizamos o código da nossa aplicação. Os padrões surgem como uma maneira de impor
+as melhores práticas para se desenvolver um software.
+
+#### Responsabilidade única e papeis bem definidos
+
+É importante que cada classe faça somente uma coisa e é preciso definir estas coisas de maneira clara.
+
+### E como se usa MVC?
+
+Diferentemente de uma ferramenta (como o Spring), o MVC não é algo que podemos adotar diretamente, ou seja, não é possível fazer download de
+algo e sair utilizando. O MVC é um conjunto de conceitos e ideias, portanto, utilizar o MVC se refere a como vamos organizar o código da
+nossa aplicação. a sigla MVC significa `Modelo, Visão e Controle`. Vamos entender o que cada coisa significa:
+
+### Modelo
+
+Classes que representam entidades manipuladas pelo sistema.
+
+### Visão
+
+Classes, templates e recursos (HTML, CSS, JavaScript) utilizados para desenvolver a interface do sistema. Formam os mecanismos pelos quais
+os usuários interagem com o sistema.
+
+### Controle
+
+Classes que organizam o relacionamento entre o modelo e a visão.
 
 ## Inversão de Controle
 
-É um padrão de desenvolvimento onde se insere determinado código da aplicação dentro do framework, que ficará responsável pelo controle da chamada dos métodos diferente da programação tradicional, ou seja, não é determinada diretamente pelo programador. Se um dia o nome da classe ou o lugar onde ela está armazenada for alterado, nós apenas alteraríamos um arquivo de configuração, não mexeríamos em uma única linha do código da classe.
+É um padrão de desenvolvimento onde se insere determinado código da aplicação dentro do framework, que ficará responsável pelo controle da
+chamada dos métodos diferente da programação tradicional, ou seja, não é determinada diretamente pelo programador. Se um dia o nome da
+classe ou o lugar onde ela está armazenada for alterado, nós apenas alteraríamos um arquivo de configuração, não mexeríamos em uma única
+linha do código da classe.
 
 ## Injeção de Dependência
 
-Nesta solução as dependências entre os módulos não são definidas programaticamente, mas sim pela configuração de uma infraestrutura de software \(container\) que é responsável por "injetar" em cada componente suas dependências declaradas. A Injeção de dependência se relaciona com o padrão Inversão de controle mas não pode ser considerada um sinônimo deste.
+Nesta solução as dependências entre os módulos não são definidas programaticamente, mas sim pela configuração de uma infraestrutura de
+software (container) que é responsável por "injetar" em cada componente suas dependências declaradas. A Injeção de dependência se
+relaciona com o padrão Inversão de controle mas não pode ser considerada um sinônimo deste.
 
 ## Outros projetos Spring
 
@@ -28,9 +67,9 @@ Nesta solução as dependências entre os módulos não são definidas programat
 
 ## Spring Boot
 
-## O que é
-
-O Spring Boot é **opinativo** e **customizável** e por isso seu objetivo é fornecer um conjunto de ferramentas que facilita a criação de aplicativos baseados em Spring autônomos e de produção que você pode "executar". É uma estrutura leve que simplifica a configuração de aplicativos baseados em Spring e facilita a publicação de nossas aplicações. A intenção é ter o seu projeto rodando o mais rápido possível e sem complicação.
+O Spring Boot é uma versão **opinativa** e **customizável** do Spring. Seu objetivo é facilitar a criação de aplicações Spring
+autônomas e de produção (que você pode "executar"). É uma estrutura leve que simplifica a configuração de aplicações Spring e facilita a
+publicação de nossas aplicações. A intenção é ter o seu projeto rodando o mais rápido possível e sem complicação.
 
 ## Vantagens do Spring Boot
 
