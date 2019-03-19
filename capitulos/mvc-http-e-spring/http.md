@@ -205,6 +205,19 @@ Estes são alguns dos mais utilizados, podemos encontrar uma lista mais detalhad
 
 ## Como desenvolver aplicações web com HTTP?
 
+O HTTP é fundamental para criar aplicações web e existem diversas ferramentas em várias linguagens para facilitar o desenvolvimento deste
+tipo de aplicações. Na Aceleradora, vamos usar:
+
+  - Java (linguagem de programação)
+  - Spring Boot (framework java para desenvolvimento de aplicações)
+  - MVC (padrão de projeto)
+
+Estas ferramentas e conceitos tentam abstrair o HTTP em maneiras mais práticas de processar mensagens do protocolo. Em outras palavras, o
+Spring (principalmente, mas não exclusivamente) resolverá vários problemas complexos para que nós possamos focar em implementar as regras de
+negócio da nossa aplicação em vez de investirmos muito tempo em reinventar a roda (lidar como mensagens HTTP, roteamento de requisições,
+interpretação e conversão de dados, etc.).
+
+Esta apostila tenta introduzir as ideias destas ferramentas e padrões que iremos utilizar na prática.
 
 ## Exercícios de Fixação
 
