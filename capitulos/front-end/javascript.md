@@ -390,12 +390,36 @@ console.log(arraySimples) // [1, 2, 4, 5]
 
 ### Percorrer os elementos
 
+Podemos utilizar a função `forEach`:
+
 ```javascript
 const arraySimples = [1, 2, 4]
 
 arraySimples.forEach(function(elemento) {
   console.log(elemento)
 })
+```
+
+Mas também podemos usar loops `for`:
+
+__For clássico__
+
+```javascript
+const arraySimples = [1, 2, 4]
+
+for (let i = 0; i < arraySimples.length; i++) {
+  console.log(arraySimples[i]);
+}
+```
+
+__For of (conhecido como `for each` em outras linguagens)__
+
+```javascript
+const arraySimples = [1, 2, 4]
+
+for (let numero of arraySimples) {
+  console.log(numero);
+}
 ```
 
 ### Acessando elementos de um array
@@ -418,8 +442,6 @@ console.log(vigesimoElemento) // undefined
 
 [Mais informações sobre arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
 
-## Objetos
-
 ## Funções
 
 Para criar funções, utilizamos a palavra reservada function.
@@ -432,6 +454,63 @@ exemplo:
    //a função retorna o produto p1 e p2
  }
 ```
+
+## Objetos
+
+Objetos são estruturas mais complexas que servem para organizar dados. Eles são estruturas associativas, onde podemos associar um valor à um
+nome.
+
+### Declarando objetos
+
+Para declarar objetos, usamos as chaves (`{}`):
+
+```javascript
+let umObjeto = {};
+```
+
+### Para que e como usar objetos?
+
+Objetos são extremamente úteis para modelar dados, especialmente quando precisamos manipular estruturas de dados complexas, que possuem
+muitas variáveis e relações. Vejamos como representar dados de uma pessoa em JavaScript:
+
+Podemos criar variáveis separadas:
+
+```javascript
+let nome = 'Silvia'
+let idade = 23
+
+console.log(nome) // Silvia
+console.log(idade) // 23
+```
+
+Ou podemos agrupar estes valores de uma maneira que eles façam mais sentido e sejam mais fáceis de entender no meio do código:
+
+```javascript
+const pessoa = {
+  nome: 'Silvia',
+  idade: 23
+}
+
+console.log(pessoa.nome) // Silvia
+console.log(pessoa.idade) // 23
+```
+
+### Objetos com comportamento
+
+Assim como podemos armazenar funções em variáveis ou arrays, também podemos armazená-las em um atributo de um objeto:
+
+```javascript
+const pessoa = {
+  nome: 'Silvia',
+  idade: 23,
+  dizOi: () => console.log('Oi')
+}
+
+pessoa.dizOi() // Ira imprimir 'Oi' na tela
+```
+
+Isto é extremamente útil, pois podemos pensar de uma maneira mais orientada a objetos, o que muitas vezes nos ajuda a escrever código mais
+organizado.
 
 ## Exercícios De Fixação
 
