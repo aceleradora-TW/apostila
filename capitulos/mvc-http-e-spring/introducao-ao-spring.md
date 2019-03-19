@@ -22,19 +22,25 @@ O MVC é um padrão arquitetural muito utilizado no desenvolvimento de aplicaç�
 Um padrão arquitetural nada mais é do que a forma como organizamos o código da nossa aplicação. Os padrões surgem como uma maneira de impor
 as melhores práticas para se desenvolver um software.
 
-#### Responsabilidade única e papeis bem definidos
+### Como se usa MVC?
 
-É importante que cada classe faça somente uma coisa e é preciso definir estas coisas de maneira clara.
+Diferentemente de uma ferramenta (como o Spring), o MVC é algo abstrato, o que significa que não é possível apenas fazer download e sair
+utilizando. O MVC é um conjunto de conceitos e ideias, portanto, utilizá-lo se refere a como vamos organizar o código da nossa aplicação.
+Vejamos então quais são as recomendações do padrão para que organizemos o código de uma aplicação.
 
-### E como se usa MVC?
-
-Diferentemente de uma ferramenta (como o Spring), o MVC não é algo que podemos adotar diretamente, ou seja, não é possível fazer download de
-algo e sair utilizando. O MVC é um conjunto de conceitos e ideias, portanto, utilizar o MVC se refere a como vamos organizar o código da
-nossa aplicação. a sigla MVC significa `Modelo, Visão e Controle`. Vamos entender o que cada coisa significa:
+A primeira coisa que temos que entender é o que a sigla MVC significa: `Modelo, Visão e Controle`. Vejamos cada item destes em mais detalhe:
 
 ### Modelo
 
-Classes que representam entidades manipuladas pelo sistema.
+Modelo se refere às classes que representam entidades manipuladas pelo sistema. Elas são classes que modelam os dados. Se estamos criando um
+sistema bancário, nosso modelo será composto de classes como:
+
+  - Cliente
+  - Conta bancária
+  - Transação
+  - Agência
+
+Ou seja, são as informações manipuladas pelo sistema organizadas de maneira coerente. Modelo se refere sempre à dados.
 
 ### Visão
 
@@ -43,7 +49,14 @@ os usuários interagem com o sistema.
 
 ### Controle
 
-Classes que organizam o relacionamento entre o modelo e a visão.
+São classes que organizam o relacionamento entre o modelo e a visão. Elas são especialmente importantes em aplicações web, que se baseiam em
+HTTP, pois aplicações deste tipo se organizam através de verbos e rotas (como vimos lá no capítulo de HTTP) e os controladores são muito
+úteis para gerenciar este tipo de informação. Resumidamente, a camada de controle irá gerenciar como as entidades da camada de visão
+se relacionam com as entidades da camada de modelo.
+
+## MVC com Spring
+
+O Spring nos permite criar uma aplicação utilizando o padrão MVC de maneira muito simples.
 
 ## Inversão de Controle
 
