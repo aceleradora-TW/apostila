@@ -495,6 +495,8 @@ console.log(pessoa.nome) // Silvia
 console.log(pessoa.idade) // 23
 ```
 
+De uma maneira muito simplificada, podemos pensar em objetos como sendo grupos de variáveis. Pense em como isto pode ser útil.
+
 ### Objetos com comportamento
 
 Assim como podemos armazenar funções em variáveis ou arrays, também podemos armazená-las em um atributo de um objeto:
