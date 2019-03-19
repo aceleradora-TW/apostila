@@ -444,15 +444,116 @@ console.log(vigesimoElemento) // undefined
 
 ## Funções
 
-Para criar funções, utilizamos a palavra reservada function.
+Funções são blocos que definem um comportamento. Elas são formadas por três coisas:
 
-exemplo:
+  - Entrada (parâmetros)
+  - Corpo (lógica, processamento)
+  - Saída (retorno)
+
+Podemos ter funções que não recebem nenhum parâmetro e/ou que não retornam nada. Para declarar funções, utilizamos a palavra reservada
+function:
 
 ```javascript
  function minhaFuncao(p1, p2) {
    return p1 + p2;
    //a função retorna o produto p1 e p2
  }
+```
+
+A função acima recebe dois parâmetros (p1 e p2) e retorna a soma dos dois parâmetros.
+
+### Funções em variáveis
+
+O Javascript permite tratar funções como valores (assim como números, strings, arrays, etc.), o que nos permite guardá-las em variáveis,
+passá-las por parâmetros ou retorná-las:
+
+```javascript
+let minhaFuncao = function(p1, p2) {
+  return p1 + p2;
+}
+```
+
+### Funções que retornam funções (que loucura!)
+
+```javascript
+let dizAlgo = function(algo) {
+  return function() {
+    return 'Digo ' + algo
+  }
+}
+
+let dizOi = dizAlgo('Oi') // lembre-se que dizAlgo retorna outra funcao
+
+console.log(dizOi()) // Imprime 'Digo Oi'
+```
+
+### Passar funções por parâmetro
+
+Lembre-se do método `forEach` dos arrays, este método recebe uma função por parâmetro, onde esta função será executada uma vez para cada
+item do array:
+
+```javascript
+let total = 0;
+
+let numeros = [1, 2, 3];
+
+numeros.forEach(function(item) {
+  console.log(item);
+  total += item;
+})
+
+console.log(total);
+```
+
+O código acima irá imprimir:
+
+```
+1
+2
+3
+6
+```
+
+### Funções simplificadas
+
+A versão ES6 (ou superior) permite que declaremos funções de maneira simplificada, são as chamadas `arrow functions`:
+
+```javascript
+const minhaFuncao = (p1, p2) => {
+  return p1 + p2;
+}
+```
+
+Perceba que não é necessário utilizar a palavra `function`, podemos substituí-la pela sintaxe de seta (`=>`).
+
+#### Funções em linha
+
+Quando o corpo de uma arrow function possui apenas uma linha, podemos declará-la sem chaves:
+
+```javascript
+const minhaFuncao = (p1, p2) => p1 + p2
+
+const resultado = minhaFuncao(1, 1) // resultado tera o valor 2
+```
+
+Neste caso, o resultado da expressão declarada será retornada pela função. No caso acima, é como se tivéssemos a palavra `return` antes de
+`p1 + p2`.
+
+Esta simplificação deixa o código muito mais simples em algumas situações. Vamos ver como exemplo `forEach` novamente:
+
+```javascript
+const numeros = [1 , 2, 3]
+
+numeros.forEach(n => console.log(n))
+```
+
+Repare que não colocamos parênteses entre o parâmetro `n`. Isto somente é válido quando a função espera somente um parâmetro. A saída do
+código acima será:
+
+```
+1
+2
+3
 ```
 
 ## Objetos
