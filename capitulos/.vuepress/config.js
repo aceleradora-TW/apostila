@@ -61,7 +61,8 @@ module.exports = {
       ['front-end/bulma.md', 'Bulma'],
       ['infraestrutura-integracao-e-entrega-continua/heroku.md', 'Heroku'],
       ['infraestrutura-integracao-e-entrega-continua/docker.md', 'Docker'],
-      ['infraestrutura-integracao-e-entrega-continua/circle-ci.md', 'Circle CI']
+      ['infraestrutura-integracao-e-entrega-continua/circle-ci.md', 'Circle CI'],
+      ['materiais-complementares/tecnologias-emergentes.md', 'Tecnologias Emergentes']
     ]
   }
 }

@@ -36,3 +36,7 @@
   * [Docker](infraestrutura-integracao-e-entrega-continua/docker.md)
   * [Circle CI](infraestrutura-integracao-e-entrega-continua/circle-ci.md)
 
+#### Materiais complementares
+
+  * [Tecnologias Emergentes](materiais-complementares/tecnologias-emergentes.md)
+
