@@ -404,6 +404,66 @@ if (condicao) {
 }
 ```
 
+### Operador ternário
+
+O operador ternário é uma maneira simplificada de escrever uma combinação de `if` (se) e `else` (senão). Ele funciona para quando
+necessitamos atribuir um valor à uma variável de maneira condicional. Ou seja, se uma condição for verdadeira, a variável terá um valor,
+caso contrário, a variável terá outro valor. Vejamos o exemplo abaixo:
+
+```java
+int precoDoUber = 0;
+
+if (vaiChover == true) {
+  precoDoUber= 20;
+} else {
+  precoDoUber = 10;
+}
+```
+
+Usando um operador ternário, podemos simplificar este código. A estrutura do operador é a seguinte:
+
+```java
+<condicao>
+  ? <valor se a condicao for verdadeira>
+  : <valor se a condicao for falsa>
+```
+
+Podemos simplificar o exemplo acima para o seguinte:
+
+```java
+int precoDoUber = vaiChover == true
+  ? 20
+  : 10;
+```
+
+É importante mencionar que não é necessário escrever a expressão utilizando várias linhas, estamos fazendo assim apenas para tornar o código
+mais legível. Poderíamos escrever tudo numa única linha:
+
+```java
+int precoDoUber = vaiChover == true ? 20 : 10;
+```
+
+Novamente, vale mencionar que operadores ternários não substituem if/else em todas as situações, pois eles servem somente para expressões
+que retornam um valor. Em outras palavras, não seria possível usar operador ternário para simplificar o seguinte código:
+
+```java
+if (vaiChover == true) {
+  System.out.println("Vou levar um guarda-chuva.");
+} else {
+  System.out.println("Vou só de casaco.");
+}
+```
+
+O código abaixo não compilará:
+
+```java
+vaiChover == true
+  ? System.out.println("Vou levar um guarda-chuva.");
+  : System.out.println("Vou só de casaco.");
+```
+
+Afinal, não estamos guardando a saída do ternário em nenhuma variável.
+
 ### Switch
 
 O switch é muito útil para quando precisamos tomar muitas decisões com base em muitas condições. Se pode utilizar um monte de ifs encadeados para fazer a mesma coisa que o switch, mas ele é muito mais legível.
