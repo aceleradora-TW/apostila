@@ -27,6 +27,7 @@
   * [HTML](front-end/html.md)
   * [CSS](front-end/css.md)
   * [JavaScript](front-end/javascript.md)
+  * [React](front-end/react.md)
   * [Thymeleaf](front-end/thymeleaf.md)
   * [Bulma](front-end/bulma.md)
 
